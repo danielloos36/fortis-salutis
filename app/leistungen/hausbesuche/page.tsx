@@ -1,0 +1,199 @@
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+import ContactCTA from '@/components/ContactCTA'
+import { locations } from '@/lib/locations'
+
+export const metadata: Metadata = {
+  title: 'Hausbesuche Physiotherapie Reinheim – Fortis Salutis',
+  description:
+    'Hausbesuche in Reinheim und Umgebung (15 km): Professionelle Physiotherapie bei Ihnen zuhause. Für Patienten mit eingeschränkter Mobilität. Jetzt Termin vereinbaren.',
+}
+
+const hausbesuchLocations = locations.filter((l) => l.hausbesuche)
+
+export default function HausbesuchePage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative h-[60vh] min-h-[400px] flex items-end">
+        <Image
+          src="/hausbesuche-fotobanner.jpg"
+          alt="Hausbesuche – Physiotherapie bei Ihnen zuhause in Reinheim und Umgebung"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-14 w-full">
+          <p className="text-[10px] text-white/40 uppercase tracking-[0.35em] mb-3">
+            Leistungen · Fortis Salutis Reinheim
+          </p>
+          <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.95]">
+            Hausbesuche
+          </h1>
+          <p className="text-white/60 mt-3 text-base max-w-lg">
+            Professionelle Physiotherapie direkt bei Ihnen zuhause
+          </p>
+        </div>
+      </section>
+
+      {/* Breadcrumb */}
+      <div className="bg-[#0a0a0a] border-b border-wine/30 px-6 py-3">
+        <div className="max-w-7xl mx-auto flex items-center gap-2 text-[10px] text-white/40 uppercase tracking-wider">
+          <Link href="/" className="hover:text-wine transition-colors">Startseite</Link>
+          <span>/</span>
+          <span className="text-white">Hausbesuche</span>
+        </div>
+      </div>
+
+      {/* Intro */}
+      <section className="bg-white py-20 lg:py-28 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div>
+            <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-4">Therapie zu Ihnen</p>
+            <h2 className="text-4xl font-black text-black mb-8 leading-tight">
+              Wenn der Weg zur<br />Praxis zu weit ist.
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-5">
+              Nicht jeder Patient kann die Praxis aufsuchen – sei es aufgrund von Bettlägerigkeit,
+              frischer Operation, eingeschränkter Mobilität oder hohem Alter. Genau für diese
+              Menschen bieten wir unseren Hausbesuchsservice an.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-5">
+              Unser Therapeutenteam kommt zu Ihnen nach Hause und bringt professionelle
+              Physiotherapie in Ihre gewohnte Umgebung. Die Behandlung ist dabei genauso
+              hochwertig und individuell wie in unserer Praxis in Reinheim.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-10">
+              Wir decken Reinheim und das gesamte Umland im Umkreis von etwa 15 km ab.
+              Sprechen Sie uns an – wir finden gemeinsam eine Lösung für Sie.
+            </p>
+            <a
+              href="tel:+4915773327200"
+              className="inline-block bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-900 transition-colors"
+            >
+              Hausbesuch anfragen
+            </a>
+          </div>
+
+          <div>
+            <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-4">Wer profitiert?</p>
+            <h2 className="text-2xl font-black text-black mb-8">Für wen sind Hausbesuche geeignet?</h2>
+            <ul className="space-y-3">
+              {[
+                'Patienten mit eingeschränkter Mobilität & Bettlägerige',
+                'Frisch operierte Patienten ohne Transportmöglichkeit',
+                'Ältere Patienten & Senioren',
+                'Schwere chronische Erkrankungen',
+                'Patienten in der häuslichen Rehabilitation',
+                'Palliativpatienten',
+                'Personen ohne eigenes Fahrzeug',
+                'Eltern mit kleinen Kindern ohne Betreuungsmöglichkeit',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span className="w-5 h-5 border border-black flex items-center justify-center shrink-0 mt-0.5">
+                    <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </span>
+                  <span className="text-gray-700 text-sm leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="bg-[#0a0a0a] py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-3 font-bold">Ihre Vorteile</p>
+          <h2 className="text-4xl font-black text-white mb-14">Was Sie erwarten können</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-800/30">
+            {[
+              {
+                title: 'Gewohnte Umgebung',
+                desc: 'Therapie im eigenen Zuhause – ohne Stress, ohne Fahrtweg. Sie können sich voll auf die Behandlung konzentrieren.',
+              },
+              {
+                title: 'Kein Transportaufwand',
+                desc: 'Wir kommen zu Ihnen. Keine Organisation von Krankentransport oder Fahrdienst notwendig.',
+              },
+              {
+                title: 'Alltagsgerechte Therapie',
+                desc: 'Wir können die Therapie auf Ihre tatsächliche Wohnsituation anpassen und alltagsrelevante Übungen einbauen.',
+              },
+              {
+                title: 'Gleiche Qualität',
+                desc: 'Ein Hausbesuch von Fortis Salutis bedeutet dieselbe Expertise und Sorgfalt wie in der Praxis – kein Kompromiss.',
+              },
+            ].map((b, i) => (
+              <div key={i} className="bg-[#0a0a0a] p-8">
+                <span className="text-wine font-black text-3xl leading-none block mb-5">0{i + 1}</span>
+                <h3 className="text-white font-black mb-3">{b.title}</h3>
+                <p className="text-white text-sm leading-relaxed">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Einzugsgebiet */}
+      <section className="py-20 px-6 bg-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-3">Einzugsgebiet</p>
+          <h2 className="text-4xl font-black text-black mb-6 leading-tight">
+            Diese Orte beliefern wir.
+          </h2>
+          <p className="text-gray-600 max-w-2xl mb-12 leading-relaxed">
+            Unsere Hausbesuche umfassen Reinheim und die gesamte Umgebung im Umkreis von ca. 15 km.
+            Nachfolgend finden Sie alle Orte, in die wir regelmäßig fahren. Ist Ihr Ort nicht dabei?
+            Rufen Sie uns an – wir finden eine Lösung.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="border border-black bg-black text-white p-5">
+              <p className="font-black">Reinheim</p>
+              <p className="text-gray-400 text-xs mt-1">Hauptstandort der Praxis</p>
+            </div>
+            {hausbesuchLocations.map((loc) => (
+              <Link
+                key={loc.slug}
+                href={`/standorte/${loc.slug}`}
+                className="border border-gray-200 bg-white p-5 hover:border-black group transition-colors"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="font-bold text-black group-hover:text-black">{loc.name}</p>
+                    <p className="text-gray-500 text-xs mt-1">
+                      {loc.distance} · ca. {loc.driveTime}
+                    </p>
+                  </div>
+                  <svg
+                    className="w-4 h-4 text-gray-300 group-hover:text-black transition-colors"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <p className="text-gray-500 text-sm mt-8">
+            Nicht dabei? <a href="tel:+4915773327200" className="underline hover:text-black transition-colors">Rufen Sie uns an</a> – wir klären gerne,
+            ob wir auch in Ihre Gemeinde kommen können.
+          </p>
+        </div>
+      </section>
+
+      <ContactCTA
+        title="Hausbesuch anfragen"
+        subtitle="Rufen Sie uns an oder schreiben Sie uns – wir vereinbaren einen Termin bei Ihnen zuhause. Schnell, unkompliziert und persönlich."
+      />
+    </>
+  )
+}
