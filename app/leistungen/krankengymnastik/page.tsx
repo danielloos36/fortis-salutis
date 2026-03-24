@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 export default function KrankengymnastikPage() {
   return (
     <ServicePage
-      title="Kranken­gymnasik"
+      title="Kranken­gymnastik"
       subtitle="Gezielte Bewegungstherapie für mehr Lebensqualität"
-      image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80"
+      image="/hero-banner-startseite.jpg"
       intro={[
         'Die Krankengymnastik ist das Herzstück der Physiotherapie und eine der ältesten und bewährtesten Behandlungsformen in der Medizin. Durch gezielte, therapeutisch angeleitete Übungen werden Bewegungseinschränkungen behoben, muskuläre Ungleichgewichte ausgeglichen und der Körper in seinen natürlichen Funktionen gestärkt.',
         'In unserer Praxis Fortis Salutis in Reinheim setzen wir auf eine individuelle, befundorientierte Krankengymnastik. Jede Behandlung beginnt mit einer ausführlichen Befundaufnahme, bei der wir Ihre aktuelle Situation genau analysieren, um einen maßgeschneiderten Therapieplan zu erstellen.',

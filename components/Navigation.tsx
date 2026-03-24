@@ -70,16 +70,18 @@ export default function Navigation() {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-52 bg-white shadow-2xl border border-gray-100">
-                {leistungen.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="block px-5 py-3 text-sm text-gray-800 hover:bg-gray-50 hover:text-black border-b border-gray-50 last:border-0 transition-colors"
-                  >
-                    {item.title}
-                  </Link>
-                ))}
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-52">
+                <div className="bg-white shadow-2xl border border-gray-100">
+                  {leistungen.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-5 py-3 text-sm text-gray-800 hover:bg-gray-50 hover:text-black border-b border-gray-50 last:border-0 transition-colors"
+                    >
+                      {item.title}
+                    </Link>
+                  ))}
+                </div>
               </div>
             )}
           </div>
