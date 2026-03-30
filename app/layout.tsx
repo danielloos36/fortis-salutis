@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: '%s | Fortis Salutis Reinheim',
   },
   description:
-    'Ihre Privatpraxis für Physiotherapie in Reinheim, Hessen. Krankengymnastik, Manuelle Therapie, Trainingstherapie, Neurologische Therapie und Hausbesuche. Jetzt Termin vereinbaren.',
+    'Physiotherapie in Reinheim, Hessen. Krankengymnastik, Manuelle Therapie, Trainingstherapie, Neurologische Therapie und Hausbesuche. Individuelle Behandlung. Jetzt Termin vereinbaren.',
   openGraph: {
     siteName: 'Fortis Salutis – Physiotherapie Reinheim',
     locale: 'de_DE',

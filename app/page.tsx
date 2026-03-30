@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Physiotherapie Reinheim – Fortis Salutis',
   description:
-    'Privatpraxis für Physiotherapie in Reinheim, Hessen. Krankengymnastik, Manuelle Therapie, Trainingstherapie, Neurologische Therapie und Hausbesuche. Mit Heilpraktikerzulassung. Jetzt Termin vereinbaren.',
+    'Physiotherapie in Reinheim, Hessen. Krankengymnastik, Manuelle Therapie, Trainingstherapie, Neurologische Therapie und Hausbesuche. Individuelle Behandlung auf höchstem Niveau. Jetzt Termin vereinbaren.',
 }
 
 const leistungen = [
@@ -67,7 +67,7 @@ export default function Home() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24">
           <p className="text-[11px] text-white/50 uppercase tracking-[0.35em] mb-6">
-            Privatpraxis · Reinheim, Hessen · Heilpraktikerzulassung
+            Physiotherapie · Reinheim, Hessen
           </p>
           <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-[7rem] font-black text-white leading-[0.9] tracking-tight mb-8 max-w-4xl">
             Physio&shy;therapie
@@ -139,7 +139,7 @@ export default function Home() {
             {/* Contact card */}
             <div className="bg-white p-8 flex flex-col justify-between">
               <div>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-wine mb-3 font-bold">Privatpraxis</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-wine mb-3 font-bold">Termin vereinbaren</p>
                 <h3 className="text-2xl font-black text-black mb-4 leading-tight">
                   Jetzt Termin
                   <br />
@@ -227,10 +227,10 @@ export default function Home() {
       <section className="bg-[#0a0a0a] py-12 px-6 border-t border-wine/40">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { value: 'Privatpraxis', label: 'Mehr Zeit für Sie' },
-            { value: 'Heilpraktiker', label: 'Zulassung' },
-            { value: '5 Leistungen', label: 'Aus einer Hand' },
+            { value: 'Individuelle', label: 'Behandlung ohne Zeitdruck' },
             { value: 'Hausbesuche', label: 'Im 15-km-Umkreis' },
+            { value: 'Ganzheitlich', label: 'Körper & Bewegung im Fokus' },
+            { value: 'Flexibel', label: 'Termin per Tel., Mail & WhatsApp' },
           ].map((item) => (
             <div key={item.value}>
               <p className="text-white font-black text-lg mb-1">{item.value}</p>

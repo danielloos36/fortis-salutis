@@ -19,8 +19,8 @@ export default function Footer() {
               <span className="font-black text-base">Fortis Salutis</span>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-5">
-              Privatpraxis für Physiotherapie in Reinheim, Hessen. Individuelle Behandlung
-              auf höchstem Niveau – mit Heilpraktikerzulassung.
+              Physiotherapie in Reinheim, Hessen. Individuelle Behandlung
+              auf höchstem Niveau – mehr Zeit, mehr Fürsorge.
             </p>
             <address className="not-italic text-sm text-gray-500 space-y-1">
               <p>Darmstädter Straße 43</p>

@@ -4,7 +4,7 @@ import ServicePage from '@/components/ServicePage'
 export const metadata: Metadata = {
   title: 'Neurologische Therapie Reinheim – Physiotherapie Fortis Salutis',
   description:
-    'Neurologische Therapie in Reinheim: Spezialisierte Behandlung bei Schlaganfall, Parkinson, MS und weiteren Erkrankungen des Nervensystems. Privatpraxis Fortis Salutis.',
+    'Neurologische Therapie in Reinheim: Spezialisierte Behandlung bei Schlaganfall, Parkinson, MS und weiteren Erkrankungen des Nervensystems. Fortis Salutis Reinheim.',
 }
 
 export default function NeurologischeTherapiePage() {

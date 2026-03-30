@@ -93,8 +93,7 @@ export default async function StandortPage({ params }: Props) {
             </p>
 
             <p className="text-gray-600 leading-relaxed mb-10">
-              Als Privatpraxis mit Heilpraktikerzulassung bieten wir Ihnen mehr Zeit, mehr Fürsorge
-              und eine individuell auf Sie zugeschnittene Behandlung. Für Patienten aus{' '}
+              Wir bieten Ihnen mehr Zeit, mehr Fürsorge und eine individuell auf Sie zugeschnittene Behandlung. Für Patienten aus{' '}
               {location.name}, die die Praxis nicht aufsuchen können, bieten wir{' '}
               {location.hausbesuche ? (
                 <strong className="font-bold text-black">Hausbesuche direkt bei Ihnen zuhause an.</strong>

@@ -4,7 +4,7 @@ import ServicePage from '@/components/ServicePage'
 export const metadata: Metadata = {
   title: 'Trainingstherapie Reinheim – Physiotherapie Fortis Salutis',
   description:
-    'Trainingstherapie in Reinheim: Gerätegestütztes therapeutisches Training zur Rehabilitation und Prävention. Privatpraxis Fortis Salutis – individuell, effektiv, nachhaltig.',
+    'Trainingstherapie in Reinheim: Gerätegestütztes therapeutisches Training zur Rehabilitation und Prävention. Fortis Salutis Reinheim – individuell, effektiv, nachhaltig.',
 }
 
 export default function TrainingstherapiePage() {

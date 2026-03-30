@@ -6,7 +6,7 @@ import ContactCTA from '@/components/ContactCTA'
 export const metadata: Metadata = {
   title: 'Physiotherapie Reinheim – Fortis Salutis',
   description:
-    'Physiotherapiepraxis Fortis Salutis in Reinheim, Hessen. Krankengymnastik, Manuelle Therapie, Trainingstherapie, Neurologische Therapie und Hausbesuche. Privatpraxis mit Heilpraktikerzulassung.',
+    'Physiotherapiepraxis Fortis Salutis in Reinheim, Hessen. Krankengymnastik, Manuelle Therapie, Trainingstherapie, Neurologische Therapie und Hausbesuche. Individuelle Behandlung auf höchstem Niveau.',
 }
 
 const services = [
@@ -54,8 +54,8 @@ export default function ReinheimPage() {
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
               Mitten in Reinheim, in der Darmstädter Straße 43, befindet sich Ihre Anlaufstelle für
-              professionelle Physiotherapie. Als Privatpraxis mit Heilpraktikerzulassung bieten wir
-              Reinheimern und allen Patienten aus der Umgebung eine medizinische Betreuung auf höchstem Niveau.
+              professionelle Physiotherapie. Wir bieten Reinheimern und allen Patienten
+              aus der Umgebung eine medizinische Betreuung auf höchstem Niveau.
             </p>
             <p className="text-gray-600 leading-relaxed mb-5">
               Reinheim ist eine Stadt im Landkreis Darmstadt-Dieburg mit rund 17.000 Einwohnern und liegt

@@ -4,7 +4,7 @@ import ServicePage from '@/components/ServicePage'
 export const metadata: Metadata = {
   title: 'Krankengymnastik Reinheim – Physiotherapie Fortis Salutis',
   description:
-    'Krankengymnastik in Reinheim: Gezielte Bewegungstherapie zur Wiederherstellung von Beweglichkeit und Kraft. Privatpraxis Fortis Salutis – individuelle Behandlung auf höchstem Niveau.',
+    'Krankengymnastik in Reinheim: Gezielte Bewegungstherapie zur Wiederherstellung von Beweglichkeit und Kraft. Fortis Salutis Reinheim – individuelle Behandlung auf höchstem Niveau.',
 }
 
 export default function KrankengymnastikPage() {
@@ -16,7 +16,7 @@ export default function KrankengymnastikPage() {
       intro={[
         'Die Krankengymnastik ist das Herzstück der Physiotherapie und eine der ältesten und bewährtesten Behandlungsformen in der Medizin. Durch gezielte, therapeutisch angeleitete Übungen werden Bewegungseinschränkungen behoben, muskuläre Ungleichgewichte ausgeglichen und der Körper in seinen natürlichen Funktionen gestärkt.',
         'In unserer Praxis Fortis Salutis in Reinheim setzen wir auf eine individuelle, befundorientierte Krankengymnastik. Jede Behandlung beginnt mit einer ausführlichen Befundaufnahme, bei der wir Ihre aktuelle Situation genau analysieren, um einen maßgeschneiderten Therapieplan zu erstellen.',
-        'Ob nach einer Operation, infolge einer Verletzung oder bei chronischen Beschwerden – die Krankengymnastik unterstützt Ihren Körper dabei, verlorene Funktionen wiederzuerlangen und langfristig schmerzfrei zu bleiben. Als Privatpraxis nehmen wir uns die Zeit, die eine wirklich wirksame Therapie benötigt.',
+        'Ob nach einer Operation, infolge einer Verletzung oder bei chronischen Beschwerden – die Krankengymnastik unterstützt Ihren Körper dabei, verlorene Funktionen wiederzuerlangen und langfristig schmerzfrei zu bleiben. Wir nehmen uns die Zeit, die eine wirklich wirksame Therapie benötigt.',
       ]}
       indications={[
         'Rückenschmerzen, LWS-Syndrom & Bandscheibenvorfälle',

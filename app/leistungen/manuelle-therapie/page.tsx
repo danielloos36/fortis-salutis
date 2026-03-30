@@ -4,7 +4,7 @@ import ServicePage from '@/components/ServicePage'
 export const metadata: Metadata = {
   title: 'Manuelle Therapie Reinheim – Physiotherapie Fortis Salutis',
   description:
-    'Manuelle Therapie in Reinheim: Spezifische Handgrifftechniken bei Gelenkblockierungen, Rückenschmerzen und Muskelverspannungen. Privatpraxis Fortis Salutis Reinheim.',
+    'Manuelle Therapie in Reinheim: Spezifische Handgrifftechniken bei Gelenkblockierungen, Rückenschmerzen und Muskelverspannungen. Fortis Salutis Reinheim.',
 }
 
 export default function ManuelleTherapiePage() {
