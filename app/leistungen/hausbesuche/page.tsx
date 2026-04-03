@@ -5,9 +5,9 @@ import ContactCTA from '@/components/ContactCTA'
 import { locations } from '@/lib/locations'
 
 export const metadata: Metadata = {
-  title: 'Hausbesuche Physiotherapie Reinheim – Fortis Salutis',
+  title: 'Hausbesuche Physiotherapie Reinheim & Umgebung – Fortis Salutis',
   description:
-    'Hausbesuche in Reinheim und Umgebung (15 km): Professionelle Physiotherapie bei Ihnen zuhause. Für Patienten mit eingeschränkter Mobilität. Jetzt Termin vereinbaren.',
+    'Physiotherapie Hausbesuche in Reinheim, Groß-Bieberau, Dieburg, Ober-Ramstadt und Umgebung. Wir kommen direkt zu Ihnen nach Hause – individuell, ganzheitlich, auf höchstem Niveau. Jetzt Termin vereinbaren.',
 }
 
 const hausbesuchLocations = locations.filter((l) => l.hausbesuche)
@@ -26,14 +26,14 @@ export default function HausbesuchePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-14 w-full">
-          <p className="text-[10px] text-white/40 uppercase tracking-[0.35em] mb-3">
+          <p className="text-[10px] text-white uppercase tracking-[0.35em] mb-3">
             Leistungen · Fortis Salutis Reinheim
           </p>
           <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.95]">
             Hausbesuche
           </h1>
-          <p className="text-white/60 mt-3 text-base max-w-lg">
-            Professionelle Physiotherapie direkt bei Ihnen zuhause
+          <p className="text-white mt-3 text-base max-w-lg">
+            Physiotherapie direkt bei Ihnen zuhause
           </p>
         </div>
       </section>
@@ -51,22 +51,21 @@ export default function HausbesuchePage() {
       <section className="bg-white py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-4">Therapie zu Ihnen</p>
+            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">Therapie zu Ihnen</p>
             <h2 className="text-4xl font-black text-black mb-8 leading-tight">
               Wenn der Weg zur<br />Praxis zu weit ist.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
-              Nicht jeder Patient kann die Praxis aufsuchen – sei es aufgrund von Bettlägerigkeit,
+              Nicht jede*r Patient*in kann die Praxis aufsuchen – sei es aufgrund von Bettlägerigkeit,
               frischer Operation, eingeschränkter Mobilität oder hohem Alter. Genau für diese
               Menschen bieten wir unseren Hausbesuchsservice an.
             </p>
             <p className="text-gray-600 leading-relaxed mb-5">
-              Unser Therapeutenteam kommt zu Ihnen nach Hause und bringt professionelle
-              Physiotherapie in Ihre gewohnte Umgebung. Die Behandlung ist dabei genauso
-              hochwertig und individuell wie in unserer Praxis in Reinheim.
+              Unser Therapeutenteam kommt zu Ihnen nach Hause – die Behandlung ist dabei
+              genauso hochwertig und individuell wie in unserer Praxis in Reinheim.
             </p>
             <p className="text-gray-600 leading-relaxed mb-10">
-              Wir decken Reinheim und das gesamte Umland im Umkreis von etwa 15 km ab.
+              Wir decken Reinheim und das gesamte Umland im Umkreis von etwa 10 km ab.
               Sprechen Sie uns an – wir finden gemeinsam eine Lösung für Sie.
             </p>
             <a
@@ -82,14 +81,11 @@ export default function HausbesuchePage() {
             <h2 className="text-2xl font-black text-black mb-8">Für wen sind Hausbesuche geeignet?</h2>
             <ul className="space-y-3">
               {[
-                'Patienten mit eingeschränkter Mobilität & Bettlägerige',
-                'Frisch operierte Patienten ohne Transportmöglichkeit',
-                'Ältere Patienten & Senioren',
+                'Patient*innen mit eingeschränkter Mobilität & Bettlägerige',
+                'Frisch operierte Patient*innen ohne Transportmöglichkeit',
+                'Ältere Patient*innen & Senior*innen',
                 'Schwere chronische Erkrankungen',
-                'Patienten in der häuslichen Rehabilitation',
-                'Palliativpatienten',
-                'Personen ohne eigenes Fahrzeug',
-                'Eltern mit kleinen Kindern ohne Betreuungsmöglichkeit',
+                'Patient*innen in der häuslichen Rehabilitation',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="w-5 h-5 border border-black flex items-center justify-center shrink-0 mt-0.5">
@@ -144,12 +140,12 @@ export default function HausbesuchePage() {
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-3">Einzugsgebiet</p>
           <h2 className="text-4xl font-black text-black mb-6 leading-tight">
-            Diese Orte beliefern wir.
+            Diese Orte fahren wir an.
           </h2>
           <p className="text-gray-600 max-w-2xl mb-12 leading-relaxed">
-            Unsere Hausbesuche umfassen Reinheim und die gesamte Umgebung im Umkreis von ca. 15 km.
+            Unsere Hausbesuche umfassen Reinheim und die gesamte Umgebung im Umkreis von ca. 10 km.
             Nachfolgend finden Sie alle Orte, in die wir regelmäßig fahren. Ist Ihr Ort nicht dabei?
-            Rufen Sie uns an – wir finden eine Lösung.
+            Rufen Sie uns an – wir suchen nach einer Lösung.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

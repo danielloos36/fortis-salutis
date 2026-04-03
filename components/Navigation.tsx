@@ -29,7 +29,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-sm border-b border-gray-100' : 'bg-transparent'
+        scrolled ? 'bg-white shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -130,7 +130,7 @@ export default function Navigation() {
       {mobileOpen && (
         <div className="md:hidden bg-white border-t border-gray-100">
           <div className="px-6 py-6 space-y-1">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gray-400 pb-3">Leistungen</p>
+            <p className="text-[10px] uppercase tracking-[0.25em] text-gray-500 pb-3">Leistungen</p>
             {leistungen.map((item) => (
               <Link
                 key={item.href}

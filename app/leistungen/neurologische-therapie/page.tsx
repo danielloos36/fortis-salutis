@@ -12,11 +12,11 @@ export default function NeurologischeTherapiePage() {
     <ServicePage
       title="Neurologische Therapie"
       subtitle="Spezialisierte Rehabilitation bei Erkrankungen des Nervensystems"
-      image="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1920&q=80"
+      image="/hero-banner-startseite.jpg"
       intro={[
-        'Die Neurologische Therapie widmet sich der Behandlung und Rehabilitation von Patienten mit Erkrankungen oder Verletzungen des zentralen und peripheren Nervensystems. Sie erfordert spezielles Fachwissen und einfühlsames Vorgehen – beides bringt unser Team bei Fortis Salutis mit.',
+        'Die Neurologische Therapie widmet sich der Behandlung und Rehabilitation von Patient*innen mit Erkrankungen oder Verletzungen des zentralen und peripheren Nervensystems. Sie erfordert spezielles Fachwissen und einfühlsames Vorgehen – beides bringt unser Team bei Fortis Salutis mit.',
         'Erkrankungen wie Schlaganfall, Parkinson oder Multiple Sklerose hinterlassen oft tiefe Spuren in der Bewegungsfähigkeit, Koordination und dem Alltag der Betroffenen. Durch neurophysiologische Therapiekonzepte wie Bobath, PNF und funktionelles Training unterstützen wir das Nervensystem dabei, neue Wege zu bahnen und verloren geglaubte Funktionen zurückzugewinnen.',
-        'In unserer Praxis in Reinheim arbeiten wir mit jedem Patienten nach einem individuellen, zielgerichteten Therapieplan. Wir begleiten Sie mit Geduld, Fachwissen und echter Fürsorge – damit Sie so viel Lebensqualität wie möglich zurückgewinnen.',
+        'In unserer Praxis in Reinheim arbeiten wir mit jeder*m Patient*in nach einem individuellen, zielgerichteten Therapieplan. Wir begleiten Sie mit Geduld, Fachwissen und echter Fürsorge – damit Sie so viel Lebensqualität wie möglich zurückgewinnen.',
       ]}
       indications={[
         'Schlaganfall (Apoplex) & Hemiplegie',

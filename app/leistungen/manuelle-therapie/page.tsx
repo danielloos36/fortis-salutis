@@ -4,34 +4,32 @@ import ServicePage from '@/components/ServicePage'
 export const metadata: Metadata = {
   title: 'Manuelle Therapie Reinheim – Physiotherapie Fortis Salutis',
   description:
-    'Manuelle Therapie in Reinheim: Spezifische Handgrifftechniken bei Gelenkblockierungen, Rückenschmerzen und Muskelverspannungen. Fortis Salutis Reinheim.',
+    'Manuelle Therapie in Reinheim: Gezielte manuelle Grifftechniken bei Rückenschmerzen, Muskelverspannungen und Bewegungseinschränkungen. Fortis Salutis Reinheim.',
 }
 
 export default function ManuelleTherapiePage() {
   return (
     <ServicePage
       title="Manuelle Therapie"
-      subtitle="Gezielte Handgrifftechniken für Gelenke und Weichteile"
+      subtitle="Gezielte manuelle Grifftechniken für Gelenke und Weichteile"
       image="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1920&q=80"
       intro={[
-        'Die Manuelle Therapie ist eine spezialisierte physiotherapeutische Behandlungsform, bei der durch präzise, manuelle Techniken Funktionsstörungen an Gelenken, Muskeln und dem Bindegewebe diagnostiziert und behandelt werden. Die Hände des Therapeuten sind dabei das wichtigste Werkzeug.',
-        'Durch spezifische Mobilisations- und Manipulationstechniken werden Gelenkblockierungen gelöst, die Gelenkbeweglichkeit wiederhergestellt und Schmerzen gezielt gelindert. Dabei wird nicht nur das betroffene Gelenk behandelt, sondern immer die gesamte kinematische Kette berücksichtigt.',
-        'In unserer Praxis Fortis Salutis in Reinheim wenden unsere Therapeuten fundierte manualtherapeutische Konzepte an. Die Behandlung ist präzise, schonend und hocheffektiv – oft bereits nach wenigen Sitzungen spürbar wirksam.',
+        'Die Manuelle Therapie behandelt Funktionsstörungen an Gelenken, Muskeln und Weichteilen – gezielt, schonend und mit den Händen. Ziel ist es, Beweglichkeit wiederherzustellen und Schmerzen nachhaltig zu lindern.',
+        'Dabei betrachten wir immer den ganzen Körper, nicht nur die schmerzende Stelle. So lassen sich Ursachen gezielt finden und behandeln – oft bereits nach wenigen Sitzungen mit spürbarem Ergebnis.',
       ]}
       indications={[
-        'Gelenkblockierungen an Wirbelsäule, Schulter, Knie & Hüfte',
-        'Halswirbelsäulen-Beschwerden & Spannungskopfschmerzen',
+        'Bewegungseinschränkungen an Wirbelsäule, Schulter, Knie & Hüfte',
+        'Halswirbelsäulen-Beschwerden',
         'Lendenwirbelsäulen-Schmerzen & Ischias-Symptomatik',
         'Bandscheibenvorfälle & Facettengelenkssyndrome',
         'Schulter-Arm-Syndrome & Impingement',
-        'Kiefergelenksbeschwerden (CMD)',
         'Schulterschmerzen & Schultersteife',
         'Knie- & Sprunggelenksbeschwerden',
       ]}
       benefits={[
         {
           title: 'Sofortige Wirkung',
-          desc: 'Gelenkblockierungen können oft in einer Sitzung gelöst werden – mit unmittelbarer Schmerzlinderung und verbesserter Beweglichkeit.',
+          desc: 'Bewegungseinschränkungen können oft in einer Sitzung deutlich verbessert werden – mit unmittelbarer Schmerzlinderung und spürbar mehr Beweglichkeit.',
         },
         {
           title: 'Ursachenbehandlung',
@@ -49,7 +47,7 @@ export default function ManuelleTherapiePage() {
       process={[
         {
           step: 'Untersuchung',
-          desc: 'Ausführliche Befundaufnahme mit manueller Gelenkuntersuchung zur Identifikation von Blockierungen.',
+          desc: 'Ausführliche Befundaufnahme mit manueller Gelenkuntersuchung.',
         },
         {
           step: 'Diagnose',

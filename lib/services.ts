@@ -58,16 +58,14 @@ export const services: Service[] = [
     shortDesc: 'Spezifische Handgrifftechniken an Gelenken und Weichteilen zur Schmerzlinderung.',
     image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1920&q=80',
     indications: [
-      'Gelenkblockierungen & Bewegungseinschränkungen',
+      'Bewegungseinschränkungen',
       'Halswirbelsäulen-Beschwerden & Kopfschmerzen',
       'Lendenwirbelsäulen-Schmerzen & Ischias',
       'Schulter-, Knie- & Hüftbeschwerden',
       'Bandscheibenvorfälle',
-      'Kiefergelenksbeschwerden (CMD)',
     ],
     benefits: [
-      'Sofortige Mobilisation blockierter Gelenke',
-      'Gezielte Schmerzlinderung ohne Medikamente',
+      'Schmerzlinderung ohne Medikamente',
       'Normalisierung von Muskelverspannungen',
       'Verbesserung der Gelenkfunktion',
     ],

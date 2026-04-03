@@ -22,7 +22,7 @@ export default function ReinheimPage() {
     <>
       <section className="relative h-[50vh] min-h-[360px] flex items-end">
         <Image
-          src="/hero-banner-startseite.jpg"
+          src="/standorte-hero.jpg"
           alt="Physiotherapie Reinheim – Fortis Salutis"
           fill
           className="object-cover object-center"
@@ -30,7 +30,7 @@ export default function ReinheimPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-14 w-full">
-          <p className="text-[10px] text-white/40 uppercase tracking-[0.35em] mb-3">Standort</p>
+          <p className="text-[10px] text-white uppercase tracking-[0.35em] mb-3">Standort</p>
           <h1 className="text-5xl lg:text-6xl font-black text-white leading-[0.95]">
             Physiotherapie<br />in Reinheim
           </h1>
@@ -48,27 +48,27 @@ export default function ReinheimPage() {
       <section className="bg-white py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-4">Ihre Praxis vor Ort</p>
+            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">Ihre Praxis vor Ort</p>
             <h2 className="text-4xl font-black text-black mb-8 leading-tight">
               Fortis Salutis –<br />zu Hause in Reinheim.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
               Mitten in Reinheim, in der Darmstädter Straße 43, befindet sich Ihre Anlaufstelle für
-              professionelle Physiotherapie. Wir bieten Reinheimern und allen Patienten
+              Physiotherapie. Wir bieten Reinheimern und allen Patient*innen
               aus der Umgebung eine medizinische Betreuung auf höchstem Niveau.
             </p>
             <p className="text-gray-600 leading-relaxed mb-5">
               Reinheim ist eine Stadt im Landkreis Darmstadt-Dieburg mit rund 17.000 Einwohnern und liegt
               am südlichen Rand der Rhein-Main-Region, eingebettet zwischen dem Odenwald und der Ebene.
-              Unsere Praxis ist für Patienten aus Reinheim selbst sowie aus allen umliegenden Gemeinden
+              Unsere Praxis ist für Patient*innen aus Reinheim selbst sowie aus allen umliegenden Gemeinden
               gut erreichbar.
             </p>
             <p className="text-gray-600 leading-relaxed mb-10">
               Wir behandeln alle Beschwerden des Bewegungsapparats, neurologische Erkrankungen und bieten
-              Hausbesuche im gesamten 15-km-Umkreis an. Vereinbaren Sie jetzt Ihren Termin.
+              Hausbesuche im gesamten 10-km-Umkreis an. Vereinbaren Sie jetzt Ihren Termin.
             </p>
             <div className="bg-gray-50 border border-gray-100 p-6">
-              <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-3">Adresse</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-3">Adresse</p>
               <p className="font-bold text-black">Fortis Salutis</p>
               <p className="text-gray-600 text-sm mt-1">Darmstädter Straße 43<br />64354 Reinheim</p>
               <div className="mt-4 space-y-1">
@@ -83,7 +83,7 @@ export default function ReinheimPage() {
           </div>
 
           <div>
-            <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-4">Unser Angebot</p>
+            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">Unser Angebot</p>
             <h2 className="text-2xl font-black text-black mb-8">Alle Leistungen in Reinheim</h2>
             <div className="space-y-2">
               {services.map((s) => (

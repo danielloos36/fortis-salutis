@@ -6,6 +6,7 @@ export interface Location {
   direction: string
   intro: string
   hausbesuche: boolean
+  hausbesucheOnRequest?: boolean
 }
 
 export const locations: Location[] = [
@@ -107,6 +108,7 @@ export const locations: Location[] = [
     direction: 'östlich',
     intro: 'Babenhausen liegt östlich von Reinheim am Rande des Landkreises Darmstadt-Dieburg. Patienten aus Babenhausen und Umgebung sind bei uns herzlich willkommen.',
     hausbesuche: false,
+    hausbesucheOnRequest: true,
   },
   {
     slug: 'seeheim-jugenheim',
@@ -116,6 +118,7 @@ export const locations: Location[] = [
     direction: 'nordwestlich',
     intro: 'Seeheim-Jugenheim liegt westlich von Reinheim an der Bergstraße und ist für seine malerische Lage bekannt. Unsere Praxis in Reinheim ist von hier aus über die B26 gut erreichbar.',
     hausbesuche: false,
+    hausbesucheOnRequest: true,
   },
   {
     slug: 'bickenbach',
@@ -133,7 +136,8 @@ export const locations: Location[] = [
     driveTime: '14 Minuten',
     direction: 'nördlich',
     intro: 'Eppertshausen liegt nördlich von Reinheim und ist über gut ausgebaute Straßen erreichbar. Als Privatpraxis bieten wir Patienten aus Eppertshausen individuelle Physiotherapie auf höchstem Niveau.',
-    hausbesuche: true,
+    hausbesuche: false,
+    hausbesucheOnRequest: true,
   },
   {
     slug: 'spachbruecken',

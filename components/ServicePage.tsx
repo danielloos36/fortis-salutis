@@ -36,13 +36,13 @@ export default function ServicePage({
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-14 w-full">
-          <p className="text-[10px] text-white/50 uppercase tracking-[0.35em] mb-3 font-bold">
+          <p className="text-[10px] text-white uppercase tracking-[0.35em] mb-3 font-bold">
             Leistungen · Fortis Salutis Reinheim
           </p>
           <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[0.95]">
             {title}
           </h1>
-          <p className="text-white/70 mt-3 text-base max-w-lg">{subtitle}</p>
+          <p className="text-white mt-3 text-base max-w-lg">{subtitle}</p>
         </div>
       </section>
 
@@ -91,16 +91,19 @@ export default function ServicePage({
       </section>
 
       {/* Benefits */}
-      <section className="bg-[#0a0a0a] py-20 px-6">
+      <section className="bg-gray-100 py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-3 font-bold">Ihre Vorteile</p>
-          <h2 className="text-4xl font-black text-white mb-14">Was Sie erwarten können</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-800/30">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-6 h-px bg-wine" />
+            <p className="text-[10px] text-wine font-bold uppercase tracking-[0.3em]">Ihre Vorteile</p>
+          </div>
+          <h2 className="text-4xl font-black text-black mb-14">Was Sie erwarten können</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {benefits.map((b, i) => (
-              <div key={i} className="bg-[#0a0a0a] p-8">
-                <span className="text-wine font-black text-3xl leading-none block mb-5">0{i + 1}</span>
-                <h3 className="text-white font-black mb-3">{b.title}</h3>
-                <p className="text-white text-sm leading-relaxed">{b.desc}</p>
+              <div key={i} className="bg-white p-8 border-t-2 border-wine">
+                <span className="text-wine font-black text-5xl leading-none block mb-6 opacity-40">0{i + 1}</span>
+                <h3 className="font-black text-black text-base mb-3">{b.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{b.desc}</p>
               </div>
             ))}
           </div>
@@ -108,7 +111,7 @@ export default function ServicePage({
       </section>
 
       {/* Process */}
-      {process && (
+      {/* {process && (
         <section className="bg-gray-100 py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-3 font-bold">So läuft es ab</p>
@@ -131,7 +134,7 @@ export default function ServicePage({
             </div>
           </div>
         </section>
-      )}
+      )} */}
 
       {/* Related services */}
       {relatedLinks && relatedLinks.length > 0 && (

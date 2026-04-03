@@ -11,7 +11,7 @@ export default function DatenschutzPage() {
   return (
     <div className="pt-32 pb-24 px-6">
       <div className="max-w-3xl mx-auto">
-        <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-3">Rechtliches</p>
+        <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-3">Rechtliches</p>
         <h1 className="text-5xl font-black text-black mb-12">Datenschutz&shy;erklärung</h1>
 
         <div className="space-y-8">
@@ -73,7 +73,7 @@ export default function DatenschutzPage() {
             </p>
           </section>
 
-          <p className="text-gray-400 text-sm italic">
+          <p className="text-gray-500 text-sm italic">
             Diese Datenschutzerklärung ist ein Platzhalter und muss durch einen
             rechtlich geprüften Text ersetzt werden.
           </p>

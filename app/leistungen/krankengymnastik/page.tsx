@@ -14,9 +14,9 @@ export default function KrankengymnastikPage() {
       subtitle="Gezielte Bewegungstherapie für mehr Lebensqualität"
       image="/hero-banner-startseite.jpg"
       intro={[
-        'Die Krankengymnastik ist das Herzstück der Physiotherapie und eine der ältesten und bewährtesten Behandlungsformen in der Medizin. Durch gezielte, therapeutisch angeleitete Übungen werden Bewegungseinschränkungen behoben, muskuläre Ungleichgewichte ausgeglichen und der Körper in seinen natürlichen Funktionen gestärkt.',
-        'In unserer Praxis Fortis Salutis in Reinheim setzen wir auf eine individuelle, befundorientierte Krankengymnastik. Jede Behandlung beginnt mit einer ausführlichen Befundaufnahme, bei der wir Ihre aktuelle Situation genau analysieren, um einen maßgeschneiderten Therapieplan zu erstellen.',
-        'Ob nach einer Operation, infolge einer Verletzung oder bei chronischen Beschwerden – die Krankengymnastik unterstützt Ihren Körper dabei, verlorene Funktionen wiederzuerlangen und langfristig schmerzfrei zu bleiben. Wir nehmen uns die Zeit, die eine wirklich wirksame Therapie benötigt.',
+        'Die Krankengymnastik ist das Herzstück der Physiotherapie. Durch gezielte, therapeutisch angeleitete Übungen werden Bewegungseinschränkungen behoben und der Körper in seinen natürlichen Funktionen gestärkt.',
+        'Uns liegt besonders eine aktive Therapie am Herzen: Wir legen großen Wert darauf, dass Patient*innen in Bewegung kommen. Denn der Körper heilt sich am besten selbst – wenn man ihm die richtigen Impulse gibt.',
+        'Das Ziel ist kein kurzfristiger Effekt, sondern ein langfristiger Therapieerfolg. Jede Behandlung beginnt daher mit einer sorgfältigen Befundaufnahme, auf deren Basis wir einen individuellen Plan entwickeln – ob nach einer Operation, nach einer Verletzung oder bei chronischen Beschwerden.',
       ]}
       indications={[
         'Rückenschmerzen, LWS-Syndrom & Bandscheibenvorfälle',
@@ -39,7 +39,7 @@ export default function KrankengymnastikPage() {
         },
         {
           title: 'Muskulatur stärken',
-          desc: 'Durch kräftigende Übungen werden die stabilisierenden Muskelgruppen aufgebaut und der Körper langfristig vor Rückfällen geschützt.',
+          desc: 'Durch kräftigende Übungen wird die Muskulatur gezielt aufgebaut und der Körper langfristig vor Rückfällen geschützt.',
         },
         {
           title: 'Rückfälle verhindern',

@@ -11,7 +11,7 @@ export default function ImpressumPage() {
   return (
     <div className="pt-32 pb-24 px-6">
       <div className="max-w-3xl mx-auto">
-        <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-3">Rechtliches</p>
+        <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-3">Rechtliches</p>
         <h1 className="text-5xl font-black text-black mb-12">Impressum</h1>
 
         <div className="prose prose-gray max-w-none space-y-8">

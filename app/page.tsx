@@ -21,7 +21,7 @@ const leistungen = [
   },
   {
     title: 'Manuelle Therapie',
-    desc: 'Spezifische Handgrifftechniken zur Behandlung von Gelenkblockierungen und Muskelverspannungen.',
+    desc: 'Gezielte manuelle Grifftechniken bei Bewegungseinschränkungen, Rückenschmerzen und Muskelverspannungen.',
     href: '/leistungen/manuelle-therapie',
   },
   {
@@ -31,7 +31,7 @@ const leistungen = [
   },
   {
     title: 'Hausbesuche',
-    desc: 'Physiotherapie direkt bei Ihnen zuhause – für Patienten mit eingeschränkter Mobilität.',
+    desc: 'Physiotherapie direkt bei Ihnen zuhause – für Patient*innen mit eingeschränkter Mobilität.',
     href: '/leistungen/hausbesuche',
   },
 ]
@@ -66,7 +66,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-24">
-          <p className="text-[11px] text-white/50 uppercase tracking-[0.35em] mb-6">
+          <p className="text-[11px] text-white uppercase tracking-[0.35em] mb-6">
             Physiotherapie · Reinheim, Hessen
           </p>
           <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-[7rem] font-black text-white leading-[0.9] tracking-tight mb-8 max-w-4xl">
@@ -74,9 +74,8 @@ export default function Home() {
             <br />
             <span className="text-white/50">die wirkt.</span>
           </h1>
-          <p className="text-base sm:text-lg text-white/70 max-w-lg mb-12 leading-relaxed">
-            Individuelle Therapie auf höchstem Niveau. Mehr Zeit, mehr Fürsorge –
-            ohne Kassenkompromisse. Ihr Körper verdient das Beste.
+          <p className="text-base sm:text-lg text-white max-w-lg mb-12 leading-relaxed">
+            Damit Sie als Patient*in Schmerzen nachhaltig reduzieren und an Mobilität sowie Autonomie gewinnen.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
@@ -185,18 +184,13 @@ export default function Home() {
             <p className="text-gray-600 leading-relaxed mb-5">
               Fortis Salutis ist Ihre Privatpraxis für Physiotherapie in Reinheim, Hessen. Als Praxis
               mit Heilpraktikerzulassung bieten wir Ihnen umfassende physiotherapeutische Behandlungen
-              auf höchstem Niveau – fernab von kurzen Kassentierminen.
+              auf höchstem Niveau – individuell, ganzheitlich und evidenzbasiert.
             </p>
             <p className="text-gray-600 leading-relaxed mb-5">
               Unser Team unter der Leitung von{' '}
-              <strong className="font-bold text-black">Mattis Bischoff</strong> und{' '}
-              <strong className="font-bold text-black">Daniel Loos</strong> setzt auf individuelle,
-              evidenzbasierte Therapiekonzepte. Jeder Patient erhält eine maßgeschneiderte Behandlung,
-              die genau auf seine Bedürfnisse abgestimmt ist.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-10">
-              Als Privatpraxis haben wir mehr Zeit für Sie – intensive Einzelbehandlungen, bei denen
-              Ihr Wohlbefinden im absoluten Mittelpunkt steht.
+              <strong className="font-bold text-black">Mattis Bischoff</strong> setzt auf individuelle,
+              evidenzbasierte Therapiekonzepte. Jede*r Patient*in erhält eine maßgeschneiderte Behandlung,
+              die genau auf ihre bzw. seine Bedürfnisse abgestimmt ist.
             </p>
             <a
               href="tel:+4915773327200"
@@ -207,13 +201,14 @@ export default function Home() {
           </div>
 
           <div className="relative">
-            <Image
-              src="/team-foto.jpg"
-              alt="Team Fortis Salutis – Mattis Bischoff und Daniel Loos, Physiotherapeuten in Reinheim"
-              width={800}
-              height={600}
-              className="w-full object-cover"
-            />
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/team-foto.jpg"
+                alt="Team Fortis Salutis – Mattis Bischoff und Daniel Loos, Physiotherapeuten in Reinheim"
+                fill
+                className="object-cover"
+              />
+            </div>
             <div className="absolute -bottom-5 -left-5 bg-black text-white px-6 py-5 hidden lg:block">
               <p className="text-[10px] uppercase tracking-[0.25em] text-gray-500 mb-1">Ihr Team</p>
               <p className="font-black text-sm">Mattis Bischoff</p>
@@ -227,8 +222,8 @@ export default function Home() {
       <section className="bg-[#0a0a0a] py-12 px-6 border-t border-wine/40">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { value: 'Individuelle', label: 'Behandlung ohne Zeitdruck' },
-            { value: 'Hausbesuche', label: 'Im 15-km-Umkreis' },
+            { value: 'Individuelle', label: 'Behandlung' },
+            { value: 'Hausbesuche', label: 'Im 10-km-Umkreis' },
             { value: 'Ganzheitlich', label: 'Körper & Bewegung im Fokus' },
             { value: 'Flexibel', label: 'Termin per Tel., Mail & WhatsApp' },
           ].map((item) => (
@@ -248,18 +243,18 @@ export default function Home() {
           fill
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-black/72" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/80" />
         <div className="relative z-10 max-w-7xl mx-auto">
           <div className="max-w-xl">
-            <p className="text-[10px] text-white/40 uppercase tracking-[0.35em] mb-5">Hausbesuche</p>
+            <p className="text-[10px] text-white uppercase tracking-[0.35em] mb-5">Hausbesuche</p>
             <h2 className="text-5xl lg:text-6xl font-black text-white mb-6 leading-[0.95]">
               Therapie direkt
               <br />
               bei Ihnen.
             </h2>
-            <p className="text-white/65 leading-relaxed mb-10 text-base">
+            <p className="text-white leading-relaxed mb-10 text-base">
               Sie können die Praxis nicht aufsuchen? Kein Problem. Wir kommen zu Ihnen nach
-              Hause – professionell, pünktlich und individuell. Im gesamten Umkreis von 15 km
+              Hause, im gesamten Umkreis von 10 km
               um Reinheim.
             </p>
             <Link
@@ -278,14 +273,14 @@ export default function Home() {
           <div className="mb-12">
             <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-3 font-bold">Einzugsgebiet</p>
             <h2 className="text-5xl lg:text-6xl font-black text-black leading-tight">
-              Für Patienten
+              Für Patient*innen
               <br />
               aus der ganzen Region.
             </h2>
           </div>
           <p className="text-gray-600 max-w-2xl mb-12 leading-relaxed">
             Unsere Praxis in Reinheim liegt zentral im Landkreis Darmstadt-Dieburg und ist aus der
-            gesamten Umgebung gut erreichbar. Hausbesuche bieten wir im Umkreis von bis zu 15 km an.
+            gesamten Umgebung gut erreichbar. Hausbesuche bieten wir im Umkreis von bis zu 10 km an.
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
             <Link

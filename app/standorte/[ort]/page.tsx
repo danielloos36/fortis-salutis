@@ -19,8 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!location) return {}
 
   return {
-    title: `Physiotherapie in ${location.name} – Fortis Salutis Reinheim`,
-    description: `Physiotherapie für Patienten aus ${location.name}: Nur ${location.distance} (${location.driveTime}) von unserer Praxis in Reinheim entfernt. Krankengymnastik, Manuelle Therapie, Trainingstherapie & Hausbesuche.`,
+    title: location.hausbesuche
+      ? `Physiotherapie & Hausbesuche in ${location.name} – Fortis Salutis Reinheim`
+      : `Physiotherapie in ${location.name} – Fortis Salutis Reinheim`,
+    description: location.hausbesuche
+      ? `Physiotherapie und Hausbesuche in ${location.name}: Wir kommen direkt zu Ihnen nach Hause. Nur ${location.distance} (${location.driveTime}) von Reinheim. Krankengymnastik, Manuelle Therapie, Trainingstherapie. Jetzt Termin vereinbaren.`
+      : `Physiotherapie für Patient*innen aus ${location.name}: Nur ${location.distance} (${location.driveTime}) von unserer Praxis in Reinheim entfernt. Krankengymnastik, Manuelle Therapie, Trainingstherapie. Jetzt Termin vereinbaren.`,
   }
 }
 
@@ -42,7 +46,7 @@ export default async function StandortPage({ params }: Props) {
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[360px] flex items-end">
         <Image
-          src="https://images.unsplash.com/photo-1467269204589-7855b8d8b52a?auto=format&fit=crop&w=1920&q=80"
+          src="/standorte-hero.jpg"
           alt={`Physiotherapie in ${location.name} – Einzugsgebiet Fortis Salutis Reinheim`}
           fill
           className="object-cover object-center"
@@ -50,11 +54,12 @@ export default async function StandortPage({ params }: Props) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/25" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-14 w-full">
-          <p className="text-[10px] text-white/40 uppercase tracking-[0.35em] mb-3">
+          <p className="text-[10px] text-white uppercase tracking-[0.35em] mb-3">
             Einzugsgebiet · {location.distance} von Reinheim
           </p>
           <h1 className="text-5xl lg:text-6xl font-black text-white leading-[0.95]">
-            Physiotherapie<br />in {location.name}
+            {location.hausbesuche ? 'Physiotherapie &' : 'Physiotherapie'}<br />
+            {location.hausbesuche ? <>Hausbesuche in<br />{location.name}</> : <>in {location.name}</>}
           </h1>
         </div>
       </section>
@@ -74,42 +79,47 @@ export default async function StandortPage({ params }: Props) {
       <section className="bg-white py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-4">
+            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">
               Physiotherapie für {location.name}
             </p>
             <h2 className="text-4xl font-black text-black mb-8 leading-tight">
-              Ihre Physiotherapeuten
-              <br />
-              <span className="text-gray-300">in der Nähe von<br />{location.name}.</span>
+              {location.hausbesuche ? (
+                <>Physiotherapie & Hausbesuche<br /><span className="text-gray-300">in {location.name}.</span></>
+              ) : (
+                <>Ihre Physiotherapeuten<br /><span className="text-gray-300">in der Nähe von {location.name}.</span></>
+              )}
             </h2>
 
-            <p className="text-gray-600 leading-relaxed mb-5">{location.intro}</p>
-
             <p className="text-gray-600 leading-relaxed mb-5">
-              Unsere Praxis Fortis Salutis befindet sich in der Darmstädter Straße 43 in Reinheim –
-              nur {location.distance} {location.direction} von {location.name}. Mit dem Auto erreichen
-              Sie uns in ca. {location.driveTime}. Kostenlose Parkmöglichkeiten stehen direkt vor
-              der Praxis zur Verfügung.
+              Unsere Praxis liegt nur {location.distance} von {location.name} entfernt –
+              mit dem Auto in ca. {location.driveTime} erreichbar. Kostenlose Parkmöglichkeiten
+              stehen direkt vor der Praxis zur Verfügung.
             </p>
 
-            <p className="text-gray-600 leading-relaxed mb-10">
-              Wir bieten Ihnen mehr Zeit, mehr Fürsorge und eine individuell auf Sie zugeschnittene Behandlung. Für Patienten aus{' '}
-              {location.name}, die die Praxis nicht aufsuchen können, bieten wir{' '}
-              {location.hausbesuche ? (
-                <strong className="font-bold text-black">Hausbesuche direkt bei Ihnen zuhause an.</strong>
-              ) : (
-                'alle Therapien in unserer modernen Praxis in Reinheim an.'
-              )}
-            </p>
+            {location.hausbesuche && (
+              <p className="text-black font-bold leading-relaxed mb-5">
+                Wir kommen direkt zu Ihnen nach {location.name} – Physiotherapie
+                bequem bei Ihnen zuhause.
+              </p>
+            )}
+
+            {location.hausbesucheOnRequest && (
+              <div className="border-l-2 border-gray-300 pl-4 mb-5">
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Für {location.name} können wir leider keine Hausbesuche anbieten.
+                  Wir freuen uns aber, Sie in unserer Praxis in Reinheim zu empfangen.
+                </p>
+              </div>
+            )}
 
             {/* Address box */}
             <div className="bg-gray-50 border border-gray-100 p-6">
-              <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-3">So erreichen Sie uns</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-3">So erreichen Sie uns</p>
               <p className="font-black text-black">Fortis Salutis</p>
               <p className="text-gray-600 text-sm mt-1">
                 Darmstädter Straße 43<br />
                 64354 Reinheim<br />
-                <span className="text-gray-400 text-xs">{location.distance} {location.direction} von {location.name}</span>
+                <span className="text-gray-500 text-xs">{location.distance} {location.direction} von {location.name}</span>
               </p>
               <div className="mt-4 flex flex-col gap-2">
                 <a
@@ -138,9 +148,9 @@ export default async function StandortPage({ params }: Props) {
 
           {/* Services */}
           <div>
-            <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-4">Unser Angebot</p>
+            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">Unser Angebot</p>
             <h2 className="text-2xl font-black text-black mb-8">
-              Alle Leistungen für Patienten aus {location.name}
+              Alle Leistungen für Patient*innen aus {location.name}
             </h2>
             <div className="space-y-2 mb-10">
               {services.map((s) => (
@@ -164,9 +174,9 @@ export default async function StandortPage({ params }: Props) {
 
             {location.hausbesuche && (
               <div className="bg-black text-white p-6">
-                <p className="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-3">Hausbesuche</p>
+                <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-3">Hausbesuche</p>
                 <p className="font-black mb-2">Wir kommen nach {location.name}.</p>
-                <p className="text-gray-400 text-sm leading-relaxed mb-5">
+                <p className="text-gray-500 text-sm leading-relaxed mb-5">
                   Sie können die Praxis nicht aufsuchen? Kein Problem – wir kommen zu Ihnen
                   nach Hause in {location.name}.
                 </p>
@@ -185,7 +195,7 @@ export default async function StandortPage({ params }: Props) {
       {/* Nearby locations */}
       <section className="bg-gray-100 py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-6">Weitere Standorte</p>
+          <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-6">Weitere Standorte</p>
           <div className="flex flex-wrap gap-2">
             <Link
               href="/standorte/reinheim"
