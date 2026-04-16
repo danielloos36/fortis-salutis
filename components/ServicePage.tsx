@@ -90,7 +90,7 @@ export default function ServicePage({
             <ul className="space-y-3">
               {indications.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="w-5 h-5 border border-wine flex items-center justify-center shrink-0 mt-0.5 text-wine">
+                  <span className="w-5 h-5 border border-wine flex items-center justify-center shrink-0 mt-0.5 text-wine rounded">
                     <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -113,7 +113,7 @@ export default function ServicePage({
           <h2 className="text-4xl font-black text-black mb-14">Was Sie erwarten können</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {benefits.map((b, i) => (
-              <div key={i} className="bg-white p-8 border-t-2 border-wine">
+              <div key={i} className="bg-white p-8 border-t-2 border-wine rounded">
                 <span className="text-wine font-black text-5xl leading-none block mb-6 opacity-40">0{i + 1}</span>
                 <h3 className="font-black text-black text-base mb-3">{b.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{b.desc}</p>
@@ -159,7 +159,7 @@ export default function ServicePage({
                 <Link
                   key={l.href}
                   href={l.href}
-                  className="border border-gray-300 text-gray-800 px-5 py-2.5 text-xs font-bold uppercase tracking-wider hover:border-wine hover:bg-wine hover:text-white transition-all"
+                  className="border border-gray-300 text-gray-800 px-5 py-2.5 text-xs font-bold uppercase tracking-wider hover:border-wine hover:bg-wine hover:text-white transition-all rounded"
                 >
                   {l.title}
                 </Link>

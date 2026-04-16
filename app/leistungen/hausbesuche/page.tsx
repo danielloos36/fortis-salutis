@@ -70,7 +70,7 @@ export default function HausbesuchePage() {
             </p>
             <a
               href="tel:+4915773327200"
-              className="inline-block bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-900 transition-colors"
+              className="inline-block bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-900 transition-colors rounded"
             >
               Hausbesuch anfragen
             </a>
@@ -88,7 +88,7 @@ export default function HausbesuchePage() {
                 'Patient*innen in der häuslichen Rehabilitation',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="w-5 h-5 border border-black flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="w-5 h-5 border border-black flex items-center justify-center shrink-0 mt-0.5 rounded">
                     <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
@@ -106,7 +106,7 @@ export default function HausbesuchePage() {
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-3 font-bold">Ihre Vorteile</p>
           <h2 className="text-4xl font-black text-white mb-14">Was Sie erwarten können</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-800/30">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {[
               {
                 title: 'Gewohnte Umgebung',
@@ -125,7 +125,7 @@ export default function HausbesuchePage() {
                 desc: 'Ein Hausbesuch von Fortis Salutis bedeutet dieselbe Expertise und Sorgfalt wie in der Praxis – kein Kompromiss.',
               },
             ].map((b, i) => (
-              <div key={i} className="bg-[#0a0a0a] p-8">
+              <div key={i} className="bg-[#111] p-8 rounded">
                 <span className="text-wine font-black text-3xl leading-none block mb-5">0{i + 1}</span>
                 <h3 className="text-white font-black mb-3">{b.title}</h3>
                 <p className="text-white text-sm leading-relaxed">{b.desc}</p>
@@ -149,7 +149,7 @@ export default function HausbesuchePage() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="border border-black bg-black text-white p-5">
+            <div className="border border-black bg-black text-white p-5 rounded">
               <p className="font-black">Reinheim</p>
               <p className="text-gray-400 text-xs mt-1">Hauptstandort der Praxis</p>
             </div>
@@ -157,7 +157,7 @@ export default function HausbesuchePage() {
               <Link
                 key={loc.slug}
                 href={`/standorte/${loc.slug}`}
-                className="border border-gray-200 bg-white p-5 hover:border-black group transition-colors"
+                className="border border-gray-200 bg-white p-5 hover:border-black group transition-colors rounded"
               >
                 <div className="flex items-center justify-between">
                   <div>

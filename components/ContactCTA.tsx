@@ -22,7 +22,7 @@ export default function ContactCTA({
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a
             href="tel:+4915773327200"
-            className={`inline-flex items-center justify-center gap-2 px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] transition-colors ${
+            className={`inline-flex items-center justify-center gap-2 px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] transition-colors rounded ${
               dark
                 ? 'bg-wine text-white hover:bg-wine-dark'
                 : 'bg-wine text-white hover:bg-wine-dark'
@@ -37,7 +37,7 @@ export default function ContactCTA({
             href="https://wa.me/4915773327200"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center justify-center gap-2 px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] border transition-colors ${
+            className={`inline-flex items-center justify-center gap-2 px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] border transition-colors rounded ${
               dark
                 ? 'border-white/20 text-white hover:border-wine hover:bg-wine'
                 : 'border-gray-300 text-black hover:border-wine hover:bg-wine hover:text-white'
@@ -47,7 +47,7 @@ export default function ContactCTA({
           </a>
           <a
             href="mailto:info@fortis-salutis.de"
-            className={`inline-flex items-center justify-center gap-2 px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] border transition-colors ${
+            className={`inline-flex items-center justify-center gap-2 px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] border transition-colors rounded ${
               dark
                 ? 'border-white/20 text-white hover:border-wine hover:bg-wine'
                 : 'border-gray-300 text-black hover:border-wine hover:bg-wine hover:text-white'

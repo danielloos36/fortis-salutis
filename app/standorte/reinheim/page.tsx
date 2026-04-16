@@ -67,7 +67,7 @@ export default function ReinheimPage() {
               Wir behandeln alle Beschwerden des Bewegungsapparats, neurologische Erkrankungen und bieten
               Hausbesuche im gesamten 10-km-Umkreis an. Vereinbaren Sie jetzt Ihren Termin.
             </p>
-            <div className="bg-gray-50 border border-gray-100 p-6">
+            <div className="bg-gray-50 border border-gray-100 p-6 rounded">
               <p className="text-[10px] text-neutral-400 uppercase tracking-[0.2em] mb-3">Adresse</p>
               <p className="font-bold text-black">Fortis Salutis</p>
               <p className="text-gray-600 text-sm mt-1">Darmstädter Straße 43<br />64354 Reinheim</p>
@@ -90,7 +90,7 @@ export default function ReinheimPage() {
                 <Link
                   key={s.href}
                   href={s.href}
-                  className="flex items-center justify-between border border-gray-100 p-5 hover:border-black group transition-colors"
+                  className="flex items-center justify-between border border-gray-100 p-5 hover:border-black group transition-colors rounded"
                 >
                   <span className="font-medium text-gray-900">{s.title}</span>
                   <svg

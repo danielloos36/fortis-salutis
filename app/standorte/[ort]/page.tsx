@@ -113,7 +113,7 @@ export default async function StandortPage({ params }: Props) {
             )}
 
             {/* Address box */}
-            <div className="bg-gray-50 border border-gray-100 p-6">
+            <div className="bg-gray-50 border border-gray-100 p-6 rounded">
               <p className="text-[10px] text-neutral-400 uppercase tracking-[0.2em] mb-3">So erreichen Sie uns</p>
               <p className="font-black text-black">Fortis Salutis</p>
               <p className="text-gray-600 text-sm mt-1">
@@ -157,7 +157,7 @@ export default async function StandortPage({ params }: Props) {
                 <Link
                   key={s.href}
                   href={s.href}
-                  className="flex items-center justify-between border border-gray-100 p-5 hover:border-black group transition-colors"
+                  className="flex items-center justify-between border border-gray-100 p-5 hover:border-black group transition-colors rounded"
                 >
                   <span className="font-medium text-gray-900">{s.title}</span>
                   <svg
@@ -173,7 +173,7 @@ export default async function StandortPage({ params }: Props) {
             </div>
 
             {location.hausbesuche && (
-              <div className="bg-black text-white p-6">
+              <div className="bg-black text-white p-6 rounded">
                 <p className="text-[10px] text-neutral-400 uppercase tracking-[0.2em] mb-3">Hausbesuche</p>
                 <p className="font-black mb-2">Wir kommen nach {location.name}.</p>
                 <p className="text-neutral-400 text-sm leading-relaxed mb-5">
@@ -182,7 +182,7 @@ export default async function StandortPage({ params }: Props) {
                 </p>
                 <Link
                   href="/leistungen/hausbesuche"
-                  className="inline-block border border-white/30 text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider hover:border-white transition-colors"
+                  className="inline-block border border-white/30 text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider hover:border-white transition-colors rounded"
                 >
                   Mehr zu Hausbesuchen
                 </Link>
@@ -199,7 +199,7 @@ export default async function StandortPage({ params }: Props) {
           <div className="flex flex-wrap gap-2">
             <Link
               href="/standorte/reinheim"
-              className="border border-wine bg-wine text-white px-4 py-2 text-xs font-bold uppercase tracking-wider"
+              className="border border-wine bg-wine text-white px-4 py-2 text-xs font-bold uppercase tracking-wider rounded"
             >
               Reinheim
             </Link>
@@ -210,7 +210,7 @@ export default async function StandortPage({ params }: Props) {
                 <Link
                   key={l.slug}
                   href={`/standorte/${l.slug}`}
-                  className="border border-gray-300 bg-white text-gray-700 px-4 py-2 text-xs font-medium hover:border-wine hover:bg-wine hover:text-white transition-all"
+                  className="border border-gray-300 bg-white text-gray-700 px-4 py-2 text-xs font-medium hover:border-wine hover:bg-wine hover:text-white transition-all rounded"
                 >
                   {l.name}
                 </Link>

@@ -116,9 +116,9 @@ export default function Navigation() {
             }`}>
               <div className="bg-white shadow-xl border-t-2 border-wine">
                 {[
-                  { title: 'Preise', href: '/gym#preis' },
-                  { title: 'Öffnungszeiten', href: '/gym#oeffnungszeiten' },
-                  { title: 'Galerie', href: '/gym#galerie' },
+                  { title: 'Preise', href: '/training#preis' },
+                  { title: 'Öffnungszeiten', href: '/training#oeffnungszeiten' },
+                  { title: 'Galerie', href: '/training#galerie' },
                 ].map((item) => (
                   <Link
                     key={item.href}
@@ -151,7 +151,7 @@ export default function Navigation() {
 
           <a
             href="tel:+4915773327200"
-            className="bg-black text-white text-sm font-bold uppercase tracking-[0.12em] px-5 py-3 hover:bg-gray-900 transition-colors"
+            className="bg-black text-white text-sm font-bold uppercase tracking-[0.12em] px-5 py-3 hover:bg-gray-900 transition-colors rounded"
           >
             Termin vereinbaren
           </a>
@@ -208,9 +208,9 @@ export default function Navigation() {
             <p className="text-[10px] uppercase tracking-[0.3em] text-wine font-bold mb-4">Training</p>
             <div className="space-y-1">
               {[
-                { title: 'Preise', href: '/gym#preis' },
-                { title: 'Öffnungszeiten', href: '/gym#oeffnungszeiten' },
-                { title: 'Galerie', href: '/gym#galerie' },
+                { title: 'Preise', href: '/training#preis' },
+                { title: 'Öffnungszeiten', href: '/training#oeffnungszeiten' },
+                { title: 'Galerie', href: '/training#galerie' },
               ].map((item) => (
                 <Link
                   key={item.href}
@@ -248,7 +248,7 @@ export default function Navigation() {
           <div className="pt-8 space-y-3">
             <a
               href="tel:+4915773327200"
-              className="block bg-white text-black text-center py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-colors"
+              className="block bg-white text-black text-center py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-colors rounded"
             >
               Jetzt anrufen
             </a>
@@ -256,7 +256,7 @@ export default function Navigation() {
               href="https://wa.me/4915773327200"
               target="_blank"
               rel="noopener noreferrer"
-              className="block border border-white/20 text-white text-center py-4 text-xs font-black uppercase tracking-[0.2em] hover:border-wine hover:bg-wine transition-colors"
+              className="block border border-white/20 text-white text-center py-4 text-xs font-black uppercase tracking-[0.2em] hover:border-wine hover:bg-wine transition-colors rounded"
             >
               WhatsApp
             </a>

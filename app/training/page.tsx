@@ -79,7 +79,7 @@ export default function GymPage() {
             <h2 className="text-4xl font-black text-black mb-10 leading-tight">Konditionen</h2>
             <div className="space-y-4">
               {preise.map(({ label, price, sub }) => (
-                <div key={label} className="border-t-2 border-wine bg-gray-50 p-6 flex items-center justify-between gap-6">
+                <div key={label} className="border-t-2 border-wine bg-gray-50 p-6 flex items-center justify-between gap-6 rounded">
                   <span className="text-sm text-gray-700 leading-snug max-w-xs">{label}</span>
                   <div className="text-right shrink-0">
                     <span className="font-black text-3xl text-black">{price}</span>
@@ -89,7 +89,7 @@ export default function GymPage() {
               ))}
             </div>
 
-            <div className="mt-8 border border-wine/30 bg-wine/5 px-6 py-5">
+            <div className="mt-8 border border-wine/30 bg-wine/5 px-6 py-5 rounded">
               <p className="text-sm text-gray-700 leading-relaxed">
                 <strong className="font-bold text-black">Probetraining möglich –</strong> inklusive
                 persönlicher Einweisung und individuell erstellter Trainingsplanung.
@@ -116,8 +116,8 @@ export default function GymPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
 
             {/* Knochen */}
-            <div className="bg-white p-7 border-t-2 border-wine">
-              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine">
+            <div className="bg-white p-7 border-t-2 border-wine rounded">
+              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine rounded">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
@@ -129,8 +129,8 @@ export default function GymPage() {
             </div>
 
             {/* Knorpel */}
-            <div className="bg-white p-7 border-t-2 border-wine">
-              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine">
+            <div className="bg-white p-7 border-t-2 border-wine rounded">
+              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine rounded">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                 </svg>
@@ -142,8 +142,8 @@ export default function GymPage() {
             </div>
 
             {/* Sehnen */}
-            <div className="bg-white p-7 border-t-2 border-wine">
-              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine">
+            <div className="bg-white p-7 border-t-2 border-wine rounded">
+              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine rounded">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
@@ -155,8 +155,8 @@ export default function GymPage() {
             </div>
 
             {/* Muskulatur */}
-            <div className="bg-white p-7 border-t-2 border-wine">
-              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine">
+            <div className="bg-white p-7 border-t-2 border-wine rounded">
+              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine rounded">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
@@ -168,8 +168,8 @@ export default function GymPage() {
             </div>
 
             {/* Bänder */}
-            <div className="bg-white p-7 border-t-2 border-wine">
-              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine">
+            <div className="bg-white p-7 border-t-2 border-wine rounded">
+              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine rounded">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
@@ -181,8 +181,8 @@ export default function GymPage() {
             </div>
 
             {/* Immunsystem */}
-            <div className="bg-white p-7 border-t-2 border-wine">
-              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine">
+            <div className="bg-white p-7 border-t-2 border-wine rounded">
+              <div className="w-10 h-10 bg-wine/10 flex items-center justify-center mb-5 text-wine rounded">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
@@ -196,8 +196,8 @@ export default function GymPage() {
 
           {/* Neuro + Abschluss */}
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-4">
-            <div className="bg-[#0a0a0a] p-7">
-              <div className="w-10 h-10 bg-wine/20 flex items-center justify-center mb-5 text-wine">
+            <div className="bg-[#0a0a0a] p-7 rounded">
+              <div className="w-10 h-10 bg-wine/20 flex items-center justify-center mb-5 text-wine rounded">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -208,7 +208,7 @@ export default function GymPage() {
               </p>
             </div>
 
-            <div className="bg-wine p-7 flex flex-col justify-center">
+            <div className="bg-wine p-7 flex flex-col justify-center rounded">
               <p className="text-white/70 text-[10px] uppercase tracking-[0.3em] mb-3 font-bold">Fazit</p>
               <p className="text-white font-black text-2xl leading-tight">
                 Lange Rede,<br />kurzer Sinn:<br />Es lohnt sich.
@@ -242,7 +242,7 @@ export default function GymPage() {
           <div className="flex flex-col sm:flex-row gap-3 shrink-0">
             <a
               href="tel:+4915773327200"
-              className="inline-block bg-white text-black px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-colors"
+              className="inline-block bg-white text-black px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-colors rounded"
             >
               Anrufen
             </a>
@@ -250,7 +250,7 @@ export default function GymPage() {
               href="https://wa.me/4915773327200"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block border border-white/20 text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:border-wine hover:bg-wine transition-colors"
+              className="inline-block border border-white/20 text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:border-wine hover:bg-wine transition-colors rounded"
             >
               WhatsApp
             </a>
