@@ -40,7 +40,7 @@ export default function Navigation() {
             alt="Fortis Salutis Logo"
             width={52}
             height={52}
-            className={`h-13 w-auto transition-all ${scrolled ? '' : 'invert brightness-0 invert'}`}
+            className={`h-12 w-auto transition-all ${scrolled ? '' : 'brightness-0 invert'}`}
           />
           <span className={`font-black text-xl tracking-tight transition-colors ${textColor}`}>
             Fortis Salutis

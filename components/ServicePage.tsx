@@ -123,7 +123,7 @@ export default function ServicePage({
                   <h3 className="font-black text-black mb-2">{p.step}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{p.desc}</p>
                   {i < process.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 -right-4 text-gray-300">
+                    <div className="hidden lg:block absolute top-8 -right-4 text-neutral-400">
                       <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                       </svg>

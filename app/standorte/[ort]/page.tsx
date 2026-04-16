@@ -79,14 +79,14 @@ export default async function StandortPage({ params }: Props) {
       <section className="bg-white py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">
+            <p className="text-[10px] text-neutral-400 uppercase tracking-[0.3em] mb-4">
               Physiotherapie für {location.name}
             </p>
             <h2 className="text-4xl font-black text-black mb-8 leading-tight">
               {location.hausbesuche ? (
-                <>Physiotherapie & Hausbesuche<br /><span className="text-gray-300">in {location.name}.</span></>
+                <>Physiotherapie & Hausbesuche<br /><span className="text-neutral-400">in {location.name}.</span></>
               ) : (
-                <>Ihre Physiotherapeuten<br /><span className="text-gray-300">in der Nähe von {location.name}.</span></>
+                <>Ihre Physiotherapeuten<br /><span className="text-neutral-400">in der Nähe von {location.name}.</span></>
               )}
             </h2>
 
@@ -114,12 +114,12 @@ export default async function StandortPage({ params }: Props) {
 
             {/* Address box */}
             <div className="bg-gray-50 border border-gray-100 p-6">
-              <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-3">So erreichen Sie uns</p>
+              <p className="text-[10px] text-neutral-400 uppercase tracking-[0.2em] mb-3">So erreichen Sie uns</p>
               <p className="font-black text-black">Fortis Salutis</p>
               <p className="text-gray-600 text-sm mt-1">
                 Darmstädter Straße 43<br />
                 64354 Reinheim<br />
-                <span className="text-gray-500 text-xs">{location.distance} {location.direction} von {location.name}</span>
+                <span className="text-neutral-400 text-xs">{location.distance} {location.direction} von {location.name}</span>
               </p>
               <div className="mt-4 flex flex-col gap-2">
                 <a
@@ -148,7 +148,7 @@ export default async function StandortPage({ params }: Props) {
 
           {/* Services */}
           <div>
-            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">Unser Angebot</p>
+            <p className="text-[10px] text-neutral-400 uppercase tracking-[0.3em] mb-4">Unser Angebot</p>
             <h2 className="text-2xl font-black text-black mb-8">
               Alle Leistungen für Patient*innen aus {location.name}
             </h2>
@@ -161,7 +161,7 @@ export default async function StandortPage({ params }: Props) {
                 >
                   <span className="font-medium text-gray-900">{s.title}</span>
                   <svg
-                    className="w-4 h-4 text-gray-300 group-hover:text-black transition-colors"
+                    className="w-4 h-4 text-neutral-400 group-hover:text-black transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -174,9 +174,9 @@ export default async function StandortPage({ params }: Props) {
 
             {location.hausbesuche && (
               <div className="bg-black text-white p-6">
-                <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-3">Hausbesuche</p>
+                <p className="text-[10px] text-neutral-400 uppercase tracking-[0.2em] mb-3">Hausbesuche</p>
                 <p className="font-black mb-2">Wir kommen nach {location.name}.</p>
-                <p className="text-gray-500 text-sm leading-relaxed mb-5">
+                <p className="text-neutral-400 text-sm leading-relaxed mb-5">
                   Sie können die Praxis nicht aufsuchen? Kein Problem – wir kommen zu Ihnen
                   nach Hause in {location.name}.
                 </p>
@@ -195,7 +195,7 @@ export default async function StandortPage({ params }: Props) {
       {/* Nearby locations */}
       <section className="bg-gray-100 py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-6">Weitere Standorte</p>
+          <p className="text-[10px] text-neutral-400 uppercase tracking-[0.3em] mb-6">Weitere Standorte</p>
           <div className="flex flex-wrap gap-2">
             <Link
               href="/standorte/reinheim"

@@ -72,7 +72,7 @@ export default function Home() {
           <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-[7rem] font-black text-white leading-[0.9] tracking-tight mb-8 max-w-4xl">
             Physio&shy;therapie
             <br />
-            <span className="text-white/50">die wirkt.</span>
+            <span className="text-white/50">ganzheitlich.</span>
           </h1>
           <p className="text-base sm:text-lg text-white max-w-lg mb-12 leading-relaxed">
             Damit Sie als Patient*in Schmerzen nachhaltig reduzieren und an Mobilität sowie Autonomie gewinnen.
@@ -177,9 +177,9 @@ export default function Home() {
             <h2 className="text-5xl lg:text-6xl font-black text-black mb-8 leading-[0.95]">
               Fortis Salutis.
               <br />
-              <span className="text-gray-300">Stark durch</span>
+              <span className="text-neutral-400">Stark durch</span>
               <br />
-              <span className="text-gray-300">Gesundheit.</span>
+              <span className="text-neutral-400">Gesundheit.</span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
               Fortis Salutis ist Ihre Privatpraxis für Physiotherapie in Reinheim, Hessen. Als Praxis

@@ -48,7 +48,7 @@ export default function ReinheimPage() {
       <section className="bg-white py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">Ihre Praxis vor Ort</p>
+            <p className="text-[10px] text-neutral-400 uppercase tracking-[0.3em] mb-4">Ihre Praxis vor Ort</p>
             <h2 className="text-4xl font-black text-black mb-8 leading-tight">
               Fortis Salutis –<br />zu Hause in Reinheim.
             </h2>
@@ -68,7 +68,7 @@ export default function ReinheimPage() {
               Hausbesuche im gesamten 10-km-Umkreis an. Vereinbaren Sie jetzt Ihren Termin.
             </p>
             <div className="bg-gray-50 border border-gray-100 p-6">
-              <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] mb-3">Adresse</p>
+              <p className="text-[10px] text-neutral-400 uppercase tracking-[0.2em] mb-3">Adresse</p>
               <p className="font-bold text-black">Fortis Salutis</p>
               <p className="text-gray-600 text-sm mt-1">Darmstädter Straße 43<br />64354 Reinheim</p>
               <div className="mt-4 space-y-1">
@@ -83,7 +83,7 @@ export default function ReinheimPage() {
           </div>
 
           <div>
-            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">Unser Angebot</p>
+            <p className="text-[10px] text-neutral-400 uppercase tracking-[0.3em] mb-4">Unser Angebot</p>
             <h2 className="text-2xl font-black text-black mb-8">Alle Leistungen in Reinheim</h2>
             <div className="space-y-2">
               {services.map((s) => (
@@ -94,7 +94,7 @@ export default function ReinheimPage() {
                 >
                   <span className="font-medium text-gray-900">{s.title}</span>
                   <svg
-                    className="w-4 h-4 text-gray-300 group-hover:text-black transition-colors"
+                    className="w-4 h-4 text-neutral-400 group-hover:text-black transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"

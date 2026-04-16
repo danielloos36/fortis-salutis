@@ -51,7 +51,7 @@ export default function HausbesuchePage() {
       <section className="bg-white py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <p className="text-[10px] text-gray-500 uppercase tracking-[0.3em] mb-4">Therapie zu Ihnen</p>
+            <p className="text-[10px] text-neutral-400 uppercase tracking-[0.3em] mb-4">Therapie zu Ihnen</p>
             <h2 className="text-4xl font-black text-black mb-8 leading-tight">
               Wenn der Weg zur<br />Praxis zu weit ist.
             </h2>
@@ -162,12 +162,12 @@ export default function HausbesuchePage() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="font-bold text-black group-hover:text-black">{loc.name}</p>
-                    <p className="text-gray-500 text-xs mt-1">
+                    <p className="text-neutral-400 text-xs mt-1">
                       {loc.distance} · ca. {loc.driveTime}
                     </p>
                   </div>
                   <svg
-                    className="w-4 h-4 text-gray-300 group-hover:text-black transition-colors"
+                    className="w-4 h-4 text-neutral-400 group-hover:text-black transition-colors"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -179,7 +179,7 @@ export default function HausbesuchePage() {
             ))}
           </div>
 
-          <p className="text-gray-500 text-sm mt-8">
+          <p className="text-neutral-400 text-sm mt-8">
             Nicht dabei? <a href="tel:+4915773327200" className="underline hover:text-black transition-colors">Rufen Sie uns an</a> – wir klären gerne,
             ob wir auch in Ihre Gemeinde kommen können.
           </p>

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions",
+    "allow": [
+      "Bash(command -v nvm)",
+      "Bash(npm --version)",
+      "Bash(brew install:*)",
+      "Bash(brew link:*)",
+      "Bash(/usr/local/Cellar/node/25.9.0_2/bin/node --version)",
+      "Read(//usr/local/bin/**)",
+      "Bash(ls /usr/local/bin/node*)",
+      "Read(//usr/local/include/node/**)",
+      "Read(//usr/local/include/**)",
+      "Bash(ln -sf /usr/local/Cellar/node/25.9.0_2/bin/node /usr/local/bin/node)",
+      "Bash(ln -sf /usr/local/Cellar/node/25.9.0_2/bin/npm /usr/local/bin/npm)",
+      "Bash(ln -sf /usr/local/Cellar/node/25.9.0_2/bin/npx /usr/local/bin/npx)"
+    ]
+  }
+}
