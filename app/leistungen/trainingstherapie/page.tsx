@@ -13,6 +13,7 @@ export default function TrainingstherapiePage() {
       title="Trainings­therapie"
       subtitle="Aktiv zurück ins Leben – therapeutisch geführtes Training"
       image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80"
+      imageMobile="/training.jpg"
       intro={[
         'Die Trainingstherapie verbindet das Beste aus Physiotherapie und gezieltem körperlichem Training. Unter therapeutischer Anleitung stärken Sie Ihren Körper systematisch – mit dem Ziel, Beschwerden dauerhaft zu überwinden und die körperliche Leistungsfähigkeit langfristig zu steigern.',
         'Anders als im normalen Fitnessstudio wird jede Trainingseinheit bei uns individuell geplant und medizinisch begleitet. Die Übungsauswahl, Intensität und Progression richten sich ausschließlich nach Ihrem Befund und Ihrem persönlichen Therapieziel. So wird das Training zur Medizin.',

@@ -15,6 +15,7 @@ const leistungen = [
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const [trainingDropdownOpen, setTrainingDropdownOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -23,13 +24,14 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const textColor = scrolled ? 'text-black' : 'text-white'
-  const hoverColor = scrolled ? 'hover:text-gray-500' : 'hover:text-white/70'
+  const isLight = (scrolled || dropdownOpen || trainingDropdownOpen) && !mobileOpen
+  const textColor = isLight ? 'text-black' : 'text-white'
+  const hoverColor = isLight ? 'hover:text-gray-500' : 'hover:text-white/70'
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-sm' : 'bg-transparent'
+        scrolled || mobileOpen || dropdownOpen || trainingDropdownOpen ? 'bg-white shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -40,7 +42,7 @@ export default function Navigation() {
             alt="Fortis Salutis Logo"
             width={52}
             height={52}
-            className={`h-12 w-auto transition-all ${scrolled ? '' : 'brightness-0 invert'}`}
+            className={`h-12 w-auto transition-all ${isLight ? '' : 'brightness-0 invert'}`}
           />
           <span className={`font-black text-xl tracking-tight transition-colors ${textColor}`}>
             Fortis Salutis
@@ -51,7 +53,7 @@ export default function Navigation() {
         <div className="hidden md:flex items-center gap-8">
           {/* Leistungen dropdown */}
           <div
-            className="relative"
+            className="relative self-stretch flex items-center"
             onMouseEnter={() => setDropdownOpen(true)}
             onMouseLeave={() => setDropdownOpen(false)}
           >
@@ -60,7 +62,7 @@ export default function Navigation() {
             >
               Leistungen
               <svg
-                className={`w-3.5 h-3.5 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${dropdownOpen ? 'rotate-180' : ''}`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -69,21 +71,68 @@ export default function Navigation() {
               </svg>
             </button>
 
-            {dropdownOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-52">
-                <div className="bg-white shadow-2xl border border-gray-100">
-                  {leistungen.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block px-5 py-3 text-sm text-gray-800 hover:bg-gray-50 hover:text-black border-b border-gray-50 last:border-0 transition-colors"
-                    >
-                      {item.title}
-                    </Link>
-                  ))}
-                </div>
+            <div className={`absolute top-full left-1/2 -translate-x-1/2 w-56 transition-all duration-200 ease-out ${
+              dropdownOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+            }`}>
+              <div className="bg-white shadow-xl border-t-2 border-wine">
+                {leistungen.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="flex items-center justify-between px-5 py-3.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-black border-b border-gray-100 last:border-0 transition-colors group"
+                  >
+                    {item.title}
+                    <svg className="w-3 h-3 text-gray-300 group-hover:text-wine group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
               </div>
-            )}
+            </div>
+          </div>
+
+          {/* Training dropdown */}
+          <div
+            className="relative self-stretch flex items-center"
+            onMouseEnter={() => setTrainingDropdownOpen(true)}
+            onMouseLeave={() => setTrainingDropdownOpen(false)}
+          >
+            <button
+              className={`flex items-center gap-1 text-sm font-bold uppercase tracking-[0.12em] transition-colors ${textColor} ${hoverColor}`}
+            >
+              Training
+              <svg
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${trainingDropdownOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <div className={`absolute top-full left-1/2 -translate-x-1/2 w-48 transition-all duration-200 ease-out ${
+              trainingDropdownOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+            }`}>
+              <div className="bg-white shadow-xl border-t-2 border-wine">
+                {[
+                  { title: 'Preise', href: '/gym#preis' },
+                  { title: 'Öffnungszeiten', href: '/gym#oeffnungszeiten' },
+                  { title: 'Galerie', href: '/gym#galerie' },
+                ].map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="flex items-center justify-between px-5 py-3.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-black border-b border-gray-100 last:border-0 transition-colors group"
+                  >
+                    {item.title}
+                    <svg className="w-3 h-3 text-gray-300 group-hover:text-wine group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
 
           <Link
@@ -127,55 +176,93 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100">
-          <div className="px-6 py-6 space-y-1">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-gray-500 pb-3">Leistungen</p>
-            {leistungen.map((item) => (
+      <div
+        className={`md:hidden fixed inset-0 top-0 z-[-1] bg-[#0a0a0a] transition-all duration-300 ease-in-out ${
+          mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className={`h-full flex flex-col px-6 pt-28 pb-10 transition-all duration-300 ${mobileOpen ? 'translate-y-0' : '-translate-y-4'}`}>
+
+          {/* Leistungen */}
+          <div className="mb-8">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-wine font-bold mb-4">Leistungen</p>
+            <div className="space-y-1">
+              {leistungen.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-between py-3 border-b border-white/10 text-white font-bold text-lg hover:text-wine transition-colors group"
+                >
+                  {item.title}
+                  <svg className="w-4 h-4 text-white/20 group-hover:text-wine transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Training */}
+          <div className="mb-8">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-wine font-bold mb-4">Training</p>
+            <div className="space-y-1">
+              {[
+                { title: 'Preise', href: '/gym#preis' },
+                { title: 'Öffnungszeiten', href: '/gym#oeffnungszeiten' },
+                { title: 'Galerie', href: '/gym#galerie' },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-between py-3 border-b border-white/10 text-white font-bold text-lg hover:text-wine transition-colors group"
+                >
+                  {item.title}
+                  <svg className="w-4 h-4 text-white/20 group-hover:text-wine transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Weitere Links */}
+          <div className="space-y-1 mb-auto">
+            {[
+              { title: 'Über uns', href: '/#ueber-uns' },
+              { title: 'Kontakt', href: '/#kontakt' },
+            ].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="block py-2.5 text-sm font-medium text-gray-900 border-b border-gray-50 hover:text-black"
+                className="flex items-center justify-between py-3 border-b border-white/10 text-white/60 font-bold text-base hover:text-white transition-colors"
               >
                 {item.title}
               </Link>
             ))}
-            <div className="pt-4 space-y-1">
-              <Link
-                href="/#ueber-uns"
-                onClick={() => setMobileOpen(false)}
-                className="block py-2.5 text-sm font-medium text-gray-900 border-b border-gray-50"
-              >
-                Über uns
-              </Link>
-              <Link
-                href="/#kontakt"
-                onClick={() => setMobileOpen(false)}
-                className="block py-2.5 text-sm font-medium text-gray-900"
-              >
-                Kontakt
-              </Link>
-            </div>
-            <div className="pt-6 space-y-3">
-              <a
-                href="tel:+4915773327200"
-                className="block bg-black text-white text-center py-4 text-xs font-bold uppercase tracking-[0.15em]"
-              >
-                Jetzt anrufen
-              </a>
-              <a
-                href="https://wa.me/4915773327200"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block border border-black text-black text-center py-4 text-xs font-bold uppercase tracking-[0.15em]"
-              >
-                WhatsApp
-              </a>
-            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="pt-8 space-y-3">
+            <a
+              href="tel:+4915773327200"
+              className="block bg-white text-black text-center py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-colors"
+            >
+              Jetzt anrufen
+            </a>
+            <a
+              href="https://wa.me/4915773327200"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block border border-white/20 text-white text-center py-4 text-xs font-black uppercase tracking-[0.2em] hover:border-wine hover:bg-wine transition-colors"
+            >
+              WhatsApp
+            </a>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   )
 }

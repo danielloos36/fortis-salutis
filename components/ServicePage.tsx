@@ -6,6 +6,8 @@ interface Props {
   title: string
   subtitle: string
   image: string
+  imageMobile?: string
+  imagePosition?: string
   intro: string[]
   indications: string[]
   benefits: { title: string; desc: string }[]
@@ -17,6 +19,8 @@ export default function ServicePage({
   title,
   subtitle,
   image,
+  imageMobile,
+  imagePosition = 'object-center',
   intro,
   indications,
   benefits,
@@ -27,11 +31,20 @@ export default function ServicePage({
     <>
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-end">
+        {imageMobile && (
+          <Image
+            src={imageMobile}
+            alt={`${title} – Fortis Salutis Reinheim`}
+            fill
+            className="object-cover object-center lg:hidden"
+            priority
+          />
+        )}
         <Image
           src={image}
           alt={`${title} – Fortis Salutis Reinheim`}
           fill
-          className="object-cover object-center"
+          className={`object-cover ${imagePosition} ${imageMobile ? 'hidden lg:block' : ''}`}
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
