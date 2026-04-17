@@ -269,7 +269,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-3 font-bold">Einzugsgebiet</p>
-            <h2 className="text-5xl lg:text-6xl font-black text-black leading-tight">
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-black leading-tight">
               Für Patient*innen
               <br />
               aus der ganzen Region.
