@@ -31,7 +31,7 @@ export default function ReinheimPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-14 w-full">
           <p className="text-[10px] text-white uppercase tracking-[0.35em] mb-3">Standort</p>
-          <h1 className="text-5xl lg:text-6xl font-black text-white leading-[0.95]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[0.95]">
             Physiotherapie<br />in Reinheim
           </h1>
         </div>

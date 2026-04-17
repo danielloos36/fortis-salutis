@@ -57,7 +57,7 @@ export default async function StandortPage({ params }: Props) {
           <p className="text-[10px] text-white uppercase tracking-[0.35em] mb-3">
             Einzugsgebiet · {location.distance} von Reinheim
           </p>
-          <h1 className="text-5xl lg:text-6xl font-black text-white leading-[0.95]">
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[0.95]">
             {location.hausbesuche ? 'Physiotherapie &' : 'Physiotherapie'}<br />
             {location.hausbesuche ? <>Hausbesuche in<br />{location.name}</> : <>in {location.name}</>}
           </h1>
