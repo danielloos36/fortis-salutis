@@ -37,23 +37,38 @@ export default function ImpressumPage() {
           <section>
             <h2 className="text-xl font-black text-black mb-4">Berufsbezeichnung und berufsrechtliche Regelungen</h2>
             <p className="text-gray-600 leading-relaxed mb-3">
-              <strong className="font-bold text-black">Berufsbezeichnungen:</strong><br />
-              Physiotherapeut (verliehen in der Bundesrepublik Deutschland)<br />
-              Heilpraktiker (verliehen in der Bundesrepublik Deutschland)
+              <strong className="font-bold text-black">Berufsbezeichnung:</strong><br />
+              Physiotherapeut (verliehen in der Bundesrepublik Deutschland)
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-3">
+              <strong className="font-bold text-black">Zuständige Kammer:</strong><br />
+              Gesundheitsamt Darmstadt
             </p>
             <p className="text-gray-600 leading-relaxed mb-2">
               <strong className="font-bold text-black">Anwendbare berufsrechtliche Regelungen:</strong>
             </p>
             <ul className="text-gray-600 leading-relaxed list-disc pl-5 space-y-1">
               <li>Masseur- und Physiotherapeutengesetz (MPhG)</li>
-              <li>Heilpraktikergesetz (HPG) i. V. m. der Ersten Durchführungsverordnung zum Heilpraktikergesetz</li>
               <li>Berufsordnung der zuständigen Landesbehörde</li>
             </ul>
-            <p className="text-gray-600 leading-relaxed mt-3">
-              <strong className="font-bold text-black">Zuständige Aufsichtsbehörde:</strong><br />
-              Gesundheitsamt Landkreis Darmstadt-Dieburg<br />
-              Wilhelm-Glässing-Straße 30<br />
-              64521 Groß-Gerau
+          </section>
+
+          <section>
+            <h2 className="text-xl font-black text-black mb-4">Angaben zur Berufshaftpflichtversicherung</h2>
+            <p className="text-gray-600 leading-relaxed">
+              <strong className="font-bold text-black">Name und Sitz des Versicherers:</strong><br />
+              Continentale AG<br />
+              <strong className="font-bold text-black">Geltungsraum der Versicherung:</strong><br />
+              Deutschland
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-black text-black mb-4">Redaktionell verantwortlich</h2>
+            <p className="text-gray-600 leading-relaxed">
+              Mattis Bischoff<br />
+              Darmstädter Straße 43<br />
+              64354 Reinheim
             </p>
           </section>
 
