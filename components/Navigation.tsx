@@ -31,7 +31,7 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled || mobileOpen || dropdownOpen || trainingDropdownOpen ? 'bg-white shadow-sm' : 'bg-transparent'
+        mobileOpen ? 'bg-[#0a0a0a]' : scrolled || dropdownOpen || trainingDropdownOpen ? 'bg-white shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -181,11 +181,11 @@ export default function Navigation() {
           mobileOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
-        <div className={`h-full flex flex-col px-6 pt-28 pb-10 transition-all duration-300 ${mobileOpen ? 'translate-y-0' : '-translate-y-4'}`}>
+        <div className={`h-full flex flex-col px-6 pt-28 pb-10 overflow-y-auto transition-all duration-300 ${mobileOpen ? 'translate-y-0' : '-translate-y-4'}`}>
 
           {/* Leistungen */}
           <div className="mb-8">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-wine font-bold mb-4">Leistungen</p>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold mb-4">Leistungen</p>
             <div className="space-y-1">
               {leistungen.map((item) => (
                 <Link
@@ -205,7 +205,7 @@ export default function Navigation() {
 
           {/* Training */}
           <div className="mb-8">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-wine font-bold mb-4">Training</p>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold mb-4">Training</p>
             <div className="space-y-1">
               {[
                 { title: 'Preise', href: '/training#preis' },

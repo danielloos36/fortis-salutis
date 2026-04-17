@@ -46,9 +46,6 @@ const standorte = [
   ['Otzberg', '/standorte/otzberg'],
   ['Modautal', '/standorte/modautal'],
   ['Groß-Zimmern', '/standorte/gross-zimmern'],
-  ['Babenhausen', '/standorte/babenhausen'],
-  ['Seeheim-Jugenheim', '/standorte/seeheim-jugenheim'],
-  ['Eppertshausen', '/standorte/eppertshausen'],
 ]
 
 export default function Home() {
