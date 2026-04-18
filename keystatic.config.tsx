@@ -30,7 +30,7 @@ function serviceSchema() {
 }
 
 export default config({
-  storage: process.env.KEYSTATIC_GITHUB_CLIENT_ID
+  storage: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_CLIENT_ID
     ? {
         kind: 'github',
         repo: {
