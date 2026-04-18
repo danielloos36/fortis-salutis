@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ServicePage from '@/components/ServicePage'
+import content from '@/content/services/manuelle-therapie.json'
 
 export const metadata: Metadata = {
   title: 'Manuelle Therapie Reinheim – Physiotherapie Fortis Salutis',
@@ -10,58 +11,13 @@ export const metadata: Metadata = {
 export default function ManuelleTherapiePage() {
   return (
     <ServicePage
-      title="Manuelle Therapie"
-      subtitle="Gezielte manuelle Grifftechniken für Gelenke und Weichteile"
+      title={content.title}
+      subtitle={content.subtitle}
       image="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1920&q=80"
-      intro={[
-        'Die Manuelle Therapie behandelt Funktionsstörungen an Gelenken, Muskeln und Weichteilen – gezielt, schonend und mit den Händen. Ziel ist es, Beweglichkeit wiederherzustellen und Schmerzen nachhaltig zu lindern.',
-        'Dabei betrachten wir immer den ganzen Körper, nicht nur die schmerzende Stelle. So lassen sich Ursachen gezielt finden und behandeln – oft bereits nach wenigen Sitzungen mit spürbarem Ergebnis.',
-      ]}
-      indications={[
-        'Bewegungseinschränkungen an Wirbelsäule, Schulter, Knie & Hüfte',
-        'Halswirbelsäulen-Beschwerden',
-        'Lendenwirbelsäulen-Schmerzen & Ischias-Symptomatik',
-        'Bandscheibenvorfälle & Facettengelenkssyndrome',
-        'Schulter-Arm-Syndrome & Impingement',
-        'Schulterschmerzen & Schultersteife',
-        'Knie- & Sprunggelenksbeschwerden',
-      ]}
-      benefits={[
-        {
-          title: 'Sofortige Wirkung',
-          desc: 'Bewegungseinschränkungen können oft in einer Sitzung deutlich verbessert werden – mit unmittelbarer Schmerzlinderung und spürbar mehr Beweglichkeit.',
-        },
-        {
-          title: 'Ursachenbehandlung',
-          desc: 'Statt nur Symptome zu bekämpfen, suchen wir die Ursache der Beschwerden und behandeln gezielt dort.',
-        },
-        {
-          title: 'Ohne Medikamente',
-          desc: 'Manuelle Therapie ist eine natürliche, nebenwirkungsfreie Behandlungsform, die auf den Einsatz von Schmerzmitteln verzichtet.',
-        },
-        {
-          title: 'Individuell & präzise',
-          desc: 'Jede Technik wird exakt auf Ihren Befund abgestimmt. Kein Schema F – jede Behandlung ist einzigartig.',
-        },
-      ]}
-      process={[
-        {
-          step: 'Untersuchung',
-          desc: 'Ausführliche Befundaufnahme mit manueller Gelenkuntersuchung.',
-        },
-        {
-          step: 'Diagnose',
-          desc: 'Auf Basis des Befunds erstellen wir ein klares Bild der Funktionsstörungen und Behandlungsprioritäten.',
-        },
-        {
-          step: 'Behandlung',
-          desc: 'Gezielte Mobilisation, Manipulation und Weichteiltechniken – schonend und präzise ausgeführt.',
-        },
-        {
-          step: 'Stabilisierung',
-          desc: 'Ergänzende Übungen sichern den Therapieerfolg und verhindern das Wiederauftreten der Beschwerden.',
-        },
-      ]}
+      intro={content.intro}
+      indications={content.indications}
+      benefits={content.benefits}
+      process={content.process}
       relatedLinks={[
         { title: 'Krankengymnastik', href: '/leistungen/krankengymnastik' },
         { title: 'Trainingstherapie', href: '/leistungen/trainingstherapie' },

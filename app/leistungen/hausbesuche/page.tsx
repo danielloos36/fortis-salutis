@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import ContactCTA from '@/components/ContactCTA'
 import { locations } from '@/lib/locations'
+import hbContent from '@/content/pages/hausbesuche.json'
 
 export const metadata: Metadata = {
   title: 'Hausbesuche Physiotherapie Reinheim & Umgebung – Fortis Salutis',
@@ -55,19 +56,9 @@ export default function HausbesuchePage() {
             <h2 className="text-4xl font-black text-black mb-8 leading-tight">
               Wenn der Weg zur<br />Praxis zu weit ist.
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-5">
-              Nicht jede*r Patient*in kann die Praxis aufsuchen – sei es aufgrund von Bettlägerigkeit,
-              frischer Operation, eingeschränkter Mobilität oder hohem Alter. Genau für diese
-              Menschen bieten wir unseren Hausbesuchsservice an.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-5">
-              Unser Therapeutenteam kommt zu Ihnen nach Hause – die Behandlung ist dabei
-              genauso hochwertig und individuell wie in unserer Praxis in Reinheim.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-10">
-              Wir decken Reinheim und das gesamte Umland im Umkreis von etwa 10 km ab.
-              Sprechen Sie uns an – wir finden gemeinsam eine Lösung für Sie.
-            </p>
+            <p className="text-gray-600 leading-relaxed mb-5">{hbContent.introText1}</p>
+            <p className="text-gray-600 leading-relaxed mb-5">{hbContent.introText2}</p>
+            <p className="text-gray-600 leading-relaxed mb-10">{hbContent.introText3}</p>
             <a
               href="tel:+4915773327200"
               className="inline-block bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-900 transition-colors rounded"
@@ -80,13 +71,7 @@ export default function HausbesuchePage() {
             <p className="text-[10px] text-gray-400 uppercase tracking-[0.3em] mb-4">Wer profitiert?</p>
             <h2 className="text-2xl font-black text-black mb-8">Für wen sind Hausbesuche geeignet?</h2>
             <ul className="space-y-3">
-              {[
-                'Patient*innen mit eingeschränkter Mobilität & Bettlägerige',
-                'Frisch operierte Patient*innen ohne Transportmöglichkeit',
-                'Ältere Patient*innen & Senior*innen',
-                'Schwere chronische Erkrankungen',
-                'Patient*innen in der häuslichen Rehabilitation',
-              ].map((item) => (
+              {hbContent.indications.map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="w-5 h-5 border border-black flex items-center justify-center shrink-0 mt-0.5 rounded">
                     <svg className="w-2.5 h-2.5" fill="currentColor" viewBox="0 0 20 20">

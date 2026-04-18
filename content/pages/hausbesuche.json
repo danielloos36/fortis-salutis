@@ -1,0 +1,30 @@
+{
+  "introText1": "Nicht jede*r Patient*in kann die Praxis aufsuchen – sei es aufgrund von Bettlägerigkeit, frischer Operation, eingeschränkter Mobilität oder hohem Alter. Genau für diese Menschen bieten wir unseren Hausbesuchsservice an.",
+  "introText2": "Unser Therapeutenteam kommt zu Ihnen nach Hause – die Behandlung ist dabei genauso hochwertig und individuell wie in unserer Praxis in Reinheim.",
+  "introText3": "Wir decken Reinheim und das gesamte Umland im Umkreis von etwa 10 km ab. Sprechen Sie uns an – wir finden gemeinsam eine Lösung für Sie.",
+  "indications": [
+    "Patient*innen mit eingeschränkter Mobilität & Bettlägerige",
+    "Frisch operierte Patient*innen ohne Transportmöglichkeit",
+    "Ältere Patient*innen & Senior*innen",
+    "Schwere chronische Erkrankungen",
+    "Patient*innen in der häuslichen Rehabilitation"
+  ],
+  "benefits": [
+    {
+      "title": "Gewohnte Umgebung",
+      "desc": "Therapie im eigenen Zuhause – ohne Stress, ohne Fahrtweg. Sie können sich voll auf die Behandlung konzentrieren."
+    },
+    {
+      "title": "Kein Transportaufwand",
+      "desc": "Wir kommen zu Ihnen. Keine Organisation von Krankentransport oder Fahrdienst notwendig."
+    },
+    {
+      "title": "Alltagsgerechte Therapie",
+      "desc": "Wir können die Therapie auf Ihre tatsächliche Wohnsituation anpassen und alltagsrelevante Übungen einbauen."
+    },
+    {
+      "title": "Gleiche Qualität",
+      "desc": "Ein Hausbesuch von Fortis Salutis bedeutet dieselbe Expertise und Sorgfalt wie in der Praxis – kein Kompromiss."
+    }
+  ]
+}

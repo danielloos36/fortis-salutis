@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import HeroTypewriter from '@/components/HeroTypewriter'
+import homeContent from '@/content/pages/home.json'
 
 export const metadata: Metadata = {
   title: 'Physiotherapie Reinheim – Fortis Salutis',
@@ -9,33 +10,18 @@ export const metadata: Metadata = {
     'Physiotherapie in Reinheim, Hessen. Krankengymnastik, Manuelle Therapie, Trainingstherapie, Neurologische Therapie und Hausbesuche. Individuelle Behandlung auf höchstem Niveau. Jetzt Termin vereinbaren.',
 }
 
-const leistungen = [
-  {
-    title: 'Krankengymnastik',
-    desc: 'Gezielte Bewegungstherapie zur Wiederherstellung von Beweglichkeit, Kraft und Koordination.',
-    href: '/leistungen/krankengymnastik',
-  },
-  {
-    title: 'Trainingstherapie',
-    desc: 'Gerätegestütztes therapeutisches Training zur Rehabilitation und Prävention.',
-    href: '/leistungen/trainingstherapie',
-  },
-  {
-    title: 'Manuelle Therapie',
-    desc: 'Gezielte manuelle Grifftechniken bei Bewegungseinschränkungen, Rückenschmerzen und Muskelverspannungen.',
-    href: '/leistungen/manuelle-therapie',
-  },
-  {
-    title: 'Neurologische Therapie',
-    desc: 'Spezialisierte Behandlung bei Erkrankungen des Nervensystems wie Schlaganfall oder Parkinson.',
-    href: '/leistungen/neurologische-therapie',
-  },
-  {
-    title: 'Hausbesuche',
-    desc: 'Physiotherapie direkt bei Ihnen zuhause – für Patient*innen mit eingeschränkter Mobilität.',
-    href: '/leistungen/hausbesuche',
-  },
+const leistungenHrefs = [
+  '/leistungen/krankengymnastik',
+  '/leistungen/trainingstherapie',
+  '/leistungen/manuelle-therapie',
+  '/leistungen/neurologische-therapie',
+  '/leistungen/hausbesuche',
 ]
+
+const leistungen = homeContent.leistungenCards.map((card, i) => ({
+  ...card,
+  href: leistungenHrefs[i],
+}))
 
 const standorte = [
   ['Groß-Bieberau', '/standorte/gross-bieberau'],
@@ -73,7 +59,7 @@ export default function Home() {
             <HeroTypewriter />
           </h1>
           <p className="text-base sm:text-lg text-white max-w-lg mb-12 leading-relaxed">
-            Damit Sie als Patient*in Schmerzen nachhaltig reduzieren und an Mobilität sowie Autonomie gewinnen.
+            {homeContent.heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
@@ -180,15 +166,10 @@ export default function Home() {
               <span className="text-neutral-400">Gesundheit.</span>
             </h2>
             <p className="text-gray-600 leading-relaxed mb-5">
-              Fortis Salutis ist Ihre Privatpraxis für Physiotherapie in Reinheim, Hessen. Als Praxis
-              mit Heilpraktikerzulassung bieten wir Ihnen umfassende physiotherapeutische Behandlungen
-              auf höchstem Niveau – individuell, ganzheitlich und evidenzbasiert.
+              {homeContent.ueberUnsText1}
             </p>
             <p className="text-gray-600 leading-relaxed mb-5">
-              Unser Team unter der Leitung von{' '}
-              <strong className="font-bold text-black">Mattis Bischoff</strong> setzt auf individuelle,
-              evidenzbasierte Therapiekonzepte. Jede*r Patient*in erhält eine maßgeschneiderte Behandlung,
-              die genau auf ihre bzw. seine Bedürfnisse abgestimmt ist.
+              {homeContent.ueberUnsText2}
             </p>
             <a
               href="tel:+4915773327200"
@@ -251,9 +232,7 @@ export default function Home() {
               bei Ihnen.
             </h2>
             <p className="text-white leading-relaxed mb-10 text-base">
-              Sie können die Praxis nicht aufsuchen? Kein Problem. Wir kommen zu Ihnen nach
-              Hause, im gesamten Umkreis von 10 km
-              um Reinheim.
+              {homeContent.hausbesucheTeaserText}
             </p>
             <Link
               href="/leistungen/hausbesuche"
@@ -277,8 +256,7 @@ export default function Home() {
             </h2>
           </div>
           <p className="text-gray-600 max-w-2xl mb-12 leading-relaxed">
-            Unsere Praxis in Reinheim liegt zentral im Landkreis Darmstadt-Dieburg und ist aus der
-            gesamten Umgebung gut erreichbar. Hausbesuche bieten wir im Umkreis von bis zu 10 km an.
+            {homeContent.einzugsgebietText}
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
             <Link
@@ -311,8 +289,7 @@ export default function Home() {
               auf Sie.
             </h2>
             <p className="text-white leading-relaxed mb-12">
-              Vereinbaren Sie Ihren Termin ganz einfach per Telefon, E-Mail oder WhatsApp.
-              Wir melden uns so schnell wie möglich bei Ihnen zurück.
+              {homeContent.kontaktText}
             </p>
 
             <div className="space-y-7">
