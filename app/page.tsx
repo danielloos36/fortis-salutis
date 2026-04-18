@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+import HeroTypewriter from '@/components/HeroTypewriter'
 
 export const metadata: Metadata = {
   title: 'Physiotherapie Reinheim – Fortis Salutis',
@@ -69,7 +70,7 @@ export default function Home() {
           <h1 className="text-[2.5rem] sm:text-6xl lg:text-8xl xl:text-[7rem] font-black text-white leading-[0.9] tracking-tight mb-8 max-w-4xl">
             Physio&shy;therapie
             <br />
-            <span className="text-white/50">ganzheitlich.</span>
+            <HeroTypewriter />
           </h1>
           <p className="text-base sm:text-lg text-white max-w-lg mb-12 leading-relaxed">
             Damit Sie als Patient*in Schmerzen nachhaltig reduzieren und an Mobilität sowie Autonomie gewinnen.
