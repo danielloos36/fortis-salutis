@@ -18,10 +18,9 @@ const leistungenHrefs = [
   '/leistungen/hausbesuche',
 ]
 
-const leistungen = homeContent.leistungenCards.map((card, i) => ({
-  ...card,
-  href: leistungenHrefs[i],
-}))
+const leistungen = homeContent.leistungenCards
+  .slice(0, leistungenHrefs.length)
+  .map((card, i) => ({ ...card, href: leistungenHrefs[i] }))
 
 const standorte = [
   ['Groß-Bieberau', '/standorte/gross-bieberau'],
