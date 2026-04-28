@@ -53,7 +53,7 @@ export default function Home() {
             Physiotherapie · Reinheim, Hessen
           </p>
           <h1 className="text-[2.5rem] sm:text-6xl lg:text-8xl xl:text-[7rem] font-black text-white leading-[0.9] tracking-tight mb-8 max-w-4xl">
-            Physio&shy;therapie
+            Physio&shy;therapie,
             <br />
             <HeroTypewriter />
           </h1>
