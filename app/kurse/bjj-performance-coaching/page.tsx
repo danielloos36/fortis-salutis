@@ -97,12 +97,12 @@ export default function BJJPerformanceCoachingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-end">
+      <section className="relative min-h-[100vh] lg:min-h-[85vh] flex items-end">
         <Image
-          src="/training.jpg"
+          src="/Gemini_Generated_Image_ut828yut828yut82.png"
           alt="BJJ Performance Coaching – Fortis Salutis Reinheim"
           fill
-          className="object-cover object-top"
+          className="object-cover object-[75%_top] lg:object-top"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
@@ -116,7 +116,7 @@ export default function BJJPerformanceCoachingPage() {
           </p>
           <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] mb-6 max-w-4xl">
             BJJ<br />
-            <span className="text-wine">Performance</span><br />
+            Performance<br />
             Coaching
           </h1>
           <p className="text-white/80 text-lg max-w-xl leading-relaxed mb-10">
@@ -370,13 +370,14 @@ export default function BJJPerformanceCoachingPage() {
         <div className="max-w-7xl mx-auto">
           <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Auf einen Blick</p>
           <h2 className="text-3xl font-black text-black mb-10">Trainingszeiten</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
             {[
               { day: 'Montag', time: '19:30 Uhr', label: 'BJJ Training' },
               { day: 'Mittwoch', time: '19:30 Uhr', label: 'BJJ Training' },
               { day: 'Sonntag', time: '08:00 – 10:00 Uhr', label: 'Open Mat' },
+              { day: '90 – 120 Min.', time: 'pro Einheit', label: 'Dauer' },
             ].map(({ day, time, label }) => (
-              <div key={day} className="border-t-2 border-wine bg-gray-50 px-6 py-5 rounded">
+              <div key={label} className="border-t-2 border-wine bg-gray-50 px-6 py-5 rounded">
                 <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-2">{label}</p>
                 <p className="font-black text-black text-xl">{day}</p>
                 <p className="text-gray-600 text-sm mt-1">{time}</p>
@@ -395,19 +396,37 @@ export default function BJJPerformanceCoachingPage() {
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
             Platz sichern oder<br />mehr erfahren
           </h2>
-          <p className="text-neutral-400 text-base mb-10 max-w-xl mx-auto leading-relaxed">
+          <p className="text-neutral-400 text-base mb-6 max-w-xl mx-auto leading-relaxed">
             Wenn du Interesse hast, sichere dir jetzt deinen Platz oder melde dich für weitere Infos.
           </p>
 
+          <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded px-6 py-4 mb-10">
+            <svg className="w-5 h-5 text-green-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.135.562 4.14 1.541 5.879L0 24l6.305-1.52A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.17-1.399l-.371-.22-3.744.902.944-3.63-.242-.374A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+            </svg>
+            <p className="text-white text-sm text-left">
+              Schreib einfach <span className="font-black text-white bg-white/10 px-2 py-0.5 rounded">&quot;BJJ&quot;</span> per WhatsApp für mehr Infos oder um direkt deinen Platz zu sichern.
+            </p>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-3 justify-center mb-16">
             <a
-              href="tel:+4915773327200"
+              href="https://wa.me/4915773327200?text=BJJ"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-wine text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-wine-dark transition-colors rounded"
+            >
+              WhatsApp – „BJJ" schreiben
+            </a>
+            <a
+              href="tel:+4915773327200"
+              className="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:border-wine hover:bg-wine transition-colors rounded"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              Jetzt anrufen
+              Anrufen
             </a>
             <a
               href="https://wa.me/4915773327200"
