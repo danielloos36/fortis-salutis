@@ -12,10 +12,15 @@ const leistungen = [
   { title: 'Hausbesuche', href: '/leistungen/hausbesuche' },
 ]
 
+const kurse = [
+  { title: 'BJJ Performance Coaching', href: '/kurse/bjj-performance-coaching' },
+]
+
 export default function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [trainingDropdownOpen, setTrainingDropdownOpen] = useState(false)
+  const [kurseDropdownOpen, setKurseDropdownOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
@@ -24,14 +29,14 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const isLight = (scrolled || dropdownOpen || trainingDropdownOpen) && !mobileOpen
+  const isLight = (scrolled || dropdownOpen || trainingDropdownOpen || kurseDropdownOpen) && !mobileOpen
   const textColor = isLight ? 'text-black' : 'text-white'
   const hoverColor = isLight ? 'hover:text-gray-500' : 'hover:text-white/70'
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        mobileOpen ? 'bg-[#0a0a0a]' : scrolled || dropdownOpen || trainingDropdownOpen ? 'bg-white shadow-sm' : 'bg-transparent'
+        mobileOpen ? 'bg-[#0a0a0a]' : scrolled || dropdownOpen || trainingDropdownOpen || kurseDropdownOpen ? 'bg-white shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -135,6 +140,46 @@ export default function Navigation() {
             </div>
           </div>
 
+          {/* Kurse dropdown */}
+          <div
+            className="relative self-stretch flex items-center"
+            onMouseEnter={() => setKurseDropdownOpen(true)}
+            onMouseLeave={() => setKurseDropdownOpen(false)}
+          >
+            <button
+              className={`flex items-center gap-1 text-sm font-bold uppercase tracking-[0.12em] transition-colors ${textColor} ${hoverColor}`}
+            >
+              Kurse
+              <svg
+                className={`w-3.5 h-3.5 transition-transform duration-200 ${kurseDropdownOpen ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <div className={`absolute top-full left-1/2 -translate-x-1/2 w-64 transition-all duration-200 ease-out ${
+              kurseDropdownOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
+            }`}>
+              <div className="bg-white shadow-xl border-t-2 border-wine">
+                {kurse.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="flex items-center justify-between px-5 py-3.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-black border-b border-gray-100 last:border-0 transition-colors group"
+                  >
+                    {item.title}
+                    <svg className="w-3 h-3 text-gray-300 group-hover:text-wine group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <Link
             href="/#ueber-uns"
             className={`text-sm font-bold uppercase tracking-[0.12em] transition-colors ${textColor} ${hoverColor}`}
@@ -188,6 +233,26 @@ export default function Navigation() {
             <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold mb-4">Leistungen</p>
             <div className="space-y-1">
               {leistungen.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center justify-between py-3 border-b border-white/10 text-white font-bold text-lg hover:text-wine transition-colors group"
+                >
+                  {item.title}
+                  <svg className="w-4 h-4 text-white/20 group-hover:text-wine transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Kurse */}
+          <div className="mb-8">
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold mb-4">Kurse</p>
+            <div className="space-y-1">
+              {kurse.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
