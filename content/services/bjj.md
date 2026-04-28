@@ -1,6 +1,7 @@
 
   "title": "Brazilian Jiu-Jitsu in Reinheim",
   "subtitle": "Grappling bei Fortis Salutis",
+  slug: bjj
   "intro":
     "BJJ Performance Coaching bei Fortis Salutis verbindet Brazilian Jiu-Jitsu mit gezieltem Krafttraining und physiotherapeutischer Betreuung.
 
