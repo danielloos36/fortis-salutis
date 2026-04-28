@@ -1,0 +1,60 @@
+{
+  "title": "BJJ Performance Coaching",
+  "subtitle": "Brazilian Jiu-Jitsu, Krafttraining und Physiotherapie für Anfänger und Wiedereinsteiger",
+  "intro": [
+    "Lerne Brazilian Jiu-Jitsu von Grund auf – kombiniert mit gezieltem Krafttraining und physiotherapeutischer Betreuung.",
+    "Dieses Programm richtet sich an Anfänger und Wiedereinsteiger, die nicht einfach nur irgendwo mittrainieren möchten, sondern strukturiert, sicher und mit System starten wollen.",
+    "Das Coaching startet im Juni, läuft über 12 Wochen und ist bewusst auf maximal 10 Teilnehmer begrenzt."
+  ],
+  "indications": [
+    "Anfänger ohne Vorerfahrung",
+    "Wiedereinsteiger ins Training",
+    "Menschen, die strukturiert trainieren wollen",
+    "Personen, die Wert auf sauberes und sicheres Training legen",
+    "Alle, die verletzungsfrei und langfristig Fortschritte machen wollen"
+  ],
+  "benefits": [
+    {
+      "title": "2x BJJ Training pro Woche",
+      "desc": "Montag und Mittwoch um 19:30 Uhr trainierst du in einer kleinen Gruppe mit maximal 10 Teilnehmern."
+    },
+    {
+      "title": "Physiotherapeutische Eingangsanalyse",
+      "desc": "Zu Beginn analysieren wir deine Beweglichkeit, Schwächen und Belastbarkeit, damit du sicher startest."
+    },
+    {
+      "title": "Individueller Trainingsplan",
+      "desc": "Du erhältst ergänzendes Krafttraining, abgestimmt auf dein Level, deine Ziele und deinen Körper."
+    },
+    {
+      "title": "Monatliches Physio-Follow-up",
+      "desc": "Dein Training wird regelmäßig angepasst, damit Überlastungen früh erkannt und Fortschritte gesichert werden."
+    },
+    {
+      "title": "Unbegrenzter Gym-Zugang",
+      "desc": "Du kannst flexibel zusätzlich zu den BJJ-Einheiten trainieren und deinen Körper gezielt aufbauen."
+    },
+    {
+      "title": "Open Mat am Sonntag",
+      "desc": "Sonntag von 8 bis 10 Uhr kannst du frei rollen und das Gelernte in entspannter Atmosphäre anwenden."
+    }
+  ],
+  "process": [
+    {
+      "step": "Eingangsanalyse",
+      "desc": "Wir prüfen deine Beweglichkeit, Belastbarkeit und mögliche Schwachstellen."
+    },
+    {
+      "step": "Trainingsstart",
+      "desc": "Du startest mit den Grundlagen des Brazilian Jiu-Jitsu und lernst Technik sauber von Anfang an."
+    },
+    {
+      "step": "Krafttraining",
+      "desc": "Parallel trainierst du nach einem individuellen Plan, der deinen Körper stärker und belastbarer macht."
+    },
+    {
+      "step": "Follow-up",
+      "desc": "Einmal pro Monat passen wir dein Training an und erkennen mögliche Probleme frühzeitig."
+    }
+  ]
+}
