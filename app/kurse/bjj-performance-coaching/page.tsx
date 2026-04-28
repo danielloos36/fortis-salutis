@@ -99,7 +99,7 @@ export default function BJJPerformanceCoachingPage() {
       {/* Hero */}
       <section className="relative min-h-[100vh] lg:min-h-[85vh] flex items-end">
         <Image
-          src="/Gemini_Generated_Image_ut828yut828yut82.png"
+          src="/Gemini_Generated_Image_d7o28ud7o28ud7o2.png"
           alt="BJJ Performance Coaching – Fortis Salutis Reinheim"
           fill
           className="object-cover object-[75%_top] lg:object-top"
