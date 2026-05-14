@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import GymSlider from '@/components/GymSlider'
+import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Fitnessstudio Reinheim – Training bei Fortis Salutis',
@@ -230,31 +231,35 @@ export default function GymPage() {
 
       {/* CTA */}
       <section className="bg-[#0a0a0a] border-t border-white/10 py-20 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
             <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-3 font-bold">Jetzt starten</p>
-            <h2 className="text-3xl font-black text-white">Interesse geweckt?</h2>
-            <p className="text-neutral-400 text-sm mt-2 max-w-md leading-relaxed">
+            <h2 className="text-4xl font-black text-white mb-6">Interesse geweckt?</h2>
+            <p className="text-neutral-400 leading-relaxed mb-10">
               Melden Sie sich bei uns – wir vereinbaren Ihr Probetraining und erstellen Ihren
               persönlichen Trainingsplan.
             </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="tel:+4915773327200"
+                className="inline-flex items-center justify-center gap-2 bg-wine text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] hover:bg-wine-dark transition-colors rounded"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Anrufen
+              </a>
+              <a
+                href="https://wa.me/4915773327200"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 border border-white/20 text-white px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] hover:border-wine hover:bg-wine transition-colors rounded"
+              >
+                WhatsApp
+              </a>
+            </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-            <a
-              href="tel:+4915773327200"
-              className="inline-block bg-white text-black px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-colors rounded"
-            >
-              Anrufen
-            </a>
-            <a
-              href="https://wa.me/4915773327200"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block border border-white/20 text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:border-wine hover:bg-wine transition-colors rounded"
-            >
-              WhatsApp
-            </a>
-          </div>
+          <ContactForm />
         </div>
       </section>
     </>

@@ -120,35 +120,30 @@ export default function Home() {
             ))}
 
             {/* Contact card */}
-            <div className="bg-white p-8 flex flex-col justify-between rounded">
+            <a
+              href="#kontakt"
+              className="group bg-wine p-8 flex flex-col justify-between rounded hover:bg-wine-dark transition-colors"
+            >
               <div>
-                <p className="text-[10px] uppercase tracking-[0.3em] text-wine mb-3 font-bold">Termin vereinbaren</p>
-                <h3 className="text-2xl font-black text-black mb-4 leading-tight">
-                  Jetzt Termin
+                <p className="text-[10px] uppercase tracking-[0.3em] text-white/70 mb-3 font-bold">Kontakt aufnehmen</p>
+                <h3 className="text-2xl font-black text-white mb-4 leading-tight">
+                  Nachricht
                   <br />
-                  vereinbaren
+                  schicken
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Telefonisch, per E-Mail oder WhatsApp. Wir melden uns schnellstmöglich bei Ihnen.
+                <p className="text-white/80 text-sm leading-relaxed">
+                  Schreiben Sie uns direkt über unser Kontaktformular – wir melden uns schnellstmöglich.
                 </p>
               </div>
-              <div className="mt-8 space-y-2">
-                <a
-                  href="tel:+4915773327200"
-                  className="block bg-wine text-white text-center py-3.5 text-xs font-bold uppercase tracking-[0.15em] hover:bg-wine-dark transition-colors rounded"
-                >
-                  Anrufen
-                </a>
-                <a
-                  href="https://wa.me/4915773327200"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block border border-gray-200 text-black text-center py-3.5 text-xs font-bold uppercase tracking-[0.15em] hover:border-wine hover:bg-wine hover:text-white transition-colors rounded"
-                >
-                  WhatsApp
-                </a>
+              <div className="mt-8">
+                <span className="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-white group-hover:gap-3 transition-all">
+                  Zum Kontaktformular
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -172,7 +167,7 @@ export default function Home() {
               {homeContent.ueberUnsText2}
             </p>
             <a
-              href="tel:+4915773327200"
+              href="#kontakt"
               className="inline-block bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-900 transition-colors rounded"
             >
               Termin vereinbaren
