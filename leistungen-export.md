@@ -46,8 +46,7 @@ Das Ziel ist kein kurzfristiger Effekt, sondern ein langfristiger Therapieerfolg
 4. Haltungsschäden & muskuläre Dysbalancen
 5. Chronische Gelenkerkrankungen wie Arthrose
 6. Atemwegserkrankungen (Lungengymnastik)
-7. Schwangerschafts- & Nachsorge
-8. Osteoporose & Stärkung des Knochenstoffwechsels
+7. Osteoporose & Stärkung des Knochenstoffwechsels
 
 ### Ihre Vorteile
 
