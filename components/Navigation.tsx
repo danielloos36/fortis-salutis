@@ -13,7 +13,7 @@ const leistungen = [
 ]
 
 const kurse = [
-  { title: 'BJJ Performance Coaching', href: '/kurse/bjj-performance-coaching' },
+  { title: 'Brazilian Jiu-Jitsu', href: '/kurse/bjj' },
 ]
 
 export default function Navigation() {

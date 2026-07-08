@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
 
       // Alte Blog-Posts
       { source: '/post/:slug*', destination: '/', permanent: true },
+
+      // Umbenannte Kursseite
+      { source: '/kurse/bjj-performance-coaching', destination: '/kurse/bjj', permanent: true },
     ]
   },
   images: {

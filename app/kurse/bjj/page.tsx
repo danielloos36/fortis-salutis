@@ -4,46 +4,26 @@ import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'BJJ Performance Coaching – Brazilian Jiu-Jitsu Reinheim · Fortis Salutis',
+  title: 'Brazilian Jiu-Jitsu Kurs Reinheim · Fortis Salutis × Zero Pressure BJJ',
   description:
-    'Brazilian Jiu-Jitsu Coaching in Reinheim: Strukturiert starten mit BJJ Training, Krafttraining und physiotherapeutischer Betreuung. Max. 10 Teilnehmer. Startet im Juni.',
+    'Brazilian Jiu-Jitsu in Reinheim – gemeinsam mit Zero Pressure BJJ Offenbach. Einstieg jederzeit möglich. Training Montag & Mittwoch, Open Mat sonntags.',
 }
 
 const programFeatures = [
   {
-    label: '2x BJJ Training pro Woche',
-    sublabel: 'Montag & Mittwoch · 19:30 Uhr',
-    desc: 'Training in kleiner Gruppe (max. 10 Teilnehmer)',
+    label: 'Anfänger willkommen',
+    sublabel: 'Für alle Level',
+    desc: 'Egal ob du noch nie trainiert hast oder schon Erfahrung mitbringst – du bist willkommen.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16.5 3.5a4 4 0 11-8 0 4 4 0 018 0zM12 14c-4.418 0-8 1.79-8 4v3h16v-3c0-2.21-3.582-4-8-4z" />
       </svg>
     ),
   },
   {
-    label: 'Physiotherapeutische Eingangsanalyse',
-    sublabel: 'Individuelle Analyse',
-    desc: 'Individuelle Analyse deiner Beweglichkeit, Schwächen und Belastbarkeit',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Individueller Trainingsplan',
-    sublabel: 'Ergänzendes Krafttraining',
-    desc: 'Ergänzendes Krafttraining abgestimmt auf dein Level und deine Ziele',
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Monatliches Physio-Follow-up',
-    sublabel: 'Anpassung & Prävention',
-    desc: 'Anpassung deines Trainings und frühzeitiges Erkennen von Problemen',
+    label: 'Einstieg jederzeit möglich',
+    sublabel: 'Kein fester Starttermin nötig',
+    desc: 'Du kannst jederzeit einsteigen – ganz ohne Wartezeit auf den nächsten Kursbeginn.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -51,19 +31,39 @@ const programFeatures = [
     ),
   },
   {
-    label: 'Unbegrenzter Gym-Zugang',
-    sublabel: 'Flexibel trainieren',
-    desc: 'Trainiere flexibel zusätzlich zu den BJJ-Einheiten',
+    label: 'Technik',
+    sublabel: 'Sauber vermittelt',
+    desc: 'BJJ-Technik, Schritt für Schritt aufgebaut für Beginner und Fortgeschrittene.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Grappling',
+    sublabel: 'Rollen & Anwenden',
+    desc: 'Das Gelernte im Live-Training direkt anwenden und ausprobieren.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Community',
+    sublabel: 'Zusammen trainieren',
+    desc: 'Werde Teil der Fortis Community und trainiere gemeinsam mit anderen.',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
       </svg>
     ),
   },
   {
     label: 'Open Mat',
-    sublabel: 'Sonntag · 8–10 Uhr',
-    desc: 'Freies Rollen und Anwenden des Gelernten in entspannter Atmosphäre',
+    sublabel: 'Sonntag',
+    desc: 'Freies Rollen und Anwenden des Gelernten in entspannter Atmosphäre.',
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -72,36 +72,33 @@ const programFeatures = [
   },
 ]
 
-const targetAudience = [
-  'Anfänger ohne Vorerfahrung',
-  'Wiedereinsteiger',
-  'Menschen, die strukturiert trainieren wollen',
-  'alle, die Wert auf sauberes und sicheres Training legen',
-]
-
-const goals = [
+const performanceCoachingFeatures = [
   {
-    title: 'BJJ-Grundlagen',
-    desc: 'die Grundlagen von Brazilian Jiu-Jitsu',
+    title: 'Physiotherapeutische Eingangsanalyse',
+    desc: 'Individuelle Analyse deiner Beweglichkeit, Schwächen und Belastbarkeit.',
   },
   {
-    title: 'Körper stärken',
-    desc: 'deinen Körper gezielt stärker und belastbarer zu machen',
+    title: 'Individueller Trainingsplan',
+    desc: 'Ergänzendes Krafttraining, abgestimmt auf dein Level und deine Ziele.',
   },
   {
-    title: 'Verletzungsfrei trainieren',
-    desc: 'von Anfang an sauber und verletzungsfrei zu trainieren',
+    title: 'Monatliches Physio-Follow-up',
+    desc: 'Anpassung deines Trainings und frühzeitiges Erkennen von Problemen.',
+  },
+  {
+    title: 'Unbegrenzter Gym-Zugang',
+    desc: 'Trainiere flexibel zusätzlich zu den BJJ-Einheiten.',
   },
 ]
 
-export default function BJJPerformanceCoachingPage() {
+export default function BJJPage() {
   return (
     <>
       {/* Hero */}
       <section className="relative min-h-[100vh] lg:min-h-[85vh] flex items-end">
         <Image
           src="/Gemini_Generated_Image_d7o28ud7o28ud7o2.png"
-          alt="BJJ Performance Coaching – Fortis Salutis Reinheim"
+          alt="Brazilian Jiu-Jitsu – Fortis Salutis Reinheim"
           fill
           className="object-cover object-[75%_top] lg:object-top"
           priority
@@ -110,25 +107,24 @@ export default function BJJPerformanceCoachingPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-20 w-full">
           <span className="inline-block border border-white/40 bg-white/10 text-white text-[10px] font-black uppercase tracking-[0.35em] px-4 py-2 rounded-sm backdrop-blur-sm mb-5">
-            Startet Juni 2026 · 12 Wochen · Max. 10 Plätze
+            Anfänger willkommen · Einstieg jederzeit möglich
           </span>
           <p className="text-[10px] text-white/60 uppercase tracking-[0.35em] mb-4 font-bold">
             Kurse · Fortis Salutis Reinheim
           </p>
           <h1 className="text-5xl lg:text-7xl xl:text-8xl font-black text-white leading-[0.9] mb-6 max-w-4xl">
-            BJJ<br />
-            Performance<br />
-            Coaching
+            Brazilian<br />
+            Jiu-Jitsu
           </h1>
           <p className="text-white/80 text-lg max-w-xl leading-relaxed mb-10">
-            Brazilian Jiu-Jitsu von Grund auf – kombiniert mit gezieltem Krafttraining und physiotherapeutischer Betreuung.
+            Brazilian Jiu-Jitsu in Reinheim – in Kooperation mit Zero Pressure BJJ Offenbach.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
               href="#kontakt"
               className="inline-flex items-center justify-center gap-2 bg-wine text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-wine-dark transition-colors rounded"
             >
-              Jetzt Platz sichern
+              Jetzt einsteigen
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -137,7 +133,7 @@ export default function BJJPerformanceCoachingPage() {
               href="#programm"
               className="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:border-white hover:bg-white/10 transition-colors rounded"
             >
-              Programm ansehen
+              Mehr erfahren
             </a>
           </div>
         </div>
@@ -164,56 +160,53 @@ export default function BJJPerformanceCoachingPage() {
         <div className="max-w-7xl mx-auto flex items-center gap-2 text-[10px] text-white/40 uppercase tracking-wider">
           <Link href="/" className="hover:text-wine transition-colors">Startseite</Link>
           <span>/</span>
-          <span className="text-white">BJJ Performance Coaching</span>
+          <span className="text-white">Brazilian Jiu-Jitsu</span>
         </div>
       </div>
 
-      {/* Intro – Das Programm */}
-      <section className="bg-white py-20 lg:py-28 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            <div>
-              <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Das Programm</p>
-              <h2 className="text-4xl lg:text-5xl font-black text-black mb-8 leading-tight">
-                Strukturiert.<br />Sicher.<br />Mit System.
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-5 text-base">
-                Dieses Programm richtet sich an Anfänger und Wiedereinsteiger, die nicht einfach nur „irgendwo mittrainieren" möchten, sondern strukturiert, sicher und mit System starten wollen.
-              </p>
+      {/* Trainingszeiten & Preise */}
+      <section className="bg-white py-16 px-6 border-b border-gray-100">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Auf einen Blick</p>
+            <h2 className="text-3xl font-black text-black mb-10">Trainingszeiten</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                { day: 'Montag', time: '19:30 Uhr', label: 'BJJ Training' },
+                { day: 'Mittwoch', time: '19:30 Uhr', label: 'BJJ Training' },
+                { day: 'Sonntag', time: 'Open Mat', label: 'Freies Training' },
+              ].map(({ day, time, label }) => (
+                <div key={label} className="border-t-2 border-wine bg-gray-50 px-6 py-5 rounded">
+                  <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-2">{label}</p>
+                  <p className="font-black text-black text-xl">{day}</p>
+                  <p className="text-gray-600 text-sm mt-1">{time}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-              <div className="mt-10 flex items-center gap-6">
-                <div className="text-center">
-                  <span className="text-4xl font-black text-black">12</span>
-                  <span className="block text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold mt-1">Wochen</span>
-                </div>
-                <div className="w-px h-12 bg-gray-200" />
-                <div className="text-center">
-                  <span className="text-4xl font-black text-black">10</span>
-                  <span className="block text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold mt-1">Teilnehmer max.</span>
-                </div>
-                <div className="w-px h-12 bg-gray-200" />
-                <div className="text-center">
-                  <span className="text-4xl font-black text-black">2×</span>
-                  <span className="block text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold mt-1">Training / Woche</span>
-                </div>
+          <div>
+            <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Abo-Modell</p>
+            <h2 className="text-3xl font-black text-black mb-10">Preise</h2>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="border-t-2 border-wine bg-gray-50 px-6 py-6 rounded">
+                <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-3">Mitglieder</p>
+                <p className="font-black text-black text-4xl leading-none">
+                  59&nbsp;€
+                </p>
+                <p className="text-gray-600 text-sm mt-2">/ Monat</p>
+              </div>
+              <div className="border-t-2 border-wine bg-gray-50 px-6 py-6 rounded">
+                <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-3">Externe</p>
+                <p className="font-black text-black text-4xl leading-none">
+                  69&nbsp;€
+                </p>
+                <p className="text-gray-600 text-sm mt-2">/ Monat</p>
               </div>
             </div>
-
-            {/* Ziele */}
-            <div>
-              <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Dein Ziel</p>
-              <h2 className="text-2xl font-black text-black mb-4">In diesem Coaching lernst du:</h2>
-              <div className="space-y-4">
-                {goals.map((goal, i) => (
-                  <div key={i} className="border-t-2 border-wine bg-gray-50 p-6 rounded">
-                    <div className="flex items-start gap-3">
-                      <span className="text-wine font-black text-2xl opacity-50 leading-none shrink-0">0{i + 1}</span>
-                      <p className="text-gray-800 font-medium leading-relaxed pt-0.5">{goal.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <p className="text-gray-500 text-xs mt-4 leading-relaxed">
+              Mitglieder = bestehende Fortis Salutis Mitglieder. Externe = alle anderen Teilnehmer*innen.
+            </p>
           </div>
         </div>
       </section>
@@ -229,7 +222,6 @@ export default function BJJPerformanceCoachingPage() {
             Was dich erwartet
           </h2>
           <p className="text-neutral-400 max-w-2xl mb-14 leading-relaxed">
-            Kein Einzelbaustein, sondern ein durchdachtes System – von der ersten Analyse bis zum freien Rollen.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -255,20 +247,19 @@ export default function BJJPerformanceCoachingPage() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <p className="text-white/70 text-[10px] uppercase tracking-[0.3em] mb-4 font-bold">Die Realität</p>
+              <p className="text-white/70 text-[10px] uppercase tracking-[0.3em] mb-4 font-bold">Die Kooperation</p>
               <h2 className="text-4xl lg:text-5xl font-black text-white mb-8 leading-tight">
                 Warum dieses Konzept?
               </h2>
               <p className="text-white/90 leading-relaxed mb-6 text-base">
-                Viele steigen in den Kampfsport ein – und hören schnell wieder auf.
-                Nicht, weil BJJ nicht funktioniert, sondern weil:
+                Gemeinsam mit Zero Pressure BJJ Offenbach bringen wir echte BJJ-Erfahrung direkt zu dir nach Reinheim – in einer entspannten, druckfreien Trainingsatmosphäre.
               </p>
               <ul className="space-y-4 mb-8">
-                {['Struktur fehlt', 'Der Körper nicht vorbereitet ist', 'Überlastungen entstehen'].map((item) => (
+                {['Für alle Level geeignet', 'Community, Technik & Grappling'].map((item) => (
                   <li key={item} className="flex items-center gap-4">
                     <span className="w-8 h-8 border-2 border-white/40 flex items-center justify-center shrink-0 text-white rounded">
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
                     </span>
                     <span className="text-white font-bold">{item}</span>
@@ -276,7 +267,7 @@ export default function BJJPerformanceCoachingPage() {
                 ))}
               </ul>
               <p className="text-white/90 leading-relaxed text-base font-bold">
-                Dieses Coaching verbindet Technik, Kraft und Betreuung, damit du langfristig Fortschritt machst.
+                Jeder kann vorbeikommen, zuschauen oder direkt mitmachen und sich selbst ein Bild machen.
               </p>
             </div>
 
@@ -285,21 +276,21 @@ export default function BJJPerformanceCoachingPage() {
                 <div className="text-5xl font-black text-white/20 mb-4">→</div>
                 <h3 className="font-black text-white text-xl mb-3">Technik</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  BJJ-Grundlagen, die wirklich sitzen. Sauber vermittelt, Schritt für Schritt.
+                  BJJ, die wirklich sitzt. Sauber vermittelt, Schritt für Schritt.
                 </p>
               </div>
               <div className="bg-black/20 backdrop-blur-sm p-8 rounded border border-white/20">
                 <div className="text-5xl font-black text-white/20 mb-4">→</div>
-                <h3 className="font-black text-white text-xl mb-3">Kraft</h3>
+                <h3 className="font-black text-white text-xl mb-3">Grappling</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Ergänzendes Krafttraining, das deinen Körper auf BJJ vorbereitet und belastbar macht.
+                  Das Gelernte live anwenden und dich mit anderen messen.
                 </p>
               </div>
               <div className="bg-black/20 backdrop-blur-sm p-8 rounded border border-white/20">
                 <div className="text-5xl font-black text-white/20 mb-4">→</div>
-                <h3 className="font-black text-white text-xl mb-3">Betreuung</h3>
+                <h3 className="font-black text-white text-xl mb-3">Community</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
-                  Physiotherapeutische Eingangsanalyse und monatliche Follow-ups – du wirst nicht allein gelassen.
+                  Werde Teil der Fortis Community und trainiere gemeinsam mit anderen.
                 </p>
               </div>
             </div>
@@ -307,84 +298,38 @@ export default function BJJPerformanceCoachingPage() {
         </div>
       </section>
 
-      {/* Für wen & Wichtig */}
+      {/* Performance Coaching Add-on */}
       <section className="bg-gray-50 py-20 lg:py-28 px-6">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
-
-          {/* Für wen */}
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-6 h-px bg-wine" />
-              <p className="text-[10px] text-wine font-bold uppercase tracking-[0.3em]">Zielgruppe</p>
-            </div>
-            <h2 className="text-3xl font-black text-black mb-8 leading-tight">Für wen ist das geeignet?</h2>
-            <ul className="space-y-3">
-              {targetAudience.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span className="w-6 h-6 bg-wine text-white flex items-center justify-center shrink-0 mt-0.5 rounded-sm">
-                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  </span>
-                  <span className="text-gray-800 font-medium leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Wichtig & Einstieg */}
-          <div className="space-y-6">
-            <div className="bg-[#0a0a0a] p-8 rounded">
-              <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-3 font-bold">Wichtig</p>
-              <h3 className="font-black text-white text-xl mb-4 leading-tight">
-                Maximal 10 Teilnehmer
-              </h3>
-              <p className="text-neutral-400 text-sm leading-relaxed">
-                Die Teilnehmerzahl ist bewusst auf maximal 10 Personen begrenzt, um eine individuelle Betreuung zu gewährleisten.
-              </p>
-            </div>
-
-            <div className="bg-white border-t-2 border-wine p-8 rounded shadow-sm">
-              <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-3 font-bold">Einstieg</p>
-              <h3 className="font-black text-black text-xl mb-4 leading-tight">
-                Das Programm startet im Juni<br />und läuft über 12 Wochen.
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-6">
-                Wenn du Interesse hast, sichere dir jetzt deinen Platz oder melde dich für weitere Infos.
-              </p>
-              <a
-                href="#kontakt"
-                className="inline-flex items-center gap-2 bg-wine text-white px-6 py-3 text-xs font-black uppercase tracking-[0.2em] hover:bg-wine-dark transition-colors rounded"
-              >
-                Platz sichern
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Trainingszeiten Übersicht */}
-      <section className="bg-white py-16 px-6 border-t border-gray-100">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Auf einen Blick</p>
-          <h2 className="text-3xl font-black text-black mb-10">Trainingszeiten</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-            {[
-              { day: 'Montag', time: '19:30 Uhr', label: 'BJJ Training' },
-              { day: 'Mittwoch', time: '19:30 Uhr', label: 'BJJ Training' },
-              { day: 'Sonntag', time: '08:00 – 10:00 Uhr', label: 'Open Mat' },
-              { day: '90 – 120 Min.', time: 'pro Einheit', label: 'Dauer' },
-            ].map(({ day, time, label }) => (
-              <div key={label} className="border-t-2 border-wine bg-gray-50 px-6 py-5 rounded">
-                <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-2">{label}</p>
-                <p className="font-black text-black text-xl">{day}</p>
-                <p className="text-gray-600 text-sm mt-1">{time}</p>
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-6 h-px bg-wine" />
+            <p className="text-[10px] text-wine font-bold uppercase tracking-[0.3em]">Zusatzangebot · Auf Anfrage</p>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-black text-black mb-4 leading-tight">
+            BJJ Performance Coaching
+          </h2>
+          <p className="text-gray-600 max-w-2xl mb-14 leading-relaxed">
+            Wer strukturiert und sicher vorankommen möchte, kann sich zusätzlich zum Kurs für unser Performance Coaching anmelden – mit physiotherapeutischer Betreuung und individuellem Trainingsplan.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+            {performanceCoachingFeatures.map((feature, i) => (
+              <div key={i} className="border-t-2 border-wine bg-white p-6 rounded shadow-sm">
+                <h3 className="font-black text-black text-base mb-2">{feature.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
+
+          <a
+            href="#kontakt"
+            className="inline-flex items-center gap-2 bg-wine text-white px-6 py-3 text-xs font-black uppercase tracking-[0.2em] hover:bg-wine-dark transition-colors rounded"
+          >
+            Performance Coaching anfragen
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </section>
 
@@ -395,10 +340,10 @@ export default function BJJPerformanceCoachingPage() {
             Fortis Salutis · Reinheim
           </p>
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
-            Platz sichern oder<br />mehr erfahren
+            Jetzt einsteigen oder<br />mehr erfahren
           </h2>
           <p className="text-neutral-400 text-base mb-6 max-w-xl mx-auto leading-relaxed">
-            Wenn du Interesse hast, sichere dir jetzt deinen Platz oder melde dich für weitere Infos.
+            Einstieg jederzeit möglich – melde dich einfach für weitere Infos.
           </p>
 
           <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded px-6 py-4 mb-10">
