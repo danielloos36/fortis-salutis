@@ -21,7 +21,7 @@ export const services: Service[] = [
       'Sportverletzungen & Muskelverletzungen',
       'Haltungsschäden & muskuläre Dysbalancen',
       'Chronische Gelenkerkrankungen (Arthrose)',
-      'Atemwegserkrankungen (Lungengymnastik)',
+      'Atemwegserkrankungen (Atemtherapie)',
     ],
     benefits: [
       'Wiederherstellung der vollen Beweglichkeit',

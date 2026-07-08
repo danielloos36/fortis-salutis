@@ -45,7 +45,7 @@ Das Ziel ist kein kurzfristiger Effekt, sondern ein langfristiger Therapieerfolg
 3. Sportverletzungen & Muskelverletzungen
 4. Haltungsschäden & muskuläre Dysbalancen
 5. Chronische Gelenkerkrankungen wie Arthrose
-6. Atemwegserkrankungen (Lungengymnastik)
+6. Atemwegserkrankungen (Atemtherapie)
 7. Osteoporose & Stärkung des Knochenstoffwechsels
 
 ### Ihre Vorteile
