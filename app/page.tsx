@@ -33,6 +33,7 @@ const standorte = [
   ['Otzberg', '/standorte/otzberg'],
   ['Modautal', '/standorte/modautal'],
   ['Groß-Zimmern', '/standorte/gross-zimmern'],
+  ['Groß-Umstadt', '/standorte/gross-umstadt'],
 ]
 
 export default function Home() {
@@ -245,7 +246,7 @@ export default function Home() {
           <div className="mb-12">
             <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-3 font-bold">Einzugsgebiet</p>
             <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-black leading-tight">
-              Für Patient*innen
+              Eine Praxis – gut erreichbar
               <br />
               aus der ganzen Region.
             </h2>
@@ -253,18 +254,28 @@ export default function Home() {
           <p className="text-gray-600 max-w-2xl mb-12 leading-relaxed">
             {homeContent.einzugsgebietText}
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-            <Link
-              href="/standorte/reinheim"
-              className="border border-wine bg-wine text-white text-center py-3 px-3 text-xs font-bold uppercase tracking-wider rounded"
-            >
-              Reinheim
-            </Link>
+
+          <div className="inline-flex items-center gap-4 bg-white border border-gray-200 rounded p-6 mb-10">
+            <div>
+              <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-1">Unsere Praxis</p>
+              <Link
+                href="/standorte/reinheim"
+                className="font-black text-black text-lg hover:text-wine transition-colors"
+              >
+                Reinheim
+              </Link>
+            </div>
+          </div>
+
+          <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-4">
+            Patient*innen kommen u. a. aus
+          </p>
+          <div className="flex flex-wrap gap-2">
             {standorte.map(([name, href]) => (
               <Link
                 key={href as string}
                 href={href as string}
-                className="border border-gray-300 bg-white text-gray-900 text-center py-3 px-3 text-xs font-medium hover:border-wine hover:bg-wine hover:text-white transition-all rounded"
+                className="border border-gray-300 bg-white text-gray-700 px-4 py-2 text-xs font-medium hover:border-wine hover:bg-wine hover:text-white transition-all rounded-full"
               >
                 {name}
               </Link>

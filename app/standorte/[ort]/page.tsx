@@ -195,14 +195,8 @@ export default async function StandortPage({ params }: Props) {
       {/* Nearby locations */}
       <section className="bg-gray-100 py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] text-neutral-400 uppercase tracking-[0.3em] mb-6">Weitere Standorte</p>
+          <p className="text-[10px] text-neutral-400 uppercase tracking-[0.3em] mb-6">Unsere Praxis betreut auch Patient*innen aus</p>
           <div className="flex flex-wrap gap-2">
-            <Link
-              href="/standorte/reinheim"
-              className="border border-wine bg-wine text-white px-4 py-2 text-xs font-bold uppercase tracking-wider rounded"
-            >
-              Reinheim
-            </Link>
             {locations
               .filter((l) => l.slug !== ort)
               .slice(0, 8)
@@ -210,7 +204,7 @@ export default async function StandortPage({ params }: Props) {
                 <Link
                   key={l.slug}
                   href={`/standorte/${l.slug}`}
-                  className="border border-gray-300 bg-white text-gray-700 px-4 py-2 text-xs font-medium hover:border-wine hover:bg-wine hover:text-white transition-all rounded"
+                  className="border border-gray-300 bg-white text-gray-700 px-4 py-2 text-xs font-medium hover:border-wine hover:bg-wine hover:text-white transition-all rounded-full"
                 >
                   {l.name}
                 </Link>

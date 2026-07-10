@@ -110,6 +110,15 @@ export const locations: Location[] = [
     hausbesuche: false,
   },
   {
+    slug: 'gross-umstadt',
+    name: 'Groß-Umstadt',
+    distance: '9 km',
+    driveTime: '12 Minuten',
+    direction: 'östlich',
+    intro: 'Groß-Umstadt liegt östlich von Reinheim im Landkreis Darmstadt-Dieburg. Patienten aus Groß-Umstadt erreichen unsere Praxis in Reinheim schnell und unkompliziert.',
+    hausbesuche: true,
+  },
+  {
     slug: 'spachbruecken',
     name: 'Spachbrücken',
     distance: '3 km',

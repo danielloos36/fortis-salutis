@@ -242,62 +242,6 @@ export default function BJJPage() {
         </div>
       </section>
 
-      {/* Warum dieses Konzept */}
-      <section className="bg-wine py-20 lg:py-28 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-white/70 text-[10px] uppercase tracking-[0.3em] mb-4 font-bold">Die Kooperation</p>
-              <h2 className="text-4xl lg:text-5xl font-black text-white mb-8 leading-tight">
-                Warum dieses Konzept?
-              </h2>
-              <p className="text-white/90 leading-relaxed mb-6 text-base">
-                Gemeinsam mit Zero Pressure BJJ Offenbach bringen wir echte BJJ-Erfahrung direkt zu dir nach Reinheim – in einer entspannten, druckfreien Trainingsatmosphäre.
-              </p>
-              <ul className="space-y-4 mb-8">
-                {['Für alle Level geeignet', 'Community, Technik & Grappling'].map((item) => (
-                  <li key={item} className="flex items-center gap-4">
-                    <span className="w-8 h-8 border-2 border-white/40 flex items-center justify-center shrink-0 text-white rounded">
-                      <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <span className="text-white font-bold">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-white/90 leading-relaxed text-base font-bold">
-                Jeder kann vorbeikommen, zuschauen oder direkt mitmachen und sich selbst ein Bild machen.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="bg-black/20 backdrop-blur-sm p-8 rounded border border-white/20">
-                <div className="text-5xl font-black text-white/20 mb-4">→</div>
-                <h3 className="font-black text-white text-xl mb-3">Technik</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  BJJ, die wirklich sitzt. Sauber vermittelt, Schritt für Schritt.
-                </p>
-              </div>
-              <div className="bg-black/20 backdrop-blur-sm p-8 rounded border border-white/20">
-                <div className="text-5xl font-black text-white/20 mb-4">→</div>
-                <h3 className="font-black text-white text-xl mb-3">Grappling</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Das Gelernte live anwenden und dich mit anderen messen.
-                </p>
-              </div>
-              <div className="bg-black/20 backdrop-blur-sm p-8 rounded border border-white/20">
-                <div className="text-5xl font-black text-white/20 mb-4">→</div>
-                <h3 className="font-black text-white text-xl mb-3">Community</h3>
-                <p className="text-white/80 text-sm leading-relaxed">
-                  Werde Teil der Fortis Community und trainiere gemeinsam mit anderen.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Performance Coaching Add-on */}
       <section className="bg-gray-50 py-20 lg:py-28 px-6">
         <div className="max-w-7xl mx-auto">
