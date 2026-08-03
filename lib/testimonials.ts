@@ -11,28 +11,28 @@ export const testimonials: Testimonial[] = [
   {
     quote:
       'Herr Bischoff verfügt über ein unglaubliches Fachwissen. Seine sympathische Art sucht seinesgleichen. Man kann Herrn Bischoff uneingeschränkt weiterempfehlen.',
-    author: 'Patient*in',
+    author: 'Verifizierte Patient*in',
     source: 'Jameda',
   },
   {
     quote:
       'Behandlung erfolgreich abgeschlossen. Danke Matthis. Ich habe mich sehr wohlgefühlt. Die Termine waren perfekt getaktet.',
-    author: 'Dagmar und Ralf Goettmann',
+    author: 'Verifizierte Patient*in',
     source: 'Google',
   },
   {
     quote: 'Sehr engagiert und zugewandt. Gute Therapie.',
-    author: 'Rolf Johann',
+    author: 'Verifizierte Patient*in',
     source: 'Google',
   },
   {
     quote: 'Top Praxis. Mega professionell. Vielen Dank für alles.',
-    author: 'Christopher Rigley',
+    author: 'Verifizierte Patient*in',
     source: 'Google',
   },
   {
     quote: 'Freundlich, fachlich top. Tolle Atmosphäre.',
-    author: 'Uwe Kummer',
+    author: 'Verifizierte Patient*in',
     source: 'Google',
   },
 ]
