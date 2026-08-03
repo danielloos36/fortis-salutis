@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   verification: {
     google: 'wtNZIMCMCu7dyMIMOe-i-ICINNL0u-nz9OjcwKQH_cA',
   },
+  icons: {
+    icon: '/ODS-FortisSalutis-Logo-Black_13.avif',
+    shortcut: '/ODS-FortisSalutis-Logo-Black_13.avif',
+    apple: '/ODS-FortisSalutis-Logo-Black_13.avif',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
