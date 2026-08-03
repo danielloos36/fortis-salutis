@@ -1,10 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactCTA from '@/components/ContactCTA'
+import JsonLd from '@/components/JsonLd'
+import { serviceSchema, breadcrumbSchema } from '@/lib/schema'
 
 interface Props {
   title: string
   subtitle: string
+  path: string
   image: string
   imageMobile?: string
   imagePosition?: string
@@ -18,6 +21,7 @@ interface Props {
 export default function ServicePage({
   title,
   subtitle,
+  path,
   image,
   imageMobile,
   imagePosition = 'object-center',
@@ -29,6 +33,14 @@ export default function ServicePage({
 }: Props) {
   return (
     <>
+      <JsonLd data={serviceSchema({ name: title, description: subtitle, path })} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Startseite', path: '/' },
+          { name: title, path },
+        ])}
+      />
+
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-end">
         {imageMobile && (
@@ -124,7 +136,7 @@ export default function ServicePage({
       </section>
 
       {/* Process */}
-      {/* {process && (
+      {process && (
         <section className="bg-gray-100 py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-3 font-bold">So läuft es ab</p>
@@ -147,7 +159,7 @@ export default function ServicePage({
             </div>
           </div>
         </section>
-      )} */}
+      )}
 
       {/* Related services */}
       {relatedLinks && relatedLinks.length > 0 && (

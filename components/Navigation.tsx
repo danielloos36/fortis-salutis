@@ -105,7 +105,7 @@ export default function Navigation() {
             <button
               className={`flex items-center gap-1 text-sm font-bold uppercase tracking-[0.12em] transition-colors ${textColor} ${hoverColor}`}
             >
-              Training
+              Fitnessstudio
               <svg
                 className={`w-3.5 h-3.5 transition-transform duration-200 ${trainingDropdownOpen ? 'rotate-180' : ''}`}
                 fill="none"
@@ -270,7 +270,7 @@ export default function Navigation() {
 
           {/* Training */}
           <div className="mb-8">
-            <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold mb-4">Training</p>
+            <p className="text-[10px] uppercase tracking-[0.3em] text-white/50 font-bold mb-4">Fitnessstudio</p>
             <div className="space-y-1">
               {[
                 { title: 'Preise', href: '/training#preis' },

@@ -9,7 +9,7 @@ const phrases = [
 ]
 
 export default function HeroTypewriter() {
-  const [displayed, setDisplayed] = useState('')
+  const [displayed, setDisplayed] = useState(phrases[0])
   const [phraseIndex, setPhraseIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
   const [cursorVisible, setCursorVisible] = useState(true)

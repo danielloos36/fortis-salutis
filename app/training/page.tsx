@@ -3,27 +3,32 @@ import Image from 'next/image'
 import Link from 'next/link'
 import GymSlider from '@/components/GymSlider'
 import ContactForm from '@/components/ContactForm'
+import JsonLd from '@/components/JsonLd'
+import { gymBusinessSchema, breadcrumbSchema } from '@/lib/schema'
+import trainingContent from '@/content/pages/training.json'
+
+const { hours, preise } = trainingContent
 
 export const metadata: Metadata = {
   title: 'Fitnessstudio Reinheim – Training bei Fortis Salutis',
   description:
     'Fitnessstudio in Reinheim: Flexibel trainieren zu günstigen Konditionen. Probetraining mit individueller Trainingsplanung. Montag bis Freitag ab 06:00 Uhr geöffnet.',
+  alternates: {
+    canonical: '/training',
+  },
 }
-
-const hours = [
-  { day: 'Mo. – Fr.', time: '06:00 – 22:00 Uhr' },
-  { day: 'Sa.', time: '08:00 – 18:00 Uhr' },
-  { day: 'Sonn- & Feiertag', time: '08:00 – 12:00 Uhr' },
-]
-
-const preise = [
-  { label: 'Regulär', price: '44 €', sub: 'pro Monat' },
-  { label: 'Schüler:innen, Student:innen & Rentner:innen', price: '39 €', sub: 'pro Monat' },
-]
 
 export default function GymPage() {
   return (
     <>
+      <JsonLd data={gymBusinessSchema({ hours, preise })} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Startseite', path: '/' },
+          { name: 'Training', path: '/training' },
+        ])}
+      />
+
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-end">
         <Image

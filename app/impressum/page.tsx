@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Impressum – Fortis Salutis Reinheim',
   description: 'Impressum der Physiotherapiepraxis Fortis Salutis in Reinheim, Hessen.',
   robots: 'noindex',
+  alternates: {
+    canonical: '/impressum',
+  },
 }
 
 export default function ImpressumPage() {

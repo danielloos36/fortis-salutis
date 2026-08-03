@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Trainingstherapie Reinheim – Physiotherapie Fortis Salutis',
   description:
     'Trainingstherapie in Reinheim: Gerätegestütztes therapeutisches Training zur Rehabilitation und Prävention. Fortis Salutis Reinheim – individuell, effektiv, nachhaltig.',
+  alternates: {
+    canonical: '/leistungen/trainingstherapie',
+  },
 }
 
 export default function TrainingstherapiePage() {
@@ -13,12 +16,12 @@ export default function TrainingstherapiePage() {
     <ServicePage
       title={content.title}
       subtitle={content.subtitle}
+      path="/leistungen/trainingstherapie"
       image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80"
       imageMobile="/training.jpg"
       intro={content.intro}
       indications={content.indications}
       benefits={content.benefits}
-      process={content.process}
       relatedLinks={[
         { title: 'Krankengymnastik', href: '/leistungen/krankengymnastik' },
         { title: 'Manuelle Therapie', href: '/leistungen/manuelle-therapie' },

@@ -3,7 +3,35 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import ContactCTA from '@/components/ContactCTA'
-import { locations } from '@/lib/locations'
+import JsonLd from '@/components/JsonLd'
+import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { locations, type Location } from '@/lib/locations'
+import { testimonials } from '@/lib/testimonials'
+
+function buildFaqItems(location: Location) {
+  return [
+    {
+      question: `Wie weit ist Fortis Salutis von ${location.name} entfernt?`,
+      answer: `Unsere Praxis in Reinheim liegt ${location.distance} ${location.direction} von ${location.name} entfernt und ist mit dem Auto in ca. ${location.driveTime} erreichbar.`,
+    },
+    {
+      question: `Bietet Fortis Salutis Hausbesuche in ${location.name} an?`,
+      answer: location.hausbesuche
+        ? `Ja, wir kommen direkt zu Ihnen nach ${location.name} – Physiotherapie bequem bei Ihnen zuhause.`
+        : `Aktuell bieten wir in ${location.name} keine Hausbesuche an. Wir freuen uns aber, Sie in unserer Praxis in Reinheim zu empfangen.`,
+    },
+    {
+      question: 'Gibt es kostenlose Parkmöglichkeiten bei Fortis Salutis?',
+      answer:
+        'Ja, direkt vor der Praxis in der Darmstädter Straße 43 in Reinheim stehen kostenlose Parkplätze zur Verfügung.',
+    },
+    {
+      question: 'Ist Fortis Salutis eine Kassenpraxis?',
+      answer:
+        'Fortis Salutis ist eine Privatpraxis. Gesetzlich Versicherte können bei ihrer Krankenkasse anfragen, ob die Behandlungskosten im Rahmen einer Kostenerstattung übernommen werden.',
+    },
+  ]
+}
 
 type Props = {
   params: Promise<{ ort: string }>
@@ -25,6 +53,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: location.hausbesuche
       ? `Physiotherapie und Hausbesuche in ${location.name}: Wir kommen direkt zu Ihnen nach Hause. Nur ${location.distance} (${location.driveTime}) von Reinheim. Krankengymnastik, Manuelle Therapie, Trainingstherapie. Jetzt Termin vereinbaren.`
       : `Physiotherapie für Patient*innen aus ${location.name}: Nur ${location.distance} (${location.driveTime}) von unserer Praxis in Reinheim entfernt. Krankengymnastik, Manuelle Therapie, Trainingstherapie. Jetzt Termin vereinbaren.`,
+    alternates: {
+      canonical: `/standorte/${ort}`,
+    },
   }
 }
 
@@ -41,8 +72,20 @@ export default async function StandortPage({ params }: Props) {
   const location = locations.find((l) => l.slug === ort)
   if (!location) notFound()
 
+  const faqItems = buildFaqItems(location)
+  const locationIndex = locations.findIndex((l) => l.slug === ort)
+  const testimonial = location.testimonial ?? testimonials[locationIndex % testimonials.length]
+
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Startseite', path: '/' },
+          { name: location.name, path: `/standorte/${ort}` },
+        ])}
+      />
+      <JsonLd data={faqSchema(faqItems)} />
+
       {/* Hero */}
       <section className="relative h-[50vh] min-h-[360px] flex items-end">
         <Image
@@ -69,7 +112,7 @@ export default async function StandortPage({ params }: Props) {
         <div className="max-w-7xl mx-auto flex items-center gap-2 text-[10px] text-white/40 uppercase tracking-wider">
           <Link href="/" className="hover:text-wine transition-colors">Startseite</Link>
           <span>/</span>
-          <Link href="/standorte/reinheim" className="hover:text-wine transition-colors">Standorte</Link>
+          <Link href="/#einzugsgebiet" className="hover:text-wine transition-colors">Standorte</Link>
           <span>/</span>
           <span className="text-white">{location.name}</span>
         </div>
@@ -188,6 +231,42 @@ export default async function StandortPage({ params }: Props) {
                 </Link>
               </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial */}
+      <section className="bg-[#0a0a0a] py-20 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-6 font-bold">
+            Das sagen unsere Patient*innen
+          </p>
+          <svg className="w-8 h-8 text-wine mx-auto mb-6" fill="currentColor" viewBox="0 0 32 32">
+            <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm17.472 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L26.824 4z" />
+          </svg>
+          <p className="text-white text-xl sm:text-2xl leading-relaxed font-medium mb-6">
+            „{testimonial.quote}"
+          </p>
+          <p className="text-white/50 text-sm">
+            {testimonial.author} · {testimonial.source}-Bewertung
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-white py-20 lg:py-28 px-6">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Häufige Fragen</p>
+          <h2 className="text-3xl sm:text-4xl font-black text-black mb-12">
+            Fragen von Patient*innen aus {location.name}
+          </h2>
+          <div className="divide-y divide-gray-100">
+            {faqItems.map((item) => (
+              <div key={item.question} className="py-6">
+                <h3 className="font-black text-black mb-2">{item.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

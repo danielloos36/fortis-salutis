@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactCTA from '@/components/ContactCTA'
+import JsonLd from '@/components/JsonLd'
+import { serviceSchema, breadcrumbSchema } from '@/lib/schema'
 import { locations } from '@/lib/locations'
 import hbContent from '@/content/pages/hausbesuche.json'
 
@@ -9,6 +11,9 @@ export const metadata: Metadata = {
   title: 'Hausbesuche Physiotherapie Reinheim & Umgebung – Fortis Salutis',
   description:
     'Physiotherapie Hausbesuche in Reinheim, Groß-Bieberau, Dieburg, Ober-Ramstadt und Umgebung. Wir kommen direkt zu Ihnen nach Hause – individuell, ganzheitlich, auf höchstem Niveau. Jetzt Termin vereinbaren.',
+  alternates: {
+    canonical: '/leistungen/hausbesuche',
+  },
 }
 
 const hausbesuchLocations = locations.filter((l) => l.hausbesuche)
@@ -16,6 +21,20 @@ const hausbesuchLocations = locations.filter((l) => l.hausbesuche)
 export default function HausbesuchePage() {
   return (
     <>
+      <JsonLd
+        data={serviceSchema({
+          name: 'Hausbesuche',
+          description: 'Physiotherapie direkt bei Ihnen zuhause in Reinheim und Umgebung.',
+          path: '/leistungen/hausbesuche',
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Startseite', path: '/' },
+          { name: 'Hausbesuche', path: '/leistungen/hausbesuche' },
+        ])}
+      />
+
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-end">
         <Image

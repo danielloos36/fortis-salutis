@@ -60,7 +60,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5">
               {[
-                ['Reinheim', '/standorte/reinheim'],
+                ['Reinheim', '/'],
                 ['Groß-Bieberau', '/standorte/gross-bieberau'],
                 ['Dieburg', '/standorte/dieburg'],
                 ['Ober-Ramstadt', '/standorte/ober-ramstadt'],

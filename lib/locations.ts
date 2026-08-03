@@ -1,3 +1,5 @@
+import type { Testimonial } from './testimonials'
+
 export interface Location {
   slug: string
   name: string
@@ -7,6 +9,7 @@ export interface Location {
   intro: string
   hausbesuche: boolean
   hausbesucheOnRequest?: boolean
+  testimonial?: Testimonial
 }
 
 export const locations: Location[] = [

@@ -1,0 +1,11 @@
+{
+  "hours": [
+    { "day": "Mo. – Fr.", "time": "06:00 – 22:00 Uhr" },
+    { "day": "Sa.", "time": "08:00 – 18:00 Uhr" },
+    { "day": "Sonn- & Feiertag", "time": "08:00 – 12:00 Uhr" }
+  ],
+  "preise": [
+    { "label": "Regulär", "price": "44 €", "sub": "pro Monat" },
+    { "label": "Schüler:innen, Student:innen & Rentner:innen", "price": "39 €", "sub": "pro Monat" }
+  ]
+}

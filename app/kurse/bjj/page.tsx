@@ -2,11 +2,16 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactForm from '@/components/ContactForm'
+import JsonLd from '@/components/JsonLd'
+import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Brazilian Jiu-Jitsu Kurs Reinheim · Fortis Salutis × Zero Pressure BJJ',
   description:
     'Brazilian Jiu-Jitsu in Reinheim – gemeinsam mit Zero Pressure BJJ Offenbach. Einstieg jederzeit möglich. Training Montag & Mittwoch, Open Mat sonntags.',
+  alternates: {
+    canonical: '/kurse/bjj',
+  },
 }
 
 const programFeatures = [
@@ -94,10 +99,17 @@ const performanceCoachingFeatures = [
 export default function BJJPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: 'Startseite', path: '/' },
+          { name: 'Brazilian Jiu-Jitsu', path: '/kurse/bjj' },
+        ])}
+      />
+
       {/* Hero */}
       <section className="relative min-h-[100vh] lg:min-h-[85vh] flex items-end">
         <Image
-          src="/Gemini_Generated_Image_d7o28ud7o28ud7o2.png"
+          src="/Gemini_Generated_Image_d7o28ud7o28ud7o2.jpg"
           alt="Brazilian Jiu-Jitsu – Fortis Salutis Reinheim"
           fill
           className="object-cover object-[75%_top] lg:object-top"

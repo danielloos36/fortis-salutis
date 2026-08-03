@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Krankengymnastik Reinheim – Physiotherapie Fortis Salutis',
   description:
     'Krankengymnastik in Reinheim: Gezielte Bewegungstherapie zur Wiederherstellung von Beweglichkeit und Kraft. Fortis Salutis Reinheim – individuelle Behandlung auf höchstem Niveau.',
+  alternates: {
+    canonical: '/leistungen/krankengymnastik',
+  },
 }
 
 export default function KrankengymnastikPage() {
@@ -13,6 +16,7 @@ export default function KrankengymnastikPage() {
     <ServicePage
       title={content.title}
       subtitle={content.subtitle}
+      path="/leistungen/krankengymnastik"
       image="/hero-banner-startseite.jpg"
       intro={content.intro}
       indications={content.indications}

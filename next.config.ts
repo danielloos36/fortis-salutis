@@ -19,6 +19,9 @@ const nextConfig: NextConfig = {
 
       // Umbenannte Kursseite
       { source: '/kurse/bjj-performance-coaching', destination: '/kurse/bjj', permanent: true },
+
+      // Reinheim-Standortseite entfernt – Startseite deckt das jetzt ab
+      { source: '/standorte/reinheim', destination: '/', permanent: true },
     ]
   },
   images: {

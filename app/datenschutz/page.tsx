@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Datenschutzerklärung – Fortis Salutis Reinheim',
   description: 'Datenschutzerklärung der Physiotherapiepraxis Fortis Salutis in Reinheim gemäß DSGVO.',
   robots: 'noindex',
+  alternates: {
+    canonical: '/datenschutz',
+  },
 }
 
 export default function DatenschutzPage() {

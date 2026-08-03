@@ -17,16 +17,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  const locationPages = [
-    { url: `${BASE_URL}/standorte/reinheim`, priority: 0.9 },
-    ...locations.map((loc) => ({
-      url: `${BASE_URL}/standorte/${loc.slug}`,
-      priority: 0.7,
-    })),
-  ].map((p) => ({
-    ...p,
+  const locationPages = locations.map((loc) => ({
+    url: `${BASE_URL}/standorte/${loc.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
+    priority: 0.7,
   }))
 
   return [

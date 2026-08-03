@@ -132,5 +132,28 @@ export default config({
       format: { data: 'json' },
       schema: serviceSchema(),
     }),
+
+    training: singleton({
+      label: 'Fitnessstudio: Öffnungszeiten & Preise',
+      path: 'content/pages/training',
+      format: { data: 'json' },
+      schema: {
+        hours: fields.array(
+          fields.object({
+            day: fields.text({ label: 'Tag(e)', description: 'z. B. "Mo. – Fr.", "Sa." oder "Sonn- & Feiertag"' }),
+            time: fields.text({ label: 'Uhrzeit', description: 'z. B. "06:00 – 22:00 Uhr"' }),
+          }),
+          { label: 'Öffnungszeiten', itemLabel: (props) => `${props.fields.day.value} · ${props.fields.time.value}` }
+        ),
+        preise: fields.array(
+          fields.object({
+            label: fields.text({ label: 'Bezeichnung' }),
+            price: fields.text({ label: 'Preis', description: 'z. B. "44 €"' }),
+            sub: fields.text({ label: 'Zusatz', description: 'z. B. "pro Monat"' }),
+          }),
+          { label: 'Konditionen', itemLabel: (props) => `${props.fields.label.value} – ${props.fields.price.value}` }
+        ),
+      },
+    }),
   },
 })

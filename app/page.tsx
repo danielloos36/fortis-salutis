@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Physiotherapie Reinheim – Fortis Salutis',
   description:
     'Physiotherapie in Reinheim, Hessen. Krankengymnastik, Manuelle Therapie, Trainingstherapie, Neurologische Therapie und Hausbesuche. Individuelle Behandlung auf höchstem Niveau. Jetzt Termin vereinbaren.',
+  alternates: {
+    canonical: '/',
+  },
 }
 
 const leistungenHrefs = [
@@ -241,7 +244,7 @@ export default function Home() {
       </section>
 
       {/* ─── EINZUGSGEBIET ─────────────────────────────────────────────── */}
-      <section className="py-24 px-6 bg-gray-100">
+      <section id="einzugsgebiet" className="py-24 px-6 bg-gray-100">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-3 font-bold">Einzugsgebiet</p>
@@ -251,19 +254,21 @@ export default function Home() {
               aus der ganzen Region.
             </h2>
           </div>
-          <p className="text-gray-600 max-w-2xl mb-12 leading-relaxed">
+          <p className="text-gray-600 max-w-2xl mb-5 leading-relaxed">
             {homeContent.einzugsgebietText}
+          </p>
+          <p className="text-gray-600 max-w-2xl mb-12 leading-relaxed">
+            Reinheim ist eine Stadt im Landkreis Darmstadt-Dieburg mit rund 17.000 Einwohnern und liegt
+            am südlichen Rand der Rhein-Main-Region, eingebettet zwischen dem Odenwald und der Ebene.
+            Unsere Praxis in der Darmstädter Straße 43 ist für Patient*innen aus Reinheim selbst sowie
+            aus allen umliegenden Gemeinden gut erreichbar – mit kostenlosen Parkmöglichkeiten direkt
+            vor der Tür.
           </p>
 
           <div className="inline-flex items-center gap-4 bg-white border border-gray-200 rounded p-6 mb-10">
             <div>
               <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-1">Unsere Praxis</p>
-              <Link
-                href="/standorte/reinheim"
-                className="font-black text-black text-lg hover:text-wine transition-colors"
-              >
-                Reinheim
-              </Link>
+              <span className="font-black text-black text-lg">Reinheim, Darmstädter Straße 43</span>
             </div>
           </div>
 
