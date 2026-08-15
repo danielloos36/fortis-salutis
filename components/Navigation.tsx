@@ -102,7 +102,8 @@ export default function Navigation() {
             onMouseEnter={() => setTrainingDropdownOpen(true)}
             onMouseLeave={() => setTrainingDropdownOpen(false)}
           >
-            <button
+            <Link
+              href="/training"
               className={`flex items-center gap-1 text-sm font-bold uppercase tracking-[0.12em] transition-colors ${textColor} ${hoverColor}`}
             >
               Fitnessstudio
@@ -114,7 +115,7 @@ export default function Navigation() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </Link>
 
             <div className={`absolute top-full left-1/2 -translate-x-1/2 w-48 transition-all duration-200 ease-out ${
               trainingDropdownOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'

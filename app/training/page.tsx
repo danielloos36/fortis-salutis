@@ -32,10 +32,10 @@ export default function GymPage() {
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[400px] flex items-end">
         <Image
-          src="/training.jpg"
+          src="/training-hero-banner.jpg"
           alt="Fitnessstudio Training – Fortis Salutis Reinheim"
           fill
-          className="object-cover object-top"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
@@ -240,10 +240,27 @@ export default function GymPage() {
           <div>
             <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-3 font-bold">Jetzt starten</p>
             <h2 className="text-4xl font-black text-white mb-6">Interesse geweckt?</h2>
-            <p className="text-neutral-400 leading-relaxed mb-10">
+            <p className="text-neutral-400 leading-relaxed mb-8">
               Melden Sie sich bei uns – wir vereinbaren Ihr Probetraining und erstellen Ihren
               persönlichen Trainingsplan.
             </p>
+
+            <div className="flex items-center gap-4 mb-8">
+              <div className="relative w-28 h-28 rounded-2xl overflow-hidden shrink-0">
+                <Image
+                  src="/Therapeuten-Mattis.jpg"
+                  alt="Mattis Bischoff – Fortis Salutis Reinheim"
+                  width={224}
+                  height={224}
+                  className="w-full h-full object-cover object-[center_20%]"
+                />
+              </div>
+              <div>
+                <p className="text-white font-black text-lg">Mattis Bischoff</p>
+                <p className="text-white/50 text-sm">Ihr Ansprechpartner</p>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="tel:+4915773327200"

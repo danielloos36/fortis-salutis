@@ -109,10 +109,10 @@ export default function BJJPage() {
       {/* Hero */}
       <section className="relative min-h-[100vh] lg:min-h-[85vh] flex items-end">
         <Image
-          src="/Gemini_Generated_Image_d7o28ud7o28ud7o2.jpg"
-          alt="Brazilian Jiu-Jitsu – Fortis Salutis Reinheim"
+          src="/kursraum-hero-banner.jpg"
+          alt="BJJ-Trainingsraum bei Fortis Salutis Reinheim"
           fill
-          className="object-cover object-[75%_top] lg:object-top"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30" />
@@ -298,9 +298,25 @@ export default function BJJPage() {
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
             Jetzt einsteigen oder<br />mehr erfahren
           </h2>
-          <p className="text-neutral-400 text-base mb-6 max-w-xl mx-auto leading-relaxed">
+          <p className="text-neutral-400 text-base mb-8 max-w-xl mx-auto leading-relaxed">
             Einstieg jederzeit möglich – melde dich einfach für weitere Infos.
           </p>
+
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="relative w-28 h-28 rounded-2xl overflow-hidden shrink-0">
+              <Image
+                src="/Therapeuten-Mattis.jpg"
+                alt="Mattis Bischoff – Fortis Salutis Reinheim"
+                width={224}
+                height={224}
+                className="w-full h-full object-cover object-[center_20%]"
+              />
+            </div>
+            <div className="text-left">
+              <p className="text-white font-black text-lg">Mattis Bischoff</p>
+              <p className="text-white/50 text-sm">Ihr Ansprechpartner</p>
+            </div>
+          </div>
 
           <div className="inline-flex items-center gap-3 bg-white/5 border border-white/10 rounded px-6 py-4 mb-10">
             <svg className="w-5 h-5 text-green-400 shrink-0" fill="currentColor" viewBox="0 0 24 24">

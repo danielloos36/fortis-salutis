@@ -17,8 +17,7 @@ export default function TrainingstherapiePage() {
       title={content.title}
       subtitle={content.subtitle}
       path="/leistungen/trainingstherapie"
-      image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80"
-      imageMobile="/training.jpg"
+      image="/training-hero-banner.jpg"
       intro={content.intro}
       indications={content.indications}
       benefits={content.benefits}

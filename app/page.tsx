@@ -339,9 +339,25 @@ export default function Home() {
               <br />
               auf Sie.
             </h2>
-            <p className="text-white leading-relaxed mb-12">
+            <p className="text-white leading-relaxed mb-8">
               {homeContent.kontaktText}
             </p>
+
+            <div className="flex items-center gap-4 mb-10">
+              <div className="relative w-28 h-28 rounded-2xl overflow-hidden shrink-0">
+                <Image
+                  src="/Therapeuten-Mattis.jpg"
+                  alt="Mattis Bischoff – Physiotherapeut bei Fortis Salutis Reinheim"
+                  width={224}
+                  height={224}
+                  className="w-full h-full object-cover object-[center_20%]"
+                />
+              </div>
+              <div>
+                <p className="text-white font-black text-lg">Mattis Bischoff</p>
+                <p className="text-white/50 text-sm">Ihr Ansprechpartner</p>
+              </div>
+            </div>
 
             <div className="space-y-7">
               {[

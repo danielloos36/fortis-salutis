@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import ContactForm from '@/components/ContactForm'
 
 interface Props {
@@ -18,7 +19,23 @@ export default function ContactCTA({
             Fortis Salutis · Reinheim
           </p>
           <h2 className="text-4xl lg:text-5xl font-black mb-6 leading-tight text-white">{title}</h2>
-          <p className="text-base mb-10 leading-relaxed text-white/80">{subtitle}</p>
+          <p className="text-base mb-8 leading-relaxed text-white/80">{subtitle}</p>
+
+          <div className="flex items-center gap-4 mb-8">
+            <div className="relative w-28 h-28 rounded-2xl overflow-hidden shrink-0">
+              <Image
+                src="/Therapeuten-Mattis.jpg"
+                alt="Mattis Bischoff – Physiotherapeut bei Fortis Salutis Reinheim"
+                width={224}
+                height={224}
+                className="w-full h-full object-cover object-[center_20%]"
+              />
+            </div>
+            <div>
+              <p className="text-white font-black text-lg">Mattis Bischoff</p>
+              <p className="text-white/50 text-sm">Ihr Ansprechpartner</p>
+            </div>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-3">
             <a
