@@ -67,17 +67,17 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:+4915773327200"
+              href="#kontakt"
               className="inline-block bg-white text-black px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-100 transition-colors rounded"
             >
               Termin vereinbaren
             </a>
-            <Link
-              href="/leistungen/krankengymnastik"
+            <a
+              href="#leistungen"
               className="inline-block border border-white/40 text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:border-white hover:bg-white/10 transition-colors rounded"
             >
               Alle Leistungen
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -90,7 +90,7 @@ export default function Home() {
       </section>
 
       {/* ─── LEISTUNGEN ────────────────────────────────────────────────── */}
-      <section className="bg-[#0a0a0a] py-24 px-6">
+      <section id="leistungen" className="bg-[#0a0a0a] py-24 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="mb-14">
             <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-3 font-bold">Was wir anbieten</p>
@@ -154,34 +154,39 @@ export default function Home() {
 
       {/* ─── ÜBER UNS / TEAM ───────────────────────────────────────────── */}
       <section id="ueber-uns" className="py-24 lg:py-32 px-6 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div>
-            <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Über uns</p>
-            <h2 className="text-5xl lg:text-6xl font-black text-black mb-8 leading-[0.95]">
-              Fortis Salutis.
-              <br />
-              <span className="text-neutral-400">Stark durch</span>
-              <br />
-              <span className="text-neutral-400">Gesundheit.</span>
-            </h2>
-            <p className="text-gray-600 leading-relaxed mb-5">
-              {homeContent.ueberUnsText1}
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-5">
-              {homeContent.ueberUnsText2}
-            </p>
-            <a
-              href="#kontakt"
-              className="inline-block bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-900 transition-colors rounded"
-            >
-              Termin vereinbaren
-            </a>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 lg:items-center">
+          <div className="contents lg:flex lg:flex-col lg:justify-center">
+            <div className="order-1">
+              <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Über uns</p>
+              <h2 className="text-5xl lg:text-6xl font-black text-black mb-8 leading-[0.95]">
+                Fortis Salutis.
+                <br />
+                <span className="text-neutral-400">Stark durch</span>
+                <br />
+                <span className="text-neutral-400">Gesundheit.</span>
+              </h2>
+            </div>
+
+            <div className="order-3">
+              <p className="text-gray-600 leading-relaxed mb-5">
+                {homeContent.ueberUnsText1}
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-5">
+                {homeContent.ueberUnsText2}
+              </p>
+              <a
+                href="#kontakt"
+                className="inline-block bg-black text-white px-8 py-4 text-xs font-black uppercase tracking-[0.2em] hover:bg-gray-900 transition-colors rounded"
+              >
+                Termin vereinbaren
+              </a>
+            </div>
           </div>
 
-          <div className="relative">
+          <div className="relative order-2">
             <div className="relative aspect-[4/3] overflow-hidden rounded">
               <Image
-                src="/team-foto.jpg"
+                src="/Therapeuten-Team.jpg"
                 alt="Team Fortis Salutis – Mattis Bischoff und Daniel Loos, Physiotherapeuten in Reinheim"
                 fill
                 className="object-cover"
@@ -192,6 +197,41 @@ export default function Home() {
               <p className="font-black text-sm">Mattis Bischoff</p>
               <p className="text-gray-500 text-xs mt-0.5">& Daniel Loos</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─── THERAPEUTEN ───────────────────────────────────────────────── */}
+      <section className="py-24 lg:py-32 px-6 bg-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-14 max-w-2xl">
+            <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-3 font-bold">Ihre Therapeuten</p>
+            <h2 className="text-5xl lg:text-6xl font-black text-black leading-[0.95]">
+              Qualifiziert.
+              <br />
+              <span className="text-neutral-400">Persönlich vor Ort.</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {homeContent.team.map((person) => (
+              <div key={person.name} className="bg-white rounded overflow-hidden group">
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <Image
+                    src={person.image}
+                    alt={`${person.name} – Physiotherapeut bei Fortis Salutis Reinheim`}
+                    fill
+                    className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-black text-black mb-1">{person.name}</h3>
+                  <p className="text-wine text-[10px] uppercase tracking-[0.25em] font-bold">
+                    {person.title}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

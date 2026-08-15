@@ -68,6 +68,19 @@ export default config({
           label: 'Über uns – Absatz 2',
           multiline: true,
         }),
+        team: fields.array(
+          fields.object({
+            name: fields.text({ label: 'Name' }),
+            title: fields.text({ label: 'Position' }),
+            image: fields.text({ label: 'Foto (Pfad in /public)', description: 'z. B. "/Therapeuten-Mattis.jpg"' }),
+            bio: fields.text({ label: 'Kurzporträt', multiline: true }),
+            fortbildungen: fields.array(
+              fields.text({ label: 'Fortbildung' }),
+              { label: 'Fortbildungen', itemLabel: (props) => props.value }
+            ),
+          }),
+          { label: 'Therapeuten-Team', itemLabel: (props) => props.fields.name.value }
+        ),
         hausbesucheTeaserText: fields.text({
           label: 'Hausbesuche-Teaser – Text',
           multiline: true,
