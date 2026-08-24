@@ -112,7 +112,7 @@ const idealFuer = [
 
 const laufendeKurse = [
   { name: 'Brazilian Jiu-Jitsu', href: '/kurse/bjj' },
-  { name: 'Achtsamkeits-/Entspannungstraining' },
+  { name: 'Achtsamkeits-/Entspannungstraining', href: '/kurse/entspannungstraining' },
   { name: 'Boxen' },
 ]
 
