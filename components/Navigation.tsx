@@ -14,6 +14,7 @@ const leistungen = [
 
 const kurse = [
   { title: 'Brazilian Jiu-Jitsu', href: '/kurse/bjj' },
+  { title: 'Kursraum & Gym mieten', href: '/kursraum-vermietung' },
 ]
 
 export default function Navigation() {
