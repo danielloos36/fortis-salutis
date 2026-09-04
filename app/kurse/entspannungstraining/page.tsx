@@ -8,7 +8,7 @@ import { breadcrumbSchema, serviceSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Entspannungstraining Reinheim – „Entspannt in den Feierabend" | Fortis Salutis',
   description:
-    'Achtsamkeits- und Entspannungstraining mit Sybille Mierau-Brinson im neuen Kursraum von Fortis Salutis Reinheim. Kursbeginn 25.08.2026, dienstags 18 Uhr, 10 Termine à 60 Minuten.',
+    'Achtsamkeits- und Entspannungstraining mit Sybille Mierau-Brinson im neuen Kursraum von Fortis Salutis Reinheim. Jeden Dienstag um 18 Uhr, 10 Termine à 60 Minuten.',
   alternates: {
     canonical: '/kurse/entspannungstraining',
   },
@@ -129,13 +129,15 @@ export default function EntspannungstrainingPage() {
 
       {/* Kooperation */}
       <div className="bg-[#0a0a0a] border-b border-white/10 px-6 py-5">
-        <div className="max-w-7xl mx-auto flex items-center gap-4">
+        <div className="max-w-7xl mx-auto flex flex-wrap items-center gap-x-4 gap-y-2">
           <p className="text-[10px] text-white/40 uppercase tracking-[0.3em] font-bold shrink-0">In Kooperation mit</p>
-          <div className="w-px h-6 bg-white/10 shrink-0" />
-          <div className="w-10 h-10 rounded-full bg-wine/20 border border-wine/40 flex items-center justify-center text-wine font-black text-xs shrink-0">
-            SM
+          <div className="hidden sm:block w-px h-6 bg-white/10 shrink-0" />
+          <div className="flex items-center gap-3 min-w-0">
+            <div className="w-10 h-10 rounded-full bg-wine/20 border border-wine/40 flex items-center justify-center text-wine font-black text-xs shrink-0">
+              SM
+            </div>
+            <span className="text-white font-bold text-sm">Sybille Mierau-Brinson · Entspannungstrainerin</span>
           </div>
-          <span className="text-white font-bold text-sm">Sybille Mierau-Brinson · Entspannungstrainerin</span>
         </div>
       </div>
 
@@ -172,12 +174,11 @@ export default function EntspannungstrainingPage() {
             <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Auf einen Blick</p>
             <h2 className="text-3xl font-black text-black mb-10">Termine</h2>
             <div className="border-t-2 border-wine bg-white px-6 py-5 rounded">
-              <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-2">Kursbeginn</p>
-              <p className="font-black text-black text-xl">Di, 25.08.2026</p>
-              <p className="text-gray-600 text-sm mt-1">18:00 Uhr</p>
+              <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-2">Jeden Dienstag</p>
+              <p className="font-black text-black text-xl">18:00 Uhr</p>
             </div>
             <p className="text-gray-500 text-xs mt-4 leading-relaxed">
-              Danach wöchentlich dienstags um 18 Uhr im neuen Kursraum von Fortis Salutis in Reinheim.
+              Wöchentlich dienstags im neuen Kursraum von Fortis Salutis in Reinheim.
             </p>
           </div>
 
@@ -210,7 +211,7 @@ export default function EntspannungstrainingPage() {
             <div className="w-6 h-px bg-white/30" />
             <p className="text-[10px] text-white/50 font-bold uppercase tracking-[0.3em]">Was dich erwartet</p>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-14 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mb-14 leading-tight break-words">
             Warum Entspannungstraining
           </h2>
 

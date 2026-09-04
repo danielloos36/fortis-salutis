@@ -235,6 +235,31 @@ export default async function StandortPage({ params }: Props) {
         </div>
       </section>
 
+      {/* Team */}
+      <section className="bg-gray-50 py-16 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="relative aspect-[4/3] overflow-hidden rounded order-2 lg:order-1">
+            <Image
+              src="/Therapeuten-Team.jpg"
+              alt="Mattis Bischoff und Daniel Loos – Ihr Physiotherapie-Team von Fortis Salutis"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="order-1 lg:order-2">
+            <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Ihr Team</p>
+            <h2 className="text-3xl lg:text-4xl font-black text-black mb-6 leading-tight">
+              Mattis Bischoff &amp; Daniel Loos
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              {location.hausbesuche
+                ? `Wir behandeln Sie in der Praxis in Reinheim oder bei Hausbesuchen in ${location.name}.`
+                : 'Wir behandeln Sie in unserer Praxis in Reinheim.'}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial */}
       <section className="bg-[#0a0a0a] py-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
