@@ -110,7 +110,7 @@ export default function HausbesuchePage() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-[4/3] overflow-hidden rounded order-2 lg:order-1">
             <Image
-              src="/team-foto.jpg"
+              src="/Therapeuten-Team.jpg"
               alt="Mattis Bischoff und Daniel Loos – Ihr Physiotherapie-Team von Fortis Salutis"
               fill
               className="object-cover"
@@ -119,12 +119,11 @@ export default function HausbesuchePage() {
           <div className="order-1 lg:order-2">
             <p className="text-[10px] text-wine uppercase tracking-[0.3em] mb-4 font-bold">Persönlich für Sie da</p>
             <h2 className="text-3xl lg:text-4xl font-black text-black mb-6 leading-tight">
-              Mattis & Daniel kommen zu Ihnen
+              Mattis Bischoff & Daniel Loos
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Beim Hausbesuch begegnen Sie keinem Unbekannten: Mattis Bischoff und Daniel Loos
-              betreuen Sie mit derselben Sorgfalt und Erfahrung wie in der Praxis – persönlich,
-              verlässlich und mit einem vertrauten Gesicht.
+              Wir behandeln Sie bei Ihnen zuhause mit derselben Sorgfalt und Erfahrung wie in der
+              Praxis.
             </p>
           </div>
         </div>
