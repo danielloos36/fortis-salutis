@@ -207,6 +207,12 @@ export default function BJJPage() {
                   59&nbsp;€
                 </p>
                 <p className="text-gray-600 text-sm mt-2">/ Monat</p>
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <p className="text-gray-500 text-[10px] uppercase tracking-wide font-bold mb-1">Studenten / Rentner / Schüler</p>
+                  <p className="font-black text-black text-xl leading-none">
+                    49&nbsp;€<span className="text-gray-500 text-sm font-normal"> / Monat</span>
+                  </p>
+                </div>
               </div>
               <div className="border-t-2 border-wine bg-gray-50 px-6 py-6 rounded">
                 <p className="text-[10px] text-wine uppercase tracking-[0.2em] font-bold mb-3">Externe</p>
@@ -214,10 +220,17 @@ export default function BJJPage() {
                   69&nbsp;€
                 </p>
                 <p className="text-gray-600 text-sm mt-2">/ Monat</p>
+                <div className="mt-4 pt-4 border-t border-gray-200">
+                  <p className="text-gray-500 text-[10px] uppercase tracking-wide font-bold mb-1">Studenten / Rentner / Schüler</p>
+                  <p className="font-black text-black text-xl leading-none">
+                    59&nbsp;€<span className="text-gray-500 text-sm font-normal"> / Monat</span>
+                  </p>
+                </div>
               </div>
             </div>
             <p className="text-gray-500 text-xs mt-4 leading-relaxed">
               Mitglieder = bestehende Fortis Salutis Mitglieder. Externe = alle anderen Teilnehmer*innen.
+              Ermäßigter Tarif für Studenten, Rentner und Schüler – bitte entsprechenden Nachweis mitbringen.
             </p>
           </div>
         </div>
