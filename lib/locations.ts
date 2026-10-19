@@ -47,7 +47,7 @@ export const locations: Location[] = [
     driveTime: '18 Minuten',
     direction: 'nordwestlich',
     intro: 'Darmstadt ist die nächste Großstadt zu Reinheim und liegt nordwestlich, nur etwa 14 km entfernt. Für Patienten aus Darmstadt ist unsere Privatpraxis Fortis Salutis in Reinheim eine attraktive Alternative zu städtischen Praxen.',
-    hausbesuche: false,
+    hausbesuche: true,
   },
   {
     slug: 'rossdorf',

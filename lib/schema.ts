@@ -146,10 +146,12 @@ export function serviceSchema({
   name,
   description,
   path,
+  areaServed,
 }: {
   name: string
   description: string
   path: string
+  areaServed?: string
 }) {
   return {
     '@context': 'https://schema.org',
@@ -159,7 +161,7 @@ export function serviceSchema({
     url: `${BASE_URL}${path}`,
     areaServed: {
       '@type': 'City',
-      name: 'Reinheim',
+      name: areaServed ?? 'Reinheim',
     },
     provider: {
       '@id': `${BASE_URL}/#praxis`,

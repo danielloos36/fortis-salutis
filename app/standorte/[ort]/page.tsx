@@ -224,7 +224,7 @@ export default async function StandortPage({ params }: Props) {
                   nach Hause in {location.name}.
                 </p>
                 <Link
-                  href="/leistungen/hausbesuche"
+                  href={location.slug === 'darmstadt' ? '/hausbesuche-darmstadt' : '/leistungen/hausbesuche'}
                   className="inline-block border border-white/30 text-white px-5 py-2.5 text-xs font-bold uppercase tracking-wider hover:border-white transition-colors rounded"
                 >
                   Mehr zu Hausbesuchen

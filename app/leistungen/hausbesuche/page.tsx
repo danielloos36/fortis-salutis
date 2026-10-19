@@ -184,7 +184,7 @@ export default function HausbesuchePage() {
             {hausbesuchLocations.map((loc) => (
               <Link
                 key={loc.slug}
-                href={`/standorte/${loc.slug}`}
+                href={loc.slug === 'darmstadt' ? '/hausbesuche-darmstadt' : `/standorte/${loc.slug}`}
                 className="border border-gray-200 bg-white p-5 hover:border-black group transition-colors rounded"
               >
                 <div className="flex items-center justify-between">
