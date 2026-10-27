@@ -38,7 +38,7 @@ export default function GymPage() {
           className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-14 w-full">
           <p className="text-[10px] text-white uppercase tracking-[0.35em] mb-3 font-bold">
             Gym · Fortis Salutis Reinheim
@@ -103,6 +103,11 @@ export default function GymPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* Galerie – Vollbild */}
+      <section id="galerie">
+        <GymSlider eyebrow="Einblick" title="Unsere Trainingsfläche" />
       </section>
 
       {/* Vorteile */}
@@ -222,15 +227,6 @@ export default function GymPage() {
               <p className="text-white/80 text-sm mt-3">Für jede und für jeden.</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Slider */}
-      <section id="galerie" className="bg-[#0a0a0a] py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] text-white/50 uppercase tracking-[0.3em] mb-4 font-bold">Einblick</p>
-          <h2 className="text-4xl font-black text-white mb-10">Unsere Trainingsfläche</h2>
-          <GymSlider />
         </div>
       </section>
 
