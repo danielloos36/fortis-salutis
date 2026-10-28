@@ -8,6 +8,7 @@ export default function AnnouncementBar() {
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
       <span className="truncate min-w-0">Kurze Wartezeiten</span>
+      <span className="whitespace-nowrap sm:hidden">· 1–2 Wochen</span>
       <span className="hidden sm:inline">· Termin meist in 1–2 Wochen</span>
       <span className="hidden md:inline underline underline-offset-2">Jetzt anrufen</span>
     </a>
