@@ -184,6 +184,13 @@ export default function Navigation() {
           </div>
 
           <Link
+            href="/blog"
+            className={`text-sm font-bold uppercase tracking-[0.12em] transition-colors ${textColor} ${hoverColor}`}
+          >
+            Blog
+          </Link>
+
+          <Link
             href="/#ueber-uns"
             className={`text-sm font-bold uppercase tracking-[0.12em] transition-colors ${textColor} ${hoverColor}`}
           >
@@ -298,6 +305,7 @@ export default function Navigation() {
           {/* Weitere Links */}
           <div className="space-y-1 mb-auto">
             {[
+              { title: 'Blog', href: '/blog' },
               { title: 'Über uns', href: '/#ueber-uns' },
               { title: 'Kontakt', href: '/#kontakt' },
             ].map((item) => (

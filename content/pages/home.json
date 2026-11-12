@@ -34,24 +34,14 @@
       "title": "Physiotherapeut & Praxisleitung",
       "image": "/Therapeuten-Mattis.jpg",
       "bio": "Mattis leitet die Praxis und entwickelt für jede Patientin und jeden Patienten ein individuelles Therapiekonzept. Sein Anspruch: nicht nur Symptome behandeln, sondern die Ursachen von Beschwerden verstehen und langfristig lösen.",
-      "fortbildungen": [
-        "Manuelle Therapie (zertifiziert)",
-        "Bobath-Konzept – Neurologische Rehabilitation",
-        "Medizinische Trainingstherapie",
-        "Sportphysiotherapie"
-      ]
+      "credentials": ["Staatlich anerkannter Physiotherapeut", "B.Sc. Physiotherapie (seit 2021)"]
     },
     {
       "name": "Daniel Loos",
       "title": "Physiotherapeut",
       "image": "/Therapeuten-Daniel.jpg",
       "bio": "Daniel begleitet Patient*innen mit viel Geduld und einem geschulten Blick für die Zusammenhänge im Bewegungsapparat. Ihm ist wichtig, dass sich Patient*innen bei jedem Termin ernst genommen und gut aufgehoben fühlen.",
-      "fortbildungen": [
-        "Manuelle Lymphdrainage",
-        "PNF – Propriozeptive Neuromuskuläre Faszilitation",
-        "Kinesiologisches Taping",
-        "Trainingstherapie"
-      ]
+      "credentials": ["Staatlich anerkannter Physiotherapeut"]
     }
   ],
   "hausbesucheTeaserText": "Sie können die Praxis nicht aufsuchen? Kein Problem. Wir kommen zu Ihnen nach Hause, im gesamten Umkreis von 10 km um Reinheim.",

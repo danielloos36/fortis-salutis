@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { locations } from '@/lib/locations'
+import { blogPosts } from '@/content/blog'
 
 const BASE_URL = 'https://www.fortis-salutis.de'
 
@@ -31,6 +32,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }
 
+  const blogIndexPage = {
+    url: `${BASE_URL}/blog`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }
+
+  const blogPages = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
   return [
     {
       url: BASE_URL,
@@ -41,5 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...servicePages,
     hausbesucheDarmstadtPage,
     ...locationPages,
+    blogIndexPage,
+    ...blogPages,
   ]
 }

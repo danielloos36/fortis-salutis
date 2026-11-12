@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import HeroTypewriter from '@/components/HeroTypewriter'
 import ContactForm from '@/components/ContactForm'
+import FortbildungenShowcase from '@/components/FortbildungenShowcase'
 import homeContent from '@/content/pages/home.json'
 
 export const metadata: Metadata = {
@@ -226,12 +227,37 @@ export default function Home() {
                 </div>
                 <div className="p-8">
                   <h3 className="text-2xl font-black text-black mb-1">{person.name}</h3>
-                  <p className="text-wine text-[10px] uppercase tracking-[0.25em] font-bold">
+                  <p className="text-wine text-[10px] uppercase tracking-[0.25em] font-bold mb-3">
                     {person.title}
                   </p>
+                  <div className="space-y-1.5">
+                    {person.credentials.map((c) => (
+                      <div key={c} className="flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 bg-wine rounded-full shrink-0" />
+                        <span className="text-gray-700 text-sm font-medium leading-relaxed">{c}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Spezialisierungen & Fortbildungen */}
+          <div className="mt-16 pt-16 border-t border-gray-200">
+            <h3 className="text-3xl font-black text-black mb-8 leading-tight">
+              Spezialisierungen &amp; Fortbildungen
+            </h3>
+            <FortbildungenShowcase
+              items={[
+                'Heilpraktiker für Physiotherapie',
+                'Sportphysiotherapeut (Deutscher Olympischer Sportbund)',
+                'Sports Performance Specialist',
+                'Precision Nutrition Coach',
+                'Pain Mentorship (Schmerzforschung)',
+                'Fortbildungen in Schmerzwissenschaft & Teletherapie',
+              ]}
+            />
           </div>
         </div>
       </section>

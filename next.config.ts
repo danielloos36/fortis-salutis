@@ -12,10 +12,6 @@ const nextConfig: NextConfig = {
       { source: '/kontakt', destination: '/#kontakt', permanent: true },
       { source: '/leistungen', destination: '/', permanent: true },
       { source: '/hausbesuche', destination: '/leistungen/hausbesuche', permanent: true },
-      { source: '/blog', destination: '/', permanent: true },
-
-      // Alte Blog-Posts
-      { source: '/post/:slug*', destination: '/', permanent: true },
 
       // Umbenannte Kursseite
       { source: '/kurse/bjj-performance-coaching', destination: '/kurse/bjj', permanent: true },
